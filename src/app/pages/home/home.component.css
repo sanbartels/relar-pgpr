@@ -1,0 +1,124 @@
+.bg-0{
+    background-image: url("/assets/img/fondo-0.jpg");
+    background-size: cover;
+}
+
+/* INSCRIPCIONES */
+.puntero{ cursor: pointer; }
+.ml-5{ margin-left: 5%; }
+.w-80{ width: 80%; }
+
+/* TEXTOS LOCOS */
+.letras-container{
+    z-index: 2;
+    width: 100%;
+    overflow: hidden;
+}
+
+.bg-texto-1{
+    min-height: 40px;
+    width: 1000%;
+    margin-top: 3%;
+    background-image: url("/assets/img/texto-1.png");
+    background-repeat: repeat;
+    animation: texto-loco 80s linear infinite;
+}
+
+.bg-texto-2{
+    min-height: 40px;
+    width: 1000%;
+    background-image: url("/assets/img/texto-2.png");
+    background-repeat: repeat;
+    animation: texto-loco-2 80s linear infinite;
+}
+
+.bg-texto-3{
+    min-height: 40px;
+    width: 1000%;
+    background-image: url("/assets/img/texto-3.png");
+    background-repeat: repeat;
+    animation: texto-loco 90s linear infinite;
+}
+
+.bg-texto-4{
+    min-height: 50px;
+    width: 1000%;
+    background-image: url("/assets/img/texto-4.png");
+    background-repeat: repeat;
+    animation: texto-loco 80s linear infinite;
+}
+
+@keyframes texto-loco{
+	0% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+@keyframes texto-loco-2{
+	0% {
+		background-position: 0% 50%;
+	}
+	100% {
+		background-position: 100% 50%;
+	}
+}
+
+/* FRENTE-1 */
+.texto-01{ position: relative }
+.frente-a0{ width: 18% }
+.frente-a1{
+    width: 43%;
+    margin-bottom: 15%;
+    padding: 0 2rem;
+}
+.frente-a2{ width: 39% }
+.frente-a3{
+    width: 30%;
+    position: absolute;
+    bottom: 0;
+    left: 5%;
+}
+
+/* LOGOS WIDTH */
+.logos-1{ width: 60% }
+.logos-2{ width: 98%; display: block; margin-left: auto; }
+.logos-3{ width: 70% }
+
+
+/* MEDIA QUERYS */
+
+/* Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) {
+    .width-lg-95{
+        margin-left: 4%;
+        width: 96%;
+    }
+}
+
+/* Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) {}
+
+/* Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) {
+    .width-lg{
+        width: 80%;
+        margin: auto;
+    }
+    .width-lg-90{
+        width: 90%;
+        margin: auto;
+    }
+
+    .border-lg-right{
+        border-right: #777 solid 1px;
+    }
+}
+
+/* X-Large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {}
+
+/* XX-Large devices (larger desktops, 1400px and up)*/
+@media (min-width: 1400px) {}

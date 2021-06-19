@@ -1,0 +1,354 @@
+<article class="bg-white w-lg-75 mx-auto p-5 my-5">
+
+    <h2>PROGRAMA</h2>
+    <div class="d-flex justify-content-between">
+        <button mat-button (click)="dayFunction('0')" class="col p-2 my-3 bg-green">LUNES 4/10</button>
+        <button mat-button (click)="dayFunction('1')" class="col p-2 m-3 bg-green">MARTES 5/10</button>
+        <button mat-button (click)="dayFunction('2')" class="col p-2 my-3 bg-green">MIÉRCOLES 6/10</button>
+        <button mat-button (click)="dayFunction('3')" class="col p-2 m-3 bg-green">JUEVES 7/10</button>
+        <button mat-button (click)="dayFunction('4')" class="col p-2 my-3 bg-green">VIERNES 8/10</button>
+    </div>
+
+
+    <!-- LUNES 4 -->
+    <section *ngIf="day=='0'" class="animate__animated animate__fadeIn animate__faster">
+        <h3>Lunes 4</h3>
+        <div class="green-lg">
+            <div class="w3s d-flex-center">Bienvenida</div>
+            <div class="w7 d-flex">
+                <div class="w1 d-flex-center">10:00</div>
+                <div class="w3 d-flex-center">Inicio del congreso</div>
+                <div class="w4 d-flex-center">Dr. Federico Battistoni<br>Presidente ALAR</div>
+                <div class="w2 d-flex-center">Uruguay</div>
+            </div>
+        </div>
+        <div class="green-lg">
+            <div class="w3s">Apertura</div>
+            <div class="w7 d-flex">
+                <div class="w1 d-flex-center">10:30</div>
+                <div class="w3 d-flex-center">Conferencia de apertura</div>
+                <div class="w4 d-flex-center">Dra. Mariangela Hungría</div>
+                <div class="w2 d-flex-center">Brasil</div>
+            </div>
+        </div>
+        <div class="green-lg">
+            <div class="w3s d-flex-center">Mujeres en la ciencia</div>
+            <div class="w7 d-flex">
+                <div class="w1 d-flex-center">12:00</div>
+                <div class="w3 d-flex-center">Mesa redonda</div>
+                <div class="w58 d-flex flex-column">
+                    <div class="d-flex green-sm">
+                        <div class="w72">Dra. Mariangela Hungría</div>
+                        <div class="d-flex-center">Brasil</div>
+                    </div>
+                    <div class="d-flex">
+                        <div class="w72 pr">Dra. Esperanza Martinez</div>
+                        <div class="d-flex-center">México</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="green-lg">
+            <div class="w3s d-flex-center">El microbioma agrícola</div>
+            <div class="w7 d-flex flex-column">
+                <div class="d-flex green-sm">
+                    <div class="w1">15:00</div>
+                    <div class="w3">Conferencia magistral</div>
+                    <div class="w4">Dra.Kornelia Smalla</div>
+                    <div class="w2">Alemania</div>
+                </div>
+                <div class="d-flex green-sm">
+                    <div class="w1">15:45</div>
+                    <div class="w3">Conferencia magistral</div>
+                    <div class="w4">Dr. Jorge L. Mazza Rodrigues</div>
+                    <div class="w2">Brasil</div>
+                </div>
+                <div class="d-flex green-sm">
+                    <div class="w1">16:30</div>
+                    <div>Poster talk</div>
+                </div>
+                <div class="d-flex">
+                    <div class="w1">17:00</div>
+                    <div>Diálogos de investigación</div>
+                </div>
+            </div>
+        </div>
+        <div class="green-lg">
+            <div class="w3s"></div>
+            <div class="w8">18:00</div>
+            <div>Sesión de poster</div>
+        </div>
+    </section>
+
+    <!-- MARTES 5 -->
+    <section *ngIf="day=='1'" class="animate__animated animate__fadeIn animate__faster">
+        <h3>Martes 5</h3>
+        <div class="green-lg">
+            <div class="w3s d-flex-center">Promoción indirecta del crecimiento vegetal</div>
+            <div class="w7 d-flex flex-column">
+                <div class="d-flex green-sm">
+                    <div class="w1">10:00</div>
+                    <div class="w3">Conferencia magistral</div>
+                    <div class="w4">Dr. Jeroen Wagemans</div>
+                    <div class="w2">Bélgica</div>
+                </div>
+                <div class="d-flex green-sm">
+                    <div class="w1">10:45</div>
+                    <div class="w3">Conferencia magistral</div>
+                    <div class="w4">Dra. Alexandra Stoll</div>
+                    <div class="w2">Chile</div>
+                </div>
+                <div class="d-flex green-sm">
+                    <div class="w1">11:30</div>
+                    <div>Poster talk</div>
+                </div>
+                <div class="d-flex">
+                    <div class="w1">12:00</div>
+                    <div>Diálogos de investigación</div>
+                </div>
+            </div>
+        </div>
+        <div class="green-lg">
+            <div class="w3s"></div>
+            <div class="w8">13:00</div>
+            <div>Puntos de encuentro</div>
+        </div>
+        <div class="green-lg">
+            <div class="w3s d-flex-center">Promoción directa del crecimiento vegetal</div>
+            <div class="w7 d-flex flex-column">
+                <div class="d-flex green-sm">
+                    <div class="w1">15:00</div>
+                    <div class="w3">Conferencia magistral</div>
+                    <div class="w4">Dr. Euan James</div>
+                    <div class="w2">Inglaterra</div>
+                </div>
+                <div class="d-flex green-sm">
+                    <div class="w1">15:45</div>
+                    <div class="w3">Conferencia magistral</div>
+                    <div class="w4">Dr. Agustin Grimoldi</div>
+                    <div class="w2">Argentina</div>
+                </div>
+                <div class="d-flex green-sm">
+                    <div class="w1">16:30</div>
+                    <div>Poster talk</div>
+                </div>
+                <div class="d-flex">
+                    <div class="w1">17:00</div>
+                    <div>Diálogos de investigación</div>
+                </div>
+            </div>
+        </div>
+        <div class="green-lg">
+            <div class="w3s"></div>
+            <div class="w8">18:00</div>
+            <div>Sesión de poster</div>
+        </div>
+    </section>
+
+    <!-- MIERCOLES 6 -->
+    <section *ngIf="day=='2'" class="animate__animated animate__fadeIn animate__faster">
+        <h3>Miercoles 6</h3>
+        <div class="green-lg">
+            <div class="w3s d-flex-center">Evolución y diversidad de MPVC</div>
+            <div class="w7 d-flex flex-column">
+                <div class="d-flex green-sm">
+                    <div class="w1">10:00</div>
+                    <div class="w3">Conferencia magistral</div>
+                    <div class="w4">Dra. Laila Pamela  Martínez</div>
+                    <div class="w2">México</div>
+                </div>
+                <div class="d-flex green-sm">
+                    <div class="w1">10:45</div>
+                    <div class="w3">Conferencia magistral</div>
+                    <div class="w4">Dr. Massimiliano Cardinale</div>
+                    <div class="w2">Italia</div>
+                </div>
+                <div class="d-flex green-sm">
+                    <div class="w1">11:30</div>
+                    <div>Poster talk</div>
+                </div>
+                <div class="d-flex">
+                    <div class="w1">12:00</div>
+                    <div>Diálogos de investigación</div>
+                </div>
+            </div>
+        </div>
+        <div class="green-lg">
+            <div class="w3s"></div>
+            <div class="w8">13:00</div>
+            <div>Puntos de encuentro</div>
+        </div>
+        <div class="green-lg">
+            <div class="w3s d-flex-center">El Holobionte Planta</div>
+            <div class="w7 d-flex flex-column">
+                <div class="d-flex green-sm">
+                    <div class="w1">15:00</div>
+                    <div class="w3">Conferencia magistral</div>
+                    <div class="w4">Dr. Pablo Hardoim</div>
+                    <div class="w2">Brasil</div>
+                </div>
+                <div class="d-flex green-sm">
+                    <div class="w1">15:45</div>
+                    <div class="w3">Conferencia magistral</div>
+                    <div class="w4">Dr. Emanuel de Souza</div>
+                    <div class="w2">Brasil</div>
+                </div>
+                <div class="d-flex green-sm">
+                    <div class="w1">16:30</div>
+                    <div>Poster talk</div>
+                </div>
+                <div class="d-flex">
+                    <div class="w1">17:00</div>
+                    <div>Diálogos de investigación</div>
+                </div>
+            </div>
+        </div>
+        <div class="green-lg">
+            <div class="w3s"></div>
+            <div class="w8">18:00</div>
+            <div>Sesión de poster</div>
+        </div>
+    </section>
+
+    <!-- JUEVES 7 -->
+    <section *ngIf="day=='3'" class="animate__animated animate__fadeIn animate__faster">
+        <h3>Jueves 7</h3>
+        <div class="green-lg">
+            <div class="w3s d-flex-center">Conservación y manejo microbiano en sistemas naturales y agroecosistemas</div>
+            <div class="w7 d-flex flex-column">
+                <div class="d-flex green-sm">
+                    <div class="w1">10:00</div>
+                    <div class="w3">Conferencia magistral</div>
+                    <div class="w4">Dra. Mariana Sánchez</div>
+                    <div class="w2">Colombia</div>
+                </div>
+                <div class="d-flex green-sm">
+                    <div class="w1">10:45</div>
+                    <div class="w3">Conferencia magistral</div>
+                    <div class="w4">Dra. Alda Rodríguez</div>
+                    <div class="w2">Uruguay</div>
+                </div>
+                <div class="d-flex green-sm">
+                    <div class="w1">11:30</div>
+                    <div>Poster talk</div>
+                </div>
+                <div class="d-flex">
+                    <div class="w1">12:00</div>
+                    <div>Diálogos de investigación</div>
+                </div>
+            </div>
+        </div>
+        <div class="green-lg">
+            <div class="w3s"></div>
+            <div class="w8">13:00</div>
+            <div>Puntos de encuentro</div>
+        </div>
+        <div class="green-lg">
+            <div class="w3s d-flex-center">Del laboratorio al campo</div>
+            <div class="w7 d-flex flex-column">
+                <div class="d-flex green-sm">
+                    <div class="w1">15:00</div>
+                    <div class="w3">Conferencia magistral</div>
+                    <div class="w4">Dra. C. María Caridad Nápoles</div>
+                    <div class="w2">Cuba</div>
+                </div>
+                <div class="d-flex green-sm">
+                    <div class="w1">15:45</div>
+                    <div class="w3">Conferencia magistral</div>
+                    <div class="w4">Dra. Paula Aguilera</div>
+                    <div class="w2">Chile</div>
+                </div>
+                <div class="d-flex green-sm">
+                    <div class="w1">16:30</div>
+                    <div>Poster talk</div>
+                </div>
+                <div class="d-flex">
+                    <div class="w1">17:00</div>
+                    <div>Diálogos de investigación</div>
+                </div>
+            </div>
+        </div>
+        <div class="green-lg">
+            <div class="w3s"></div>
+            <div class="w8">18:00</div>
+            <div>Sesión de poster</div>
+        </div>
+    </section>
+
+    <!-- VIERNES 8 -->
+    <section *ngIf="day=='4'" class="animate__animated animate__fadeIn animate__faster">
+        <h3>Viernes 8</h3>
+        <div class="green-lg">
+            <div class="w3s d-flex-center">Legislación sobre registro y empleo de productos microbianos</div>
+            <div class="w7 d-flex flex-column">
+                <div class="d-flex green-sm">
+                    <div class="w1">10:00</div>
+                    <div class="w3">Conferencia magistral</div>
+                    <div class="w4">Mag.Bio. Romina Almesía</div>
+                    <div class="w2">Chile</div>
+                </div>
+                <div class="d-flex green-sm">
+                    <div class="w1">10:45</div>
+                    <div class="w3">Conferencia magistral</div>
+                    <div class="w4">Dr. Jerri Zilli</div>
+                    <div class="w2">Brasil</div>
+                </div>
+                <div class="d-flex">
+                    <div class="w1">11:30</div>
+                    <div>Poster talk</div>
+                </div>
+            </div>
+        </div>
+        <div class="green-lg">
+            <div class="w3s d-flex-center">Actores involucrados en el desarrollo y aplicación de bioinsumos: ¿es posible un modelo alternativo de producción?</div>
+            <div class="w7 d-flex">
+                <div class="w1 d-flex-center">12:00</div>
+                <div class="w3 d-flex-center">Mesa redonda</div>
+                <div class="w58 d-flex flex-column">
+                    <div class="d-flex green-sm">
+                        <div class="w72">Ing. Pedro Lage<br>Empresa LAge y Cía (Lallemand)</div>
+                        <div class="d-flex-center">Uruguay</div>
+                    </div>
+                    <div class="d-flex green-sm">
+                        <div class="w72 pr">Sr. Tomás Krostch<br>Instituto Interamericano de Cooperación para la Agricultura-IICA</div>
+                        <div class="d-flex-center">Argentina</div>
+                    </div>
+                    <div class="d-flex green-sm">
+                        <div class="w72 pr">Sr. Jose Roberto Pereira<br>Asociación Nacional de Productores e Importadores de Inoculantes-ANPII</div>
+                        <div class="d-flex-center">Brasil</div>
+                    </div>
+                    <div class="d-flex green-sm">
+                        <div class="w72 pr">Dra. Maribel Parada<br>Red Chilena de Bioinsumos</div>
+                        <div class="d-flex-center">Chile</div>
+                    </div>
+                    <div class="d-flex">
+                        <div class="w72 pr">Sr. Roberto Rapella<br>Cámara Argentina de Bioinsumos-CABIO</div>
+                        <div class="d-flex-center">Argentina</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="green-lg">
+            <div class="w3s">Clausura</div>
+            <div class="w7 d-flex">
+                <div class="w1 d-flex-center">17:00</div>
+                <div class="w3 d-flex-center">Conferencia de clausura</div>
+                <div class="w4 d-flex-center">Dra. Esperanza Martinez</div>
+                <div class="w2 d-flex-center">México</div>
+            </div>
+        </div>
+        <div class="green-lg">
+            <div class="w3s d-flex-center">Saludo final</div>
+            <div class="w7 d-flex">
+                <div class="w1 d-flex-center">18:00</div>
+                <div class="w3 d-flex-center">Cierre del congreso</div>
+                <div class="w4 d-flex-center">Dr. Federico Battistoni<br>Presidente ALAR</div>
+                <div class="w2 d-flex-center">Uruguay</div>
+            </div>
+        </div>
+    </section>
+</article>
+
+<div class="w-lg-75 mx-auto my-5 bg-green p-3">
+    <img class="img-fluid" src="/assets/img/programa.jpg" alt="Programa">
+</div>

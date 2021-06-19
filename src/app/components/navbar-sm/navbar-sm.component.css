@@ -1,0 +1,35 @@
+/* NAV */
+.nav-sm{
+    background-color: white;
+    box-shadow: #bbb 0 0 10px;
+    position: sticky;
+    width: 100%;
+    top: 0;
+    z-index: 2;
+    border-bottom: #16f64b solid 5px;
+}
+
+nav a{
+    font-size: 14px;
+    text-decoration: none;
+    color: black;
+    font-family: 'Staatliches';
+    margin: 0.6rem 0rem;
+}
+
+nav i{
+    font-size: 18px;
+}
+
+nav a:hover{
+    color: black;
+    animation-name: grow-up;
+    animation-duration: 0.2s;
+    animation-fill-mode: forwards
+}
+
+@keyframes grow-up {
+    100% {
+        transform: scale(1.1);
+    }
+}

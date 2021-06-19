@@ -1,0 +1,13 @@
+<nav class="d-sm-none mb-5 nav-sm">
+    <div class="container">
+        <div class="d-flex justify-content-around py-1">
+            <a *ngIf="this.auth.user.uid" class="mx-sm-4" [routerLink]="['/user']"><img [src]="this.auth.user.photoURL | img " alt="Imagen de usuario"><span class="d-none d-md-inline mx-2">{{ this.auth.user.displayName | username }}</span></a>
+            <a *ngIf="!this.auth.user.uid" class="mx-sm-4" [routerLink]="['/login']"><i class="fas fa-user"></i></a>
+            <a class="mx-sm-4" [routerLink]="['/home']"><i class="fas fa-home"></i></a>
+            <a href="https://www.facebook.com/relar.pgpr" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://twitter.com/RelarPgpr" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://instagram.com/relar.pgpr" target="_blank"><i class="fab fa-instagram"></i></a>
+            <a href="mailto:secretaria.alar@gmail.com"><i class="fas fa-envelope"></i></a>
+        </div>
+    </div>
+</nav>

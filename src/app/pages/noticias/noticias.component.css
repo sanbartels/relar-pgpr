@@ -1,0 +1,39 @@
+section{
+    background-color: rgba(88, 88, 88, 0.800);
+    color: white;
+    padding: 1.8rem 1rem;
+    margin: 3rem 0;
+}
+
+hr{ color: #16f64b; }
+a{ color: white; }
+a:hover{ color: #16f64b;}
+
+.letras-container{
+    z-index: 2;
+    width: 100%;
+    overflow: hidden;
+}
+
+.bg-texto-5{
+    min-height: 45px;
+    width: 1000%;
+    margin: 3rem 0 1rem;
+    background-image: url("/assets/img/texto-5.png");
+    background-repeat: repeat;
+    animation: texto-loco 80s linear infinite;
+}
+
+@keyframes texto-loco{
+	0% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+h3{
+    text-transform: uppercase;
+    font-family: 'Staatliches';
+}

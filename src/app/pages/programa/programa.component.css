@@ -1,0 +1,55 @@
+.bg-green{
+    background-color: #16f64b;
+}
+
+h3, h2{
+    text-transform: uppercase;
+    font-family: 'Staatliches';
+}
+
+.d-flex-center{
+    display: flex;
+    align-items: center;
+    padding-right: 1rem;
+}
+
+.pr{ padding-right: 1rem; }
+
+.w8{ width: 8.4%; }
+.w1{ width: 12%;}
+.w2{ width: 16%; }
+.w3{ width: 30%; }
+.w3s{ width: 30%; font-weight: bold; }
+.w4{ width: 42%; }
+.w58{ width: 58%; }
+.w7{ width: 70%; }
+.w72{ width: 72.4%; }
+
+h3{
+    border-bottom: #16f64b solid 2px;
+    padding-bottom: 0.5rem;
+    margin-top: 2rem;
+}
+
+.green-lg{
+    border-bottom: #16f64b solid 2px;
+    display: flex;
+    margin: 1rem 0;
+    padding-bottom: 1rem;
+}
+
+.green-sm{
+    border-bottom: #16f64b solid 1px;
+    margin-bottom: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.green-sm div{
+    display: flex;
+    align-items: center;
+    padding-right: 1rem;
+}
+
+@media (min-width: 1200px) {
+    .w-lg-75{ width: 75%; }
+}

@@ -1,0 +1,39 @@
+<!-- PROGRESSBAR -->
+<ul id="progressbar" class="mt-5 p-0">
+    <li class="active" id="account"><strong>Cuenta</strong></li>
+    <li id="personal"><strong>Información Personal</strong></li>
+    <li id="postular"><strong>Postular trabajo</strong></li>
+    <li id="payment"><strong>Pago</strong></li>
+    <li id="confirm"><strong>Finalizar</strong></li>
+</ul>
+<div class="my-5 px-5 d-flex justify-content-center">
+    <div class="bg-white d-inline-block">
+        <ngx-auth-firebaseui-register
+            titleText="REGISTRARSE"
+            nameText="Nombre"
+            nameErrorRequiredText="Nombre es un campo obligatorio"
+            emailErrorRequiredText="Email es un campo obligatorio"
+            emailErrorPatternText="Por favor ingrese un email válido"
+            passwordErrorRequiredText="Password es un campo obligatorio"
+            passwordConfirmationText="Confirme su password"
+            passwordConfirmationErrorRequiredText="La confirmación del password es un campo obligatorio"
+            passwordErrorMatchText="Los password no son iguales"
+            passwordErrorMinLengthText="La contraseña es muy corta!"
+            passwordErrorMaxLengthText="La contraseña es muy larga!"
+            createAccountButtonText="Crear cuenta"
+            alreadyHaveAccountText="¿Ya tienes una cuenta?"
+            (onLoginRequested)="login()"
+            (onSuccess)="saveUser($event)"
+            (onError)="handleError($event)"
+        ></ngx-auth-firebaseui-register>
+        <div class="w-50 mx-auto pb-5">
+            <ngx-auth-firebaseui-providers
+                [providers]="[providers.Google, providers.Facebook]"
+                layout="row"
+                [theme]="themes.FAB"
+                (onSuccess)="saveUser($event)"
+                (onError)="handleError($event)">
+            </ngx-auth-firebaseui-providers>
+        </div>
+    </div>
+</div>

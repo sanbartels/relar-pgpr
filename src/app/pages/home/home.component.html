@@ -1,0 +1,97 @@
+<main>
+    <!-- TEXTO -->
+    <div class="d-none d-sm-block letras-container mb-4">
+        <div class="bg-texto-1"></div>
+    </div>
+
+    <!-- FRENTE-1 -->
+    <section class="texto-01 mt-5">
+        <div class="width-lg-90 d-flex texto-01">
+            <div class="frente-a0 align-self-center"><img class="img-fluid w-100" src="/assets/img/frente-a0.jpg" alt="Introducción"></div>
+            <div class="frente-a1 align-self-start"><img class="img-fluid w-100" src="/assets/img/frente-a1.jpg" alt="Introducción"></div>
+            <div class="frente-a2 align-self-end mb-5"><img class="img-fluid w-100" src="/assets/img/frente-a2.jpg" alt="Introducción"></div>
+        </div>
+    </section>
+
+    <!-- NOTICIAS -->
+    <section class="w-100">
+        <div class="d-flex p-5">
+            <div class="col puntero p-0"><img class="img-fluid w-100" [routerLink]="['/noticias']" src="/assets/img/noti-1.jpg" alt="Noticia 1"></div>
+            <div class="col puntero px-5"><img class="img-fluid w-100" [routerLink]="['/noticias']" src="/assets/img/noti-2.jpg" alt="Noticia 2"></div>
+            <div class="col puntero p-0"><img class="img-fluid w-100" [routerLink]="['/noticias']" src="/assets/img/noti-3.jpg" alt="Noticia 3"></div>
+        </div>
+    </section>
+
+    <!-- FECHAS IMPORTANTES -->
+    <section>
+        <div>
+            <img class="img-fluid w-100" src="/assets/img/frente-2.png" alt="Fechas importantes">
+        </div>
+    </section>
+
+    <!--INSCRIPCIONES -->
+    <section class="bg-0 pb-sm-2">
+        <div (click)="registrarse()" class="letras-container puntero py-4">
+            <div class="bg-texto-2"></div>
+        </div>
+        <div class="pb-5 row width-lg-95">
+            <div class="col-12 col-sm-6 px-0">
+                <img class="img-fluid w-100" src="/assets/img/inscripciones.jpg" alt="Información de incripciones">
+            </div>
+            <div class="col-12 col-sm-6 px-0 d-flex flex-column justify-content-center">
+                <div class="w-75 py-3 my-5 align-self-end puntero">
+                    <a (click)="registrarse()"><img class="img-fluid w-100" src="/assets/img/boton-1.png" alt="Registrarse"></a>
+                </div>
+                <div class="w-80 py-3 my-sm-5">
+                    <a [routerLink]="['/postular-trabajo']"><img class="img-fluid w-100" src="/assets/img/boton-2.png" alt="Postular Trabajo"></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MESAS DE TRABAJO -->
+    <section>
+        <div class="width-lg-90">
+            <img class="img-fluid w-100" src="/assets/img/frente-3.png" alt="Inscripciones">
+        </div>
+    </section>
+
+    <section>
+        <div class="width-lg-90">
+            <img class="img-fluid w-100" src="/assets/img/frente-4.png" alt="Inscripciones">
+        </div>
+    </section>
+
+    <!-- TEXTO 2 -->
+    <div class="letras-container mt-5 mb-3">
+        <div class="bg-texto-3"></div>
+    </div>
+    <div class="letras-container mb-5">
+        <div class="bg-texto-4"></div>
+    </div>
+
+
+    <!-- ACERCA DE ALAR -->
+    <section class="pb-5 mb-5">
+        <div class="width-lg-90">
+            <img class="img-fluid" src="/assets/img/acerca-de-alar.png" alt="Acerca de ALAR">
+        </div>
+    </section>
+
+    <!-- COMITÉS -->
+    <section class="width-lg-90">
+        <div class="my-4"><img class="img-fluid" src="/assets/img/placa-1.jpg" alt=""></div>
+        <div class="my-4"><img class="img-fluid" src="/assets/img/placa-2.jpg" alt=""></div>
+        <div class="my-4"><img class="img-fluid" src="/assets/img/placa-3.jpg" alt=""></div>
+        <div class="my-4"><img class="img-fluid" src="/assets/img/placa-4.jpg" alt=""></div>
+        <div class="my-4"><img class="img-fluid" src="/assets/img/placa-5.jpg" alt=""></div>
+    </section>
+
+    <!-- LOGOS -->
+    <section class="my-5">
+        <img class="img-fluid logos-1 my-3" src="/assets/img/logos-1.jpg" alt="Organizan">
+        <img class="img-fluid logos-2 my-3" src="/assets/img/logos-2.jpg" alt="Logos">
+        <img class="img-fluid logos-3 my-3" src="/assets/img/logos-3.jpg" alt="Logos">
+    </section>
+</main>
+
