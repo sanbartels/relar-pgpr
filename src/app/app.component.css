@@ -1,0 +1,8 @@
+::ng-deep.mat-menu-panel {
+    max-width: none !important;
+    background-color: transparent !important;
+}
+
+::ng-deep.mat-elevation-z4{
+    box-shadow: none !important;
+}

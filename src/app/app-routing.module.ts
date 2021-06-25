@@ -10,6 +10,11 @@ import { UserComponent } from './pages/user/user.component';
 import { ProgramaComponent } from './pages/programa/programa.component';
 import { FaqComponent } from './pages/faq/faq.component';
 import { NoticiasComponent } from './pages/noticias/noticias.component';
+//import { ConferencistasComponent} from './pages/conferencistas/conferencistas.component';
+//import { ConferencistaComponent } from './pages/conferencista/conferencista.component';
+//import { SesionesDeTrabajoComponent } from './pages/sesiones-de-trabajo/sesiones-de-trabajo.component';
+import { SesionDeTrabajoComponent } from './pages/sesion-de-trabajo/sesion-de-trabajo.component';
+import { SESION_ROUTES } from './pages/sesion-de-trabajo/sesion-routes';
 
 /*PAGO*/
 import { RegistrarseComponent } from './pages/pago/pago-1/registrarse.component';
@@ -28,6 +33,8 @@ const routes: Routes = [
   { path: 'programa', component: ProgramaComponent },
   { path: 'faq', component: FaqComponent },
   { path: 'noticias', component: NoticiasComponent },
+  { path: "sesiones-de-trabajo/:id", component: SesionDeTrabajoComponent, children: SESION_ROUTES },
+  /*PAGO*/
   { path: 'registrarse-1', component: RegistrarseComponent },
   { path: 'registrarse-2', component: PagoComponent, ...canActivate(redirectUnauthorizedToLogin) },
   { path: 'registrarse-3', component: PostularTrabajoComponent, ...canActivate(redirectUnauthorizedToLogin) },

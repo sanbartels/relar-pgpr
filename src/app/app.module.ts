@@ -15,6 +15,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatSelectModule } from '@angular/material/select';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatMenuModule } from '@angular/material/menu';
 
 /* FIREBASE */
 import { AngularFireModule } from '@angular/fire';
@@ -52,6 +53,10 @@ import { UsernamePipe } from './pipes/username.pipe';
 import { ProgramaComponent } from './pages/programa/programa.component';
 import { FaqComponent } from './pages/faq/faq.component';
 import { NoticiasComponent } from './pages/noticias/noticias.component';
+import { ConferencistasComponent } from './pages/conferencistas/conferencistas.component';
+import { ConferencistaComponent } from './pages/conferencista/conferencista.component';
+import { SesionesDeTrabajoComponent } from './pages/sesiones-de-trabajo/sesiones-de-trabajo.component';
+import { SesionDeTrabajoComponent } from './pages/sesion-de-trabajo/sesion-de-trabajo.component';
 
 @NgModule({
   declarations: [
@@ -74,7 +79,11 @@ import { NoticiasComponent } from './pages/noticias/noticias.component';
     UsernamePipe,
     ProgramaComponent,
     FaqComponent,
-    NoticiasComponent
+    NoticiasComponent,
+    ConferencistasComponent,
+    ConferencistaComponent,
+    SesionesDeTrabajoComponent,
+    SesionDeTrabajoComponent
   ],
   imports: [
     BrowserModule,
@@ -90,6 +99,7 @@ import { NoticiasComponent } from './pages/noticias/noticias.component';
     MatRadioModule,
     MatSelectModule,
     MatSnackBarModule,
+    MatMenuModule,
     NgxPayPalModule,
     AngularFireModule,
     AngularFireStorageModule,

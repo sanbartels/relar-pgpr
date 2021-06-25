@@ -1,0 +1,21 @@
+<section class="py-5">
+    <div class="d-none d-sm-block letras-container my-5">
+        <div class="bg-texto-5"></div>
+    </div>
+    <div class="p-5" [routerLink]="['/sesiones-de-trabajo/'+id]">
+        <h2>SESIÓN<br>{{sesion.nombre}}</h2>
+        <h3 class="text-white">{{sesion.horario}}</h3>
+    </div>
+    <nav class="my-5">
+        <ul class="d-md-flex justify-content-center m-0">
+            <li class="border-2px" [matMenuTriggerFor]="menu">Charlas Magistrales</li>
+            <li [routerLink]="['/sesiones-de-trabajo/'+id+'/poster-talk']">Póster Talk</li>
+            <li [routerLink]="['/sesiones-de-trabajo/'+id+'/dialogos-de-investigacion']" class="border-2px">Diálogos de investigación</li>
+        </ul>
+        
+        <mat-menu #menu="matMenu">
+            <li [routerLink]="['/sesiones-de-trabajo/'+id+'/charlas-magistrales/'+cid]" *ngFor="let cid of this.sesion.conferencistas">{{ this.data.conferencistas[cid].nombre }}</li>
+        </mat-menu>
+    </nav>
+    <router-outlet></router-outlet>
+</section>

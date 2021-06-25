@@ -3,8 +3,6 @@ import { AngularFireAuth } from '@angular/fire/auth';
 import { HttpClient } from '@angular/common/http';
 import { UserDB, Trabajo } from '../models/user.model';
 import { map, delay } from 'rxjs/operators';
-import { Observable } from 'rxjs';
-import firebase from 'firebase/app';
 
 @Injectable({
   providedIn: 'root'
@@ -13,7 +11,7 @@ export class AuthService {
 
   public user = new UserDB();
   private trabajo = new Trabajo();
-  private url = 'https://relar-pgpr-default-rtdb.firebaseio.com'
+  private url = 'https://relar-pgpr-default-rtdb.firebaseio.com';
 
   constructor( 
     private auth: AngularFireAuth,

@@ -13,17 +13,21 @@ nav a{
     font-size: 14px;
     text-decoration: none;
     color: rgb(77, 77, 77);
-    font-family: 'Staatliches';
+    font-family: 'Seravek Medium', sans-serif;
+    text-transform: uppercase;
     margin: 0.6rem 0rem;
 }
 
-nav i{
-    font-size: 20px;
-}
+nav a i{font-size: 20px;}
 
 nav img{
     width: 30px;
     border-radius: 50%;
+}
+
+button{
+    font-family: 'Seravek', sans-serif;
+    font-size: 16px;
 }
 
 nav a:hover{

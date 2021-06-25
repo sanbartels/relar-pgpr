@@ -1,8 +1,12 @@
-export class Trabajo{
-    name: string;
-    id: string;
-    photo: string;
+export class Conferencista{
     bio: string;
+    conferencia: string;
+    date: number;
+    id: string;
+    nombre: string;
+    pais: string;
+    texto?: string;
+    url: string;
 
     constructor(){
     }

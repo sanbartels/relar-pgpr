@@ -1,4 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+
+/*
+font-family: 'Seravek Medium', sans-serif;
+font-family: 'Seravek', sans-serif;
+font-family: 'Seravek ExtraLight', sans-serif;
+font-family: 'Seravek Light', sans-serif;
+*/
+
 body, html{
     height: 100%;
     font-size: 1rem;
@@ -6,9 +14,26 @@ body, html{
 }
 
 body{
-    background-image: url("assets/img/fondo-2.jpg");
+    background-image: url("/assets/img/fondo-2.jpg");
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+/* MEDIA QUERYS */
+
+/* Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) {}
+
+/* Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) {}
+
+/* Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) {}
+
+/* X-Large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {}
+
+/* XX-Large devices (larger desktops, 1400px and up)*/
+@media (min-width: 1400px) {}
