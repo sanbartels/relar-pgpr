@@ -1,8 +1,10 @@
 <section class="py-5">
-    <div class="d-none d-sm-block letras-container my-5">
-        <div class="bg-texto-5"></div>
-    </div>
-    <div class="p-5" [routerLink]="['/sesiones-de-trabajo/'+id]">
+    <!-- 
+        <div class="d-none d-sm-block letras-container my-5">
+            <div class="bg-texto-5"></div>
+        </div>
+    -->
+    <div class="p-5 mt-4" [routerLink]="['/sesiones-de-trabajo/'+id]">
         <h2>SESIÓN<br>{{sesion.nombre}}</h2>
         <h3 class="text-white">{{sesion.horario}}</h3>
     </div>

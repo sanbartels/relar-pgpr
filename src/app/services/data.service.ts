@@ -8,56 +8,56 @@ export class DataService {
   data={
     "microbioma-agrícola": {
       "conferencistas": ["kornelia-smalla", "jorge-mazza-rodrigues"],
-      "coordinadores": "Coordinadores: Dra. Carolina Leoni y Dr. Rodrigo Mendes",
+      "coordinadores": "Coordinadores: Dra. Carolina Leoni (Uruguay) y Dr. Rodrigo Mendes (Brasil)",
       "horario": "Lunes 4 de octubre",
       "nombre": "El microbioma agrícola",
       "texto": "Próximamente más información"
     },
     "promoción-indirecta-del-crecimiento-vegetal": {
       "conferencistas": ["jeroen-wagemans", "alexandra-stoll"],
-      "coordinadores": "Coordinadores: Dr. Federico Rivas y Dr. Claudio Valverde",
+      "coordinadores": "Coordinadores: Dr. Federico Rivas (Uruguay) y Dr. Claudio Valverde (Argentina)",
       "horario": "Martes 5 de octubre",
       "nombre": "Promoción indirecta del crecimiento vegetal",
       "texto": "Una fracción sustantiva de la diversidad microbiana está íntimamente asociada a distintos órganos o compartimentos vegetales y contribuyen significativamente al crecimiento saludable de la planta por medio de mecanismos que reducen el impacto negativo de fitopatógenos. Entre estos mecanismos, se destacan la antibiosis, la inducción de la resistencia sistémica y la competencia por nutrientes y por nicho. Identificar los actores responsables y comprender las bases moleculares de estos mecanismos permite avanzar en el entendimiento de la evolución del holobionte planta, a la vez que genera herramientas para el desarrollo de estrategias biotecnológicas para el mejoramiento de la producción agronómica. En esta sesión se ilustrarán estos conceptos con contribuciones sobre la potencialidad de los bacteriófagos para el control de infecciones en repollo por parte de Xanthomonas campestris (a cargo del Dr. Jeroen Wagemans, de KU-Leuven, Bélgica), y sobre el impacto a nivel severidad de infección por parte de Botrytis sp. y la respuesta transcriptómica del tomate inoculado con microorganismos benéficos: Bacillus sp. individualmente o en combinación con Trichoderma sp. (a cargo de la Dra. Alexandra Stoll, de CEAZA, Chile)."
     },
     "promoción-directa-del-crecimiento-vegetal": {
       "conferencistas": ["euan-james", "agustin-grimoldi"],
-      "coordinadores": "Coordinadoras: Dra. Fabiana Pezzani y Dra. Verónica Reis",
+      "coordinadores": "Coordinadoras: Dra. Fabiana Pezzani (Uruguay) y Dra. Verónica Reis (Brasil)",
       "horario": "Martes 5 de octubre",
       "nombre": "Promoción directa del crecimiento vegetal",
       "texto": "La microbiota asociada al sistema suelo-planta ha recibido gran atención surgiendo el concepto “holobionte planta”. El mismo define a la planta como un macro-ser compuesto por todos los organismos que viven sobre o en la misma, incluyendo las microbiotas. Dichas microbiotas están compuestas por complejas comunidades microbianas que juegan un rol fundamental en la protección contra estreses bióticos y abióticos, así como en la promoción del crecimiento vegetal (PCV), mediante diferentes mecanismos incluyendo la bioestimulación o la biodisponibilización de nutrientes. El objetivo de esta sesión es intercambiar sobre el estado del arte de la PCV directa desde diferentes miradas. En ese sentido el Dr Agustín Grimoldi, expondrá sobre el rol de los hongos micorrizógenos en su interacción con gramíneas y leguminosas en sistemas con diferentes disponibilidad de fósforo. Asimismo, el Dr Euan James expondrá sobre la relevancia de la fijación biológica del nitrógeno por cepas de rizobios en cultivos de leguminosas, en suelos sin historia. La comprensión del papel de la microbiota en el holobionte planta acaba de comenzar, siendo esperable y fundamental que los conocimientos sobre la diversidad y actividad de la misma contribuyan al entendimiento de la PCV y su aplicación biotecnológica."
     },
     "evolución-y-diversidad-de-mpvc": {
       "conferencistas": ["laila-pamela-martinez", "massimiliano-cardinale"],
-      "coordinadores": "Coordinadores: Dra. Ana Fernandez y Dr. Mariano Pistorio",
+      "coordinadores": "Coordinadores: Dra. Ana Fernandez (Uruguay) y Dr. Mariano Pistorio (Argentina)",
       "horario": "Miércoles 6 de octubre",
       "nombre": "Evolución y diversidad de MPVC",
       "texto": "Las plantas son sistemas altamente colonizados por microorganismos, cuya presencia determina el crecimiento y la sanidad de los cultivos. Debido al carácter ancestral de las asociaciones microbioma-planta se han observado distintos niveles de sofisticación en estas asociaciones, que incluyen tanto coevolución entre organismos como interacción de comunidades estructuradas complejas con el hospedero. Los cambios en la composición de la comunidad microbiana asociada pueden tener efectos positivos en la capacidad de adaptación a condiciones ambientales cambiantes o extremas y por tanto en la productividad de las plantas. Así, hospedadores y microbiomas constituyen sistemas biológicos complejos y dinámicos, en los cuales el mutualismo, por un lado, y el parasitismo y la patogenicidad por otro, están presentes como parte de un delgado equilibrio modulado fuertemente por el entorno y por las interacciones entre la comunidad microbiana asociada. La sesión Evolución y diversidad de Microorganismos Promotores del Crecimiento Vegetal (MPCV) está orientada a investigaciones relacionadas con la evolución y adaptación de los microorganismos al entorno y a su relación con las plantas. Además, se enfoca en la investigación de la interfaz microorganismo-hospedador, tanto las relaciones patógenas, parasíticas, como los mutualistas, así como también los estudios del microbioma."
     },
     "el-holobionte-planta": {
       "conferencistas": ["pablo-hardoim", "emanuel-de-souza"],
-      "coordinadores": "Coordinadores: Dra. Elena Fabiano y Dr. Antonio Lagares",
+      "coordinadores": "Coordinadores: Dra. Elena Fabiano (Uruguay) y Dr. Antonio Lagares (Argentina)",
       "horario": "Miércoles 6 de octubre",
       "nombre": "El Holobionte Planta",
       "texto": "Próximamente más información"
     },
     "conservación-y-manejo-microbiano": {
       "conferencistas": ["mariana-sanchez", "alda-rodriguez"],
-      "coordinadores": "Coordinadores: Dra. Natalia Bajsa y Dr. Luis Wall",
+      "coordinadores": "Coordinadores: Dra. Natalia Bajsa (Uruguay) y Dr. Luis Wall (Argentina)",
       "horario": "Jueves 7 de octubre",
       "nombre": "Conservación y manejo microbiano en sistemas naturales y agroecosistemas",
       "texto": "Próximamente más información"
     },
     "del-laboratorio-al-campo": {
       "conferencistas": ["maria-caridad-napoles", "paula-aguilera"],
-      "coordinadores": "Coordinadoras: Dra. Nora Altier y Dra. Mariángela Hungría",
+      "coordinadores": "Coordinadoras: Dra. Nora Altier (Uruguay) y Dra. Mariángela Hungría (Brasil)",
       "horario": "Jueves 7 de octubre",
       "nombre": "Del laboratorio al campo",
       "texto": "Próximamente más información"
     },
     "legislación-sobre-productos-microbianos": {
       "conferencistas": ["romina-almesia", "jerri-zilli"],
-      "coordinadores": "Coordinadoras: Dra. Fabiana Pezzani y Dra. Verónica Reis",
+      "coordinadores": "Coordinadores: María Maryan (Uruguay) y Ing. Perticari (Argentina)",
       "horario": "Viernes 8 de octubre",
       "nombre": "Legislación sobre registro y empleo de productos microbianos",
       "texto": "Existen diferentes grados de avance en las normas sobre productos biológicos a nivel mundial. En Latinoamérica la industria de los biológicos se muestra muy activa y rica en iniciativas en casi todos los países y muchos de ellos cuentan con normativas para inoculantes formulados con bacterias del género rizobio y con otros PGPR con mecanismos de promoción directa sobre el crecimiento vegetal así como también para productos formulados con agentes de control biológico. En los últimos años han surgido nuevos productos, generalmente formulados con consorcios microbianos con diferentes funcionalidades que no se ajustan a las normas existentes. Esto ha llevado a que se utilicen una amplia variedad de términos para identificarlos (inoculantes, biofertilizantes, bioestimulantes, elicitores, bioinsumos, productos biológicos, etc.) generando confusión en su identificación. Es necesario contar con definiciones claras que nos permitan clasificar cada producto de acuerdo a su composición y efecto benéfico para poder contar con marcos normativos apropiados para su evaluación. Se deben concretar tecnologías innovadoras para la agricultura basadas en el conocimiento científico, y para ello es necesario un fuerte compromiso de las Empresas, la Academia y el Estado, acompañado de políticas de investigación, desarrollo y extensión respecto al uso de productos biológicos."
