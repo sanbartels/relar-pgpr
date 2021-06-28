@@ -1,0 +1,21 @@
+<section class="m-5 p-5">
+    <table class="table table-dark table-hover">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Email</th>
+            <th scope="col">Categoría</th>
+          </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of usersArray; let i = index">
+              <th scope="row">{{i}}</th>
+              <td>{{ user.displayName }}</td>
+              <td>{{ user.email }}</td>
+              <td>{{ categorias[user.categoria] }}</td>
+            </tr>
+          </tbody>
+    </table>
+
+</section>

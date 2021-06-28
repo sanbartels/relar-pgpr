@@ -16,6 +16,9 @@ import { NoticiasComponent } from './pages/noticias/noticias.component';
 import { SesionDeTrabajoComponent } from './pages/sesion-de-trabajo/sesion-de-trabajo.component';
 import { SESION_ROUTES } from './pages/sesion-de-trabajo/sesion-routes';
 
+/* ADMIN */
+import { AdminComponent } from './pages/admin/admin.component';
+
 /*PAGO*/
 import { RegistrarseComponent } from './pages/pago/pago-1/registrarse.component';
 import { PagoComponent } from './pages/pago/pago-2/pago.component';
@@ -34,6 +37,8 @@ const routes: Routes = [
   { path: 'faq', component: FaqComponent },
   { path: 'noticias', component: NoticiasComponent },
   { path: "sesiones-de-trabajo/:id", component: SesionDeTrabajoComponent, children: SESION_ROUTES },
+  /*ADMIN*/
+  { path: "admin", component: AdminComponent, ...canActivate(redirectUnauthorizedToLogin) },
   /*PAGO*/
   { path: 'registrarse-1', component: RegistrarseComponent },
   { path: 'registrarse-2', component: PagoComponent, ...canActivate(redirectUnauthorizedToLogin) },

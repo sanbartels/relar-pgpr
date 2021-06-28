@@ -57,6 +57,7 @@ import { ConferencistasComponent } from './pages/conferencistas/conferencistas.c
 import { ConferencistaComponent } from './pages/conferencista/conferencista.component';
 import { SesionesDeTrabajoComponent } from './pages/sesiones-de-trabajo/sesiones-de-trabajo.component';
 import { SesionDeTrabajoComponent } from './pages/sesion-de-trabajo/sesion-de-trabajo.component';
+import { AdminComponent } from './pages/admin/admin.component';
 
 @NgModule({
   declarations: [
@@ -83,7 +84,8 @@ import { SesionDeTrabajoComponent } from './pages/sesion-de-trabajo/sesion-de-tr
     ConferencistasComponent,
     ConferencistaComponent,
     SesionesDeTrabajoComponent,
-    SesionDeTrabajoComponent
+    SesionDeTrabajoComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,
