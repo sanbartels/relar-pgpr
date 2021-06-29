@@ -7,6 +7,11 @@ font-family: 'Seravek ExtraLight', sans-serif;
 font-family: 'Seravek Light', sans-serif;
 */
 
+@font-face {
+  font-family: 'MacType';
+  src: url('/assets/fonts/mactype.ttf');
+}
+
 body, html{
     height: 100%;
     font-size: 1rem;
@@ -21,7 +26,7 @@ body{
     background-size: cover;
 }
 
-/* MEDIA QUERYS */
+/* MEDIA QUERIES */
 
 /* Small devices (landscape phones, 576px and up)*/
 @media (min-width: 576px) {}
