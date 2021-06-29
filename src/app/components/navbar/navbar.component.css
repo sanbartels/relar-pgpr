@@ -1,49 +1,43 @@
 /* NAV */
-.nav-lg{
+nav{
     background-color: white;
-    box-shadow: #bbb 0 0 10px;
+    box-shadow: #666 0 0 10px;
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
-    border-bottom: #16f64b solid 5px;
+    font-family: 'Seravek', sans-serif;
 }
 
 nav a{
-    font-size: 14px;
     text-decoration: none;
-    color: rgb(77, 77, 77);
-    font-family: 'Seravek Medium', sans-serif;
-    text-transform: uppercase;
-    margin: 0.6rem 0rem;
-}
-
-nav a i{font-size: 20px;}
-
-nav img{
-    width: 30px;
-    border-radius: 50%;
-}
-
-button{
-    font-family: 'Seravek', sans-serif;
-    font-size: 16px;
-}
-
-nav a:hover{
     color: black;
+}
+
+nav li{
+    font-size: 14px;
+    list-style: none;
+    color: black;
+    font-family: 'Seravek', sans-serif;
+    text-transform: uppercase;
+    padding: 5px 20px;
+    margin: 5px 0;
+    cursor: pointer;
+}
+
+nav, ul{ background-color: #16f64b !important; margin:0; padding:0; }
+nav li i{ font-size: 20px; }
+nav img{ width: 30px; border-radius: 50%; }
+.d-flex-center{ display: flex; align-items: center; }
+.border-left{ border-left: solid black 2px; }
+.border-right{ border-right: solid black 2px; }
+
+
+/*
+nav li:hover{
     animation-name: grow-up;
     animation-duration: 0.2s;
     animation-fill-mode: forwards
-}
-
-.d-flex-center{
-    display: flex;
-    align-items: center;
-}
-
-.margin-x{
-    margin: 0 1.2rem;
 }
 
 @keyframes grow-up {
@@ -51,3 +45,4 @@ nav a:hover{
         transform: scale(1.1);
     }
 }
+*/

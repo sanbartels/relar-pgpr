@@ -57,7 +57,7 @@ export class DataService {
     },
     "legislación-sobre-productos-microbianos": {
       "conferencistas": ["romina-almesia", "jerri-zilli"],
-      "coordinadores": "Coordinadores: María Maryan (Uruguay) y Ing. Perticari (Argentina)",
+      "coordinadores": "Coordinadores: Lic. Bioq. María Maryan (Uruguay) y Ing. Perticari (Argentina)",
       "horario": "Viernes 8 de octubre",
       "nombre": "Legislación sobre registro y empleo de productos microbianos",
       "texto": "Existen diferentes grados de avance en las normas sobre productos biológicos a nivel mundial. En Latinoamérica la industria de los biológicos se muestra muy activa y rica en iniciativas en casi todos los países y muchos de ellos cuentan con normativas para inoculantes formulados con bacterias del género rizobio y con otros PGPR con mecanismos de promoción directa sobre el crecimiento vegetal así como también para productos formulados con agentes de control biológico. En los últimos años han surgido nuevos productos, generalmente formulados con consorcios microbianos con diferentes funcionalidades que no se ajustan a las normas existentes. Esto ha llevado a que se utilicen una amplia variedad de términos para identificarlos (inoculantes, biofertilizantes, bioestimulantes, elicitores, bioinsumos, productos biológicos, etc.) generando confusión en su identificación. Es necesario contar con definiciones claras que nos permitan clasificar cada producto de acuerdo a su composición y efecto benéfico para poder contar con marcos normativos apropiados para su evaluación. Se deben concretar tecnologías innovadoras para la agricultura basadas en el conocimiento científico, y para ello es necesario un fuerte compromiso de las Empresas, la Academia y el Estado, acompañado de políticas de investigación, desarrollo y extensión respecto al uso de productos biológicos."
@@ -94,7 +94,7 @@ export class DataService {
       "titulo": "Phage biocontrol against Xanthomonas infections in cabbage"
     },
     "alexandra-stoll":{
-      "bio": "Bióloga de formación (2001), de la Universidad Técnica de Dresden, Alemania. En la misma institución realicé mi doctorado (2005). Desde 2008 soy investigadora titular del CEAZA y desde 2012 lidero el laboratorio de Microbiología Aplicada. Este laboratorio incorpora investigación básica y aplicada enfocada en la identificación y caracterización de microorganismos y comunidades asociadas a la raíz vegetal, mecanismos involucrados en la interacción planta-bacteria y aplicaciones a la agricultura en zonas áridas.",
+      "bio": "La Dra. Alexandra Stoll obtuvo su título en Biología (2001) en la Universidad Técnica de Dresden, Alemania, donde también realizó su doctorado (2005). Desde 2008 se desempeña como investigadora titular del Centro de Estudios Avanzados en Zonas Áridas (CEAZA, Chile) y desde 2012 lidera el Laboratorio de Microbiología Aplicada. Sus líneas principales de investigación se centran en la identificación y caracterización de microorganismos y comunidades asociadas a la raíz vegetal, los mecanismos involucrados en la interacción planta-bacteria, y aplicaciones para la agricultura en zonas áridas. En esta línea emplean un enfoque holístico de ecología vegetal y microbiana, incluida su interacción, en ecosistemas naturales y agrícolas de zonas áridas. Además, promueve la divulgación a la sociedad y socios empresariales (transferencia tecnológica), y realiza capacitaciones para agricultores regionales.",
       "horario": "10:45",
       "nombre": "Dra. Alexandra Stoll",
       "pais": "Chile",

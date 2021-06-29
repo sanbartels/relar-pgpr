@@ -1,13 +1,16 @@
 <section class="py-5">
-    <!-- 
-        <div class="d-none d-sm-block letras-container my-5">
-            <div class="bg-texto-5"></div>
-        </div>
-    -->
-    <div class="p-5 mt-4" [routerLink]="['/sesiones-de-trabajo/'+id]">
+    <!-- TEXTO RELAR-PGPR -->
+    <div class="d-none d-sm-block letras-container my-5">
+        <div class="bg-texto-5"></div>
+    </div>
+
+    <!-- TITULO -->
+    <div class="m-5 pt-3" [routerLink]="['/sesiones-de-trabajo/'+id]">
         <h2>SESIÓN<br>{{sesion.nombre}}</h2>
         <h3 class="text-white">{{sesion.horario}}</h3>
     </div>
+
+    <!-- MENU -->
     <nav class="my-5">
         <ul class="d-md-flex justify-content-center m-0">
             <li class="border-2px" [matMenuTriggerFor]="menu">Charlas Magistrales</li>
