@@ -9,7 +9,12 @@ font-family: 'Seravek Light', sans-serif;
 
 @font-face {
   font-family: 'MacType';
-  src: url('/assets/fonts/mactype.ttf');
+  src: url(/assets/fonts/mactype.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'Roboto';
+  src: url(/assets/fonts/roboto/Roboto-Regular.ttf) format('truetype');
 }
 
 body, html{

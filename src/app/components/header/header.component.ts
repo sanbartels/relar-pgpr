@@ -15,8 +15,8 @@ export class HeaderComponent implements OnInit {
     private router: Router
   ){
     router.events.forEach(
-      ()=> this.show = this.router.isActive('sesiones-de-trabajo', false)
-    )
+      () => this.show = this.router.isActive('sesiones-de-trabajo', false)
+    );
   }
 
   ngOnInit(): void {
