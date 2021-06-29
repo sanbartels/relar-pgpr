@@ -1,0 +1,44 @@
+
+.puntero{ cursor: pointer; }
+.w-80{ width: 80%; }
+
+/* TEXTOS LOCOS */
+.letras-container{
+  z-index: 2;
+  width: 100%;
+  overflow: hidden;
+}
+
+.bg-0{
+  background-image: url("/assets/img/fondo-0.jpg");
+  background-size: cover;
+}
+
+.bg-texto-2{
+  min-height: 40px;
+  width: 1000%;
+  background-image: url("/assets/img/texto-2.png");
+  background-repeat: repeat;
+  animation: texto-loco-2 80s linear infinite;
+}
+
+/* MEDIA QUERIES */
+/* Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) {
+  .width-lg-95{
+    margin-left: 4%;
+    width: 96%;
+  }
+}
+
+/* Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) {}
+
+/* Large devices (desktops, 992px and up)*/
+@media (min-width: 992px) {}
+
+/* X-Large devices (large desktops, 1200px and up)*/
+@media (min-width: 1200px) {}
+
+/* XX-Large devices (larger desktops, 1400px and up)*/
+@media (min-width: 1400px) {}

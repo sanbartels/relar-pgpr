@@ -1,20 +1,3 @@
-@keyframes texto-loco{
-	0% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0 50%;
-	}
-}
-
-@keyframes texto-loco-2{
-	0% {
-		background-position: 0 50%;
-	}
-	100% {
-		background-position: 100% 50%;
-	}
-}
 
 /* MEDIA QUERIES */
 /* Small devices (landscape phones, 576px and up)*/
@@ -24,7 +7,12 @@
 @media (min-width: 768px) {}
 
 /* Large devices (desktops, 992px and up)*/
-@media (min-width: 992px) {}
+@media (min-width: 992px) {
+  .width-lg-90{
+    width: 90%;
+    margin: auto;
+  }
+}
 
 /* X-Large devices (large desktops, 1200px and up)*/
 @media (min-width: 1200px) {}

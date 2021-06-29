@@ -1,20 +1,4 @@
-@keyframes texto-loco{
-	0% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0 50%;
-	}
-}
-
-@keyframes texto-loco-2{
-	0% {
-		background-position: 0 50%;
-	}
-	100% {
-		background-position: 100% 50%;
-	}
-}
+.puntero{ cursor: pointer; }
 
 /* MEDIA QUERIES */
 /* Small devices (landscape phones, 576px and up)*/

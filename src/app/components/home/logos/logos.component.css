@@ -1,20 +1,8 @@
-@keyframes texto-loco{
-	0% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0 50%;
-	}
-}
 
-@keyframes texto-loco-2{
-	0% {
-		background-position: 0 50%;
-	}
-	100% {
-		background-position: 100% 50%;
-	}
-}
+/* LOGOS WIDTH */
+.logos-1{ width: 60% }
+.logos-2{ width: 98%; display: block; margin-left: auto; }
+.logos-3{ width: 70% }
 
 /* MEDIA QUERIES */
 /* Small devices (landscape phones, 576px and up)*/

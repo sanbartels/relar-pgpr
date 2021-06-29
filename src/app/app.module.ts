@@ -33,6 +33,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { PostularTrabajo2Component } from './pages/postular-trabajo2/postular-trabajo2.component';
 import { LoginComponent } from './pages/login/login.component';
 import { UserComponent } from './pages/user/user.component';
+
 /* PAGO */
 import { RegistrarseComponent } from './pages/pago/pago-1/registrarse.component';
 import { PagoComponent } from './pages/pago/pago-2/pago.component';
@@ -58,6 +59,15 @@ import { ConferencistaComponent } from './pages/conferencista/conferencista.comp
 import { SesionesDeTrabajoComponent } from './pages/sesiones-de-trabajo/sesiones-de-trabajo.component';
 import { SesionDeTrabajoComponent } from './pages/sesion-de-trabajo/sesion-de-trabajo.component';
 import { AdminComponent } from './pages/admin/admin.component';
+import { LogosComponent } from './components/home/logos/logos.component';
+import { ComiteComponent } from './components/home/comite/comite.component';
+import { AcercaComponent } from './components/home/acerca/acerca.component';
+import { PosterComponent } from './components/home/poster/poster.component';
+import { MesasComponent } from './components/home/mesas/mesas.component';
+import { InscripcionesComponent } from './components/home/inscripciones/inscripciones.component';
+import { FechasImportantesComponent } from './components/home/fechas-importantes/fechas-importantes.component';
+import { NoticiasHomeComponent } from './components/home/noticias/noticias.component';
+import { IntroduccionComponent } from './components/home/introduccion/introduccion.component';
 
 @NgModule({
   declarations: [
@@ -85,7 +95,16 @@ import { AdminComponent } from './pages/admin/admin.component';
     ConferencistaComponent,
     SesionesDeTrabajoComponent,
     SesionDeTrabajoComponent,
-    AdminComponent
+    AdminComponent,
+    LogosComponent,
+    ComiteComponent,
+    AcercaComponent,
+    PosterComponent,
+    MesasComponent,
+    InscripcionesComponent,
+    FechasImportantesComponent,
+    NoticiasHomeComponent,
+    IntroduccionComponent
   ],
   imports: [
     BrowserModule,
