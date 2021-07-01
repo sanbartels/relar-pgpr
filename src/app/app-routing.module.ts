@@ -10,11 +10,10 @@ import { UserComponent } from './pages/user/user.component';
 import { ProgramaComponent } from './pages/programa/programa.component';
 import { FaqComponent } from './pages/faq/faq.component';
 import { NoticiasComponent } from './pages/noticias/noticias.component';
-//import { ConferencistasComponent} from './pages/conferencistas/conferencistas.component';
-//import { ConferencistaComponent } from './pages/conferencista/conferencista.component';
-//import { SesionesDeTrabajoComponent } from './pages/sesiones-de-trabajo/sesiones-de-trabajo.component';
 import { SesionDeTrabajoComponent } from './pages/sesion-de-trabajo/sesion-de-trabajo.component';
 import { SESION_ROUTES } from './pages/sesion-de-trabajo/sesion-routes';
+import { MesasRedondasComponent } from './pages/mesas-redondas/mesas-redondas.component';
+import { MESAS_ROUTES } from './pages/mesas-redondas/mesas-routes';
 
 /* ADMIN */
 import { AdminComponent } from './pages/admin/admin.component';
@@ -37,6 +36,7 @@ const routes: Routes = [
   { path: 'faq', component: FaqComponent },
   { path: 'noticias', component: NoticiasComponent },
   { path: "sesiones-de-trabajo/:id", component: SesionDeTrabajoComponent, children: SESION_ROUTES },
+  { path: "mesas-redondas/:id", component: MesasRedondasComponent, children: MESAS_ROUTES },
   /*ADMIN*/
   { path: "admin", component: AdminComponent, ...canActivate(redirectUnauthorizedToLogin) },
   /*PAGO*/

@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class DataService {
 
-  data={
+  sesiones={
     "microbioma-agrícola": {
       "conferencistas": ["kornelia-smalla", "jorge-mazza-rodrigues"],
       "coordinadores": "Coordinadores: Dra. Carolina Leoni (Uruguay) y Dr. Rodrigo Mendes (Brasil)",
@@ -181,17 +181,17 @@ export class DataService {
       "nombre": "Dra. C. María Caridad Nápoles",
       "pais": "Cuba",
       "sid": "del-laboratorio-al-campo",
-      "texto": "Resumen: Resulta cada vez más clara la necesidad de garantizar alimentos para una población creciente, conservando la fertilidad de los suelos y respetando el medio ambiente. Si existía alguna duda, la crisis impuesta por la pandemia que hoy vivimos, ha reforzado esta realidad. Este milenio ha reconocido de forma creciente el papel que juegan los procesos biológicos en el funcionamiento de la biosfera, pero en particular del suelo y de la producción agrícola. El uso de productos compuestos por microorganismos benéficos, ya sean fitoestimulantes, biofertilizantes o agentes de biocontrol, constituye una estrategia tecnológica cada vez más aceptada en las prácticas agrícolas sustentables, con lo cual cada vez son más los centros de investigación y grandes compañías que dedican recursos económicos y humanos a la búsqueda de nuevos bioproductos. En esta charla, trataremos de ejemplificar brevemente, utilizando la experiencia de Cuba, cuál ha sido el camino recorrido para convertir una cepa aislada de entre millones que se asocian a un cultivo, en un producto que regresa al campo para potenciar sus bondades y colaborar con el crecimiento, desarrollo y rendimiento de cultivos de interés.",
+      "texto": "Resulta cada vez más clara la necesidad de garantizar alimentos para una población creciente, conservando la fertilidad de los suelos y respetando el medio ambiente. Si existía alguna duda, la crisis impuesta por la pandemia que hoy vivimos, ha reforzado esta realidad. Este milenio ha reconocido de forma creciente el papel que juegan los procesos biológicos en el funcionamiento de la biosfera, pero en particular del suelo y de la producción agrícola. El uso de productos compuestos por microorganismos benéficos, ya sean fitoestimulantes, biofertilizantes o agentes de biocontrol, constituye una estrategia tecnológica cada vez más aceptada en las prácticas agrícolas sustentables, con lo cual cada vez son más los centros de investigación y grandes compañías que dedican recursos económicos y humanos a la búsqueda de nuevos bioproductos. En esta charla, trataremos de ejemplificar brevemente, utilizando la experiencia de Cuba, cuál ha sido el camino recorrido para convertir una cepa aislada de entre millones que se asocian a un cultivo, en un producto que regresa al campo para potenciar sus bondades y colaborar con el crecimiento, desarrollo y rendimiento de cultivos de interés.",
       "titulo": "Necesidad de una agricultura autosustentable, generación de productos microbianos desde el laboratorio hasta el campo. Caso Cuba."
     },
     "paula-aguilera":{
-      "bio": "",
+      "bio": "Paula Aguilera. Núcelo Científico Tecnológico (Bioren), Universidad de La Frontera, Temuco-Chile.",
       "horario": "15:45",
       "nombre": "Dra. Paula Aguilera",
       "pais": "Chile",
       "sid": "del-laboratorio-al-campo",
-      "texto": "",
-      "titulo": "Próximamente más información"
+      "texto": "La StartUp Myconativa es una empresa impulsada desde la academia que genera bioproductos a partir de la investigación y a la vez entrega servicios tecnológicos e instrucción. Los resultados de una tesis de doctorado permitieron transformar el know how en tecnología, esto fue posible debido al cofinanciamiento de instrumentos nacionales, al patrocinio de la Universidad de la Frontera y al campo experimental de la empresa. Como empresa buscamos incorporar tecnologías que otorguen un manejo productivo sustentable a la agricultura, con énfasis en el valor nutricional y funcional de productos que proporciona la fruticultura, horticultura, enología. Al mismo tiempo, favorecer la conservación de los ecosistemas mediante la restauración ecológica y la biorremediación. Los bioproductos corresponden a biofertilizantes, enraizantes, fortificantes, bioestimulantes que se pueden aplicar en plantas de hortalizas, frutales, ornamentales en diferentes etapas del cultivo, así como en la biorremediación y conservación de ecosistemas. La base de los bioproductos generados hasta ahora por nuestra empresa, está constituida por hongos benéficos nativos extraídos desde suelos chilenos que al colonizar la raíz se denominan micorrizas. Los hongos formadores de micorrizas aportan a la fertilización bioquímica. MYCONATIVA® es el primer bioproducto inoculante desarrollado en nuestra empresa y ha sido diseñado en base a hongos nativos micorrícicos arbusculares aislados desde la región de La Araucanía para su uso como vigorizador de plantas agrícolas producidas en vivero o almácigo. Es un biofortificante con micorrizas que favorece la conducción de agua, nutrientes, estimula la germinación, emergencia, enraizamiento, floración, producción de biomasa y producto final. Pantas inoculadas con MYCONATIVA® toleran mayor estrés ambiental y resistencia al déficit hídrico. Las micorrizas corresponden a una simbiosis entre hongos benéficos y las raíces de las plantas, el hongo incrementa la capacidad de absorción de agua, macro y micronutrientes, aumenta la resistencia de las plantas hacia las enfermedades, científicamente se ha evidenciado que beneficia a plantas que viven en estrés hídrico, salinidad, presencia de contaminantes, a cambio la planta le entrega al hongo los productos carbonados de la fotosíntesis para que ellos puedan vivir. Se presentarán casos de Estudio de Campo.",
+      "titulo": "Experiencia Myconativa: Desde la Ciencia hacia la Innovación"
     },
     "romina-almesia":{
       "bio": "Magíster Cs en área de ecología molecular microbiana e Ingeniera en Biotecnología molecular de la Universidad de Chile. Experiencia en empresas de bioinsumos agrícolas, gestionando y dirigiendo desarrollos desde el laboratorio al mercado, ejerciendo en i+D+i. Asesor de registros de productos agrícolas biológicos ante el SAG en Chile y a nivel internacional. Consultor de patentes de invención. Directora y Vicepresidenta de la Red Chilena de Bioinsumos.",
@@ -210,10 +210,70 @@ export class DataService {
       "sid": "legislación-sobre-productos-microbianos",
       "texto": "",
       "titulo": "Próximamente más información"
+    },
+    "mariangela-hungria":{
+      "nombre": "Dra. Mariangela Hungría",
+      "pais": "Brasil"
+    },
+    "esperanza-martinez":{
+      "nombre": "Dra. Esperanza Martinez",
+      "pais": "México"
+    },
+    "pedro-lage":{
+      "nombre": "Ing. Pedro Lage",
+      "institucion": "Empresa LAge y Cía - Lallemand",
+      "pais": "Uruguay"
+    },
+    "tomas-krostch":{
+      "nombre": "Sr. Tomás Krostch",
+      "institucion": "Instituto Interamericano de Cooperación para la Agricultura - IICA",
+      "pais": "Argentina"
+    },
+    "jose-roberto-pereira":{
+      "nombre": "Sr. Jose Roberto Pereira",
+      "institucion": "Asociación Nacional de Productores e Importadores de Inoculantes - ANPII",
+      "pais": "Brasil"
+    },
+    "maribel-parada":{
+      "nombre": "Dra. Maribel Parada",
+      "institucion": "Red Chilena de Bioinsumos",
+      "pais": "Chile"
+    },
+    "roberto-rapella":{
+      "nombre": "Sr. Roberto Rapella",
+      "institucion": "Cámara Argentina de Bioinsumos - CABIO",
+      "pais": "Argentina"
     }
   }
 
-  getSesion = ( id: string ) => this.data[id];
+  mesas={
+    "mujeres-en-la-ciencia": {
+      "conferencistas": ["mariangela-hungria", "esperanza-martinez"],
+      "coordinadores": "Coordinadora: Dra. Silvia Batista (Uruguay)",
+      "horario": "Lunes 4 de octubre",
+      "nombre": "Mujeres en la ciencia",
+      "texto": "Próximamente más información"
+    },
+    "bioinsumos": {
+      "conferencistas": ["pedro-lage", "tomas-krostch", "jose-roberto-pereira", "maribel-parada", "roberto-rapella"],
+      "coordinadores": "Coordinadores: Dr. Federico Battistoni (Uruguay) y Dr. Fabricio Cassan (Brasil)",
+      "horario": "Lunes 4 de octubre",
+      "instituciones":[
+        { "nombre": "Lallemand", "url": "" },
+        { "nombre": "Instituto Interamericano de Cooperación para la Agricultura", "url": "" },
+        { "nombre": "Asociación Nacional de Productores e Importadores de Inoculantes", "url": "" },
+        { "nombre": "Red Chilena de Bioinsumos", "url": "" },
+        { "nombre": "Cámara Argentina de Bioinsumos", "url": "" }
+      ],
+      "nombre": "Actores involucrados en el desarrollo y aplicación de bioinsumos: ¿Es posible un modelo alternativo de producción?",
+      "texto": "Uno de los principales desafíos del siglo XXI es cubrir la alta demanda alimenticia de la población mundial. En ese sentido, los sistemas productivos actuales basados en prácticas agrícolas focalizadas en el uso de agroquímicos, han llegado a su límite de sustentabilidad ambiental y económica. Para lograr un cambio significativo, nuevas prácticas agrícolas sustentables son necesarias de investigar y desarrollar. En este contexto, los microorganismos naturalmente asociados al sistema suelo-planta juegan un rol fundamental, debido a su ampliamente demostrada capacidad de promover el crecimiento vegetal directa o indirectamente. Este cambio de paradigma implica el esfuerzo de diferentes actores en la cadena productiva, en un camino no exento de adversidades. La finalidad de esta actividad, es fomentar el intercambio de experiencias entre diferentes actores internacionales involucrados en el desarrollo, producción y aplicación de bioinsumos basados en microorganismos promotores del crecimiento vegetal. Para esto, la mesa redonda cuenta con una diversidad de panelistas provenientes de Argentina, Brasil, Chile y Uruguay, así como de un organismo interamericano; que expondrán sobre las ventajas y limitaciones de la aplicación de bioinsumos en los sistemas productivos. Se propone el intercambio de opiniones en base a la necesidad y posibilidad de desarrollar modelos alternativos de producción más sustentables basadas en bioinsumos."
+    }
+  }
+
+
+
+  getSesion = ( id: string ) => this.sesiones[id];
+  getMesa = ( id: string ) => this.mesas[id];
   getConferencista = ( cid: string ) => this.conferencistas[cid];
   getConferencistaName = ( cid: string ) => this.conferencistas[cid].nombre;
   constructor() {}

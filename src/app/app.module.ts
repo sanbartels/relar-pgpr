@@ -16,6 +16,7 @@ import { MatRadioModule } from '@angular/material/radio';
 import { MatSelectModule } from '@angular/material/select';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatMenuModule } from '@angular/material/menu';
+import { MatExpansionModule } from '@angular/material/expansion';
 
 /* FIREBASE */
 import { AngularFireModule } from '@angular/fire';
@@ -43,6 +44,12 @@ import { HomeComponent } from './pages/home/home.component';
 import { PostularTrabajo2Component } from './pages/postular-trabajo2/postular-trabajo2.component';
 import { LoginComponent } from './pages/login/login.component';
 import { UserComponent } from './pages/user/user.component';
+import { ProgramaComponent } from './pages/programa/programa.component';
+import { FaqComponent } from './pages/faq/faq.component';
+import { NoticiasComponent } from './pages/noticias/noticias.component';
+import { SesionDeTrabajoComponent } from './pages/sesion-de-trabajo/sesion-de-trabajo.component';
+import { MesasRedondasComponent } from './pages/mesas-redondas/mesas-redondas.component';
+import { AdminComponent } from './pages/admin/admin.component';
 
 /* PAGO */
 import { RegistrarseComponent } from './pages/pago/pago-1/registrarse.component';
@@ -57,18 +64,6 @@ import { FooterComponent } from './components/footer/footer.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { NavbarSmComponent } from './components/navbar-sm/navbar-sm.component';
 import { PaypalComponent } from './components/paypal/paypal.component';
-
-/* PIPES */
-import { ImgPipe } from './pipes/img.pipe';
-import { UsernamePipe } from './pipes/username.pipe';
-import { ProgramaComponent } from './pages/programa/programa.component';
-import { FaqComponent } from './pages/faq/faq.component';
-import { NoticiasComponent } from './pages/noticias/noticias.component';
-import { ConferencistasComponent } from './pages/conferencistas/conferencistas.component';
-import { ConferencistaComponent } from './pages/conferencista/conferencista.component';
-import { SesionesDeTrabajoComponent } from './pages/sesiones-de-trabajo/sesiones-de-trabajo.component';
-import { SesionDeTrabajoComponent } from './pages/sesion-de-trabajo/sesion-de-trabajo.component';
-import { AdminComponent } from './pages/admin/admin.component';
 import { LogosComponent } from './components/home/logos/logos.component';
 import { ComiteComponent } from './components/home/comite/comite.component';
 import { AcercaComponent } from './components/home/acerca/acerca.component';
@@ -78,6 +73,10 @@ import { InscripcionesComponent } from './components/home/inscripciones/inscripc
 import { FechasImportantesComponent } from './components/home/fechas-importantes/fechas-importantes.component';
 import { NoticiasHomeComponent } from './components/home/noticias/noticias.component';
 import { IntroduccionComponent } from './components/home/introduccion/introduccion.component';
+
+/* PIPES */
+import { ImgPipe } from './pipes/img.pipe';
+import { UsernamePipe } from './pipes/username.pipe';
 
 @NgModule({
   declarations: [
@@ -101,9 +100,6 @@ import { IntroduccionComponent } from './components/home/introduccion/introducci
     ProgramaComponent,
     FaqComponent,
     NoticiasComponent,
-    ConferencistasComponent,
-    ConferencistaComponent,
-    SesionesDeTrabajoComponent,
     SesionDeTrabajoComponent,
     AdminComponent,
     LogosComponent,
@@ -114,7 +110,8 @@ import { IntroduccionComponent } from './components/home/introduccion/introducci
     InscripcionesComponent,
     FechasImportantesComponent,
     NoticiasHomeComponent,
-    IntroduccionComponent
+    IntroduccionComponent,
+    MesasRedondasComponent
   ],
   imports: [
     BrowserModule,
@@ -131,6 +128,7 @@ import { IntroduccionComponent } from './components/home/introduccion/introducci
     MatSelectModule,
     MatSnackBarModule,
     MatMenuModule,
+    MatExpansionModule,
     NgxPayPalModule,
     TranslateModule.forRoot({
       loader: {

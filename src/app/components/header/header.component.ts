@@ -8,16 +8,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class HeaderComponent implements OnInit {
 
-  show: boolean;
-
-  constructor(
-    private route: ActivatedRoute,
-    private router: Router
-  ){
-    router.events.forEach(
-      () => this.show = this.router.isActive('sesiones-de-trabajo', false)
-    );
-  }
+  constructor(){}
 
   ngOnInit(): void {
   }

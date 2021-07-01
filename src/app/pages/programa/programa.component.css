@@ -1,3 +1,9 @@
+.contenedor-principal{
+    background-color: white;
+    padding: 2rem 1rem;
+    margin: 3rem 0;
+}
+
 .bg-green{
     background-color: #16f64b;
 }
@@ -5,6 +11,11 @@
 h3, h2{
     text-transform: uppercase;
     font-family: 'Staatliches';
+}
+h3{
+    border-bottom: #16f64b solid 2px;
+    padding-bottom: 0.5rem;
+    margin-top: 2rem;
 }
 
 .d-flex-center{
@@ -25,15 +36,10 @@ h3, h2{
 .w7{ width: 70%; }
 .w72{ width: 72.4%; }
 
-h3{
-    border-bottom: #16f64b solid 2px;
-    padding-bottom: 0.5rem;
-    margin-top: 2rem;
-}
-
 .green-lg{
     border-bottom: #16f64b solid 2px;
     display: flex;
+    flex-wrap: wrap;
     margin: 1rem 0;
     padding-bottom: 1rem;
 }
@@ -50,6 +56,18 @@ h3{
     padding-right: 1rem;
 }
 
+@media (min-width: 576px) {
+    .contenedor-principal{ 
+        padding: 3rem;
+    }
+}
+
 @media (min-width: 1200px) {
-    .w-lg-75{ width: 75%; }
+    .contenedor-principal{ 
+        width: 75%;
+        margin: 3rem auto;
+    }
+    .w-lg-75{
+        width: 75%;
+    }
 }

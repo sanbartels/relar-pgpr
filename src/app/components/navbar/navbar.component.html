@@ -7,14 +7,20 @@
             <li class="border-right" [routerLink]="['/programa']">
                 {{ 'NAV.PROGRAMA' | translate }}
             </li>
-            <li class="border-right" [matMenuTriggerFor]="menu">
+            <li class="border-right" [matMenuTriggerFor]="sesiones">
                 {{ 'NAV.SESIONES' | translate }}
+            </li>
+            <li class="border-right" [matMenuTriggerFor]="mesas">
+                MESAS REDONDAS
             </li>
             <li  class="border-right" [routerLink]="['/noticias']">
                 {{ 'NAV.NOTICIAS' | translate }}
             </li>
+            <li  class="border-right" [routerLink]="['/faq']">
+                FAQ
+            </li>
 
-            <mat-menu #menu="matMenu">
+            <mat-menu #sesiones="matMenu">
                 <div class="bg-white">
                     <button mat-menu-item [routerLink]="['/sesiones-de-trabajo/microbioma-agrícola']">El microbioma agrícola</button>
                     <button mat-menu-item [routerLink]="['/sesiones-de-trabajo/promoción-indirecta-del-crecimiento-vegetal']">Promoción indirecta del crecimiento vegetal</button>
@@ -26,11 +32,17 @@
                     <button mat-menu-item [routerLink]="['/sesiones-de-trabajo/legislación-sobre-productos-microbianos']">Legislación sobre registro y empleo de productos microbianos</button>
                 </div>
             </mat-menu>
+            <mat-menu #mesas="matMenu">
+                <div class="bg-white">
+                    <button mat-menu-item [routerLink]="['/mesas-redondas/mujeres-en-la-ciencia']">Mujeres en la ciencia</button>
+                    <button mat-menu-item [routerLink]="['/mesas-redondas/bioinsumos']">Actores involucrados en el desarrollo y aplicación de bioinsumos: ¿Es posible un modelo alternativo de producción?</button>
+                </div>
+            </mat-menu>
         </ul>
         <ul class="d-flex-center">
-            <li (click)="useLanguage('_es')">{{ 'NAV.ES' | translate }}</li>
+            <!--<li (click)="useLanguage('_es')">{{ 'NAV.ES' | translate }}</li>
             <li (click)="useLanguage('_en')">{{ 'NAV.EN' | translate }}</li>
-            <!-- <li (click)="useLanguage('_pt')">{{ 'NAV.PT' | translate }}</li>-->
+            <li (click)="useLanguage('_pt')">{{ 'NAV.PT' | translate }}</li>-->
             <li href="https://www.facebook.com/relar.pgpr" target="_blank"><i class="fab fa-facebook"></i></li>
             <li href="https://twitter.com/RelarPgpr" target="_blank"><i class="fab fa-twitter"></i></li>
             <li href="https://instagram.com/relar.pgpr" target="_blank"><i class="fab fa-instagram"></i></li>

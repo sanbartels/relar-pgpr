@@ -25,7 +25,6 @@ a:hover{ color: #16f64b;}
 .bg-texto-5{
     min-height: 45px;
     width: 1000%;
-    margin: 3rem 0 1rem;
     background-image: url("/assets/img/texto-5.png");
     background-repeat: repeat;
     animation: texto-loco 80s linear infinite;

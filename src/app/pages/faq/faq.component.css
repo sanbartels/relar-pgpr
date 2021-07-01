@@ -1,0 +1,32 @@
+.contenedor-principal{
+    background-color: white;
+    padding: 2rem 0;
+    margin: 3rem 0;
+}
+
+h2{
+    text-transform: uppercase;
+    font-family: 'Staatliches';
+    text-align: center;
+}
+
+.justify{
+    text-align: justify;
+}
+
+/* Small devices (landscape phones, 576px and up)*/
+@media (min-width: 576px) {
+    .contenedor-principal{ 
+        padding: 3rem;
+    }
+    h2{
+        text-align: left;
+    }
+}
+
+@media (min-width: 1200px) {
+    .contenedor-principal{ 
+        width: 75%;
+        margin: 3rem auto;
+    }
+}
