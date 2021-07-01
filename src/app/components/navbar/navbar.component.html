@@ -2,16 +2,16 @@
     <div class="d-flex-center justify-content-between">
         <ul class="d-flex-center">
             <li class="border-right" [routerLink]="['/home']">
-                HOME
+                {{ 'NAV.HOME' | translate }}
             </li>
             <li class="border-right" [routerLink]="['/programa']">
-                PROGRAMA
+                {{ 'NAV.PROGRAMA' | translate }}
             </li>
             <li class="border-right" [matMenuTriggerFor]="menu">
-                SESIONES DE TRABAJO
+                {{ 'NAV.SESIONES' | translate }}
             </li>
             <li  class="border-right" [routerLink]="['/noticias']">
-                NOTICIAS
+                {{ 'NAV.NOTICIAS' | translate }}
             </li>
 
             <mat-menu #menu="matMenu">
@@ -28,6 +28,9 @@
             </mat-menu>
         </ul>
         <ul class="d-flex-center">
+            <li (click)="useLanguage('_es')">{{ 'NAV.ES' | translate }}</li>
+            <li (click)="useLanguage('_en')">{{ 'NAV.EN' | translate }}</li>
+            <!-- <li (click)="useLanguage('_pt')">{{ 'NAV.PT' | translate }}</li>-->
             <li href="https://www.facebook.com/relar.pgpr" target="_blank"><i class="fab fa-facebook"></i></li>
             <li href="https://twitter.com/RelarPgpr" target="_blank"><i class="fab fa-twitter"></i></li>
             <li href="https://instagram.com/relar.pgpr" target="_blank"><i class="fab fa-instagram"></i></li>
@@ -37,8 +40,8 @@
                 <span>{{ this.auth.user.displayName | username }}</span>
             </li>
             <li *ngIf="!this.auth.user.uid" [routerLink]="['/login']">
-                <i class="fas fa-user"></i>
-                <span>LOGIN</span>
+                <i class="fas fa-user mx-2"></i>
+                <span>{{ 'NAV.LOGIN' | translate }}</span>
             </li>
         </ul>
     </div>

@@ -1,0 +1,28 @@
+{
+  "NAV": {
+    "HOME": "HOME",
+    "PROGRAMA": "AGENDA",
+    "SESIONES": "WORK SESSIONS",
+    "NOTICIAS": "NEWS",
+    "LOGIN": "LOGIN",
+    "ES": "SP",
+    "EN": "EN",
+    "PT": "PT"
+  },
+  "TEST": "hello",
+  "HOME": {
+    "TITLE": "Hello Angular with ngx-translate!",
+    "SELECT": "Change language"
+  },
+  "LOGIN": {
+    "TITLE-TEXT": "Login to your account",
+    "DONT-HAVE-AN-ACCOUNT": "You do not have an account yet?",
+    "CREATE-ACCOUNT-BUTTON": "Sign up",
+    "EMAIL-ERROR-REQUIRED": "Email is a required field",
+    "EMAIL-ERROR-PATTERN": "Please enter a valid email",
+    "PASSWORD-ERROR-REQUIRED": "Password is a required field",
+    "EMAIL": "Email",
+    "PASSWORD": "Password",
+    "LOGIN-BUTTON": "Login"
+  }
+}

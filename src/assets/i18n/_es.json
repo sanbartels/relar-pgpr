@@ -1,0 +1,28 @@
+{
+  "NAV": {
+    "HOME": "INICIO",
+    "PROGRAMA": "PROGRAMA",
+    "SESIONES": "SESIONES DE TRABAJO",
+    "NOTICIAS": "NOTICIAS",
+    "LOGIN": "INGRESAR",
+    "ES": "ES",
+    "EN": "IN",
+    "PT": "PT"
+  },
+  "TEST": "hola",
+  "HOME": {
+    "TITLE": "Hello Angular with ngx-translate!",
+    "SELECT": "Change language"
+  },
+  "LOGIN": {
+    "TITLE-TEXT": "Ingrese a su cuenta",
+    "DONT-HAVE-AN-ACCOUNT": "¿Aun no tiene una cuenta?",
+    "CREATE-ACCOUNT-BUTTON": "Crear cuenta",
+    "EMAIL-ERROR-REQUIRED": "Correo es un campo obligatorio",
+    "EMAIL-ERROR-PATTERN": "Por favor ingrese un correo válido",
+    "PASSWORD-ERROR-REQUIRED": "Contraseña es un campo obligatorio",
+    "EMAIL": "Correo",
+    "PASSWORD": "Contraseña",
+    "LOGIN-BUTTON": "Ingresar"
+  }
+}

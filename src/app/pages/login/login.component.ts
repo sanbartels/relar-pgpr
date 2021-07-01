@@ -11,20 +11,22 @@ import { AuthProvider } from 'ngx-auth-firebaseui';
 export class LoginComponent {
   constructor(
     private router: Router,
-    private snackBar : MatSnackBar ) {
+    private snackBar: MatSnackBar ) {
   }
-  saveUser($event: any){
+
+  providers = AuthProvider;
+
+  saveUser($event: any): void{
     this.snackBar.open('Bienvenido', 'Aceptar', { duration: 3000 });
     this.router.navigateByUrl('/home');
   }
 
-  registrarse(){
+  registrarse(): void{
     this.router.navigateByUrl('/registrarse-1');
   }
 
-  handleError($event: any){
+  handleError($event: any): void{
     this.snackBar.open('A ocurrido un error inesperado', 'Aceptar', { duration: 3000 });
   }
 
-  providers = AuthProvider;
 }

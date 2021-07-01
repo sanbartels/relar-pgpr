@@ -27,6 +27,16 @@ import { NgxAuthFirebaseUIModule, AuthProvider } from 'ngx-auth-firebaseui';
 /* PAYPAL*/
 import { NgxPayPalModule } from 'ngx-paypal';
 
+/* I18N */
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+
+// AoT requires an exported function for factories
+export function createTranslateLoader(httpClient: HttpClient): TranslateHttpLoader {
+  return new TranslateHttpLoader(httpClient, './assets/i18n/', '.json');
+}
+
 /* PAGES */
 import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
@@ -122,29 +132,36 @@ import { IntroduccionComponent } from './components/home/introduccion/introducci
     MatSnackBarModule,
     MatMenuModule,
     NgxPayPalModule,
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: createTranslateLoader,
+        deps: [HttpClient]
+      }
+    }),
     AngularFireModule,
     AngularFireStorageModule,
     AngularFireAnalyticsModule,
     AngularFireAuthModule,
     NgxAuthFirebaseUIModule.forRoot(
     {
-      apiKey: "AIzaSyBJ0Hp1BfWmmSSzHfZaceHB7yLbrDuEFp8",
-      authDomain: "relar-pgpr.firebaseapp.com",
-      projectId: "relar-pgpr",
-      storageBucket: "relar-pgpr.appspot.com",
-      messagingSenderId: "121333279414",
-      appId: "1:121333279414:web:4ba9ba120dbb10f9e2d417",
-      measurementId: "G-WQXZ96DHH3"
+      apiKey: 'AIzaSyBJ0Hp1BfWmmSSzHfZaceHB7yLbrDuEFp8',
+      authDomain: 'relar-pgpr.firebaseapp.com',
+      projectId: 'relar-pgpr',
+      storageBucket: 'relar-pgpr.appspot.com',
+      messagingSenderId: '121333279414',
+      appId: '1:121333279414:web:4ba9ba120dbb10f9e2d417',
+      measurementId: 'G-WQXZ96DHH3'
     },
     () => 'RELAR-PGPR',
     {
-      enableFirestoreSync: true, // enable/disable autosync users with firestore
+      enableFirestoreSync: true, // enable/disable auto-sync users with firestore
       toastMessageOnAuthSuccess: false, // whether to open/show a snackbar message on auth success - default : true
       toastMessageOnAuthError: false, // whether to open/show a snackbar message on auth error - default : true
       authGuardFallbackURL: '/loggedout', // url for unauthenticated users - to use in combination with canActivate feature on a route
       authGuardLoggedInURL: '/loggedin', // url for authenticated users - to use in combination with canActivate feature on a route
       passwordMaxLength: 60, // `min/max` input parameters in components should be within this range.
-      passwordMinLength: 8, // Password length min/max in forms independently of each componenet min/max.
+      passwordMinLength: 8, // Password length min/max in forms independently of each component min/max.
       // Same as password but for the name
       nameMaxLength: 50,
       nameMinLength: 2,

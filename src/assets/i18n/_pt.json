@@ -1,0 +1,17 @@
+{
+  "NAV": {
+    "HOME": "COMEÇO",
+    "PROGRAMA": "PROGRAMA",
+    "SESIONES": "SESSÕES DE TRABALHO",
+    "NOTICIAS": "NOTÍCIAS",
+    "LOGIN": "ENTEROKAY",
+    "ES": "ES",
+    "EN": "IN",
+    "PT": "PT"
+  },
+  "TEST": "Olá",
+  "HOME": {
+    "TITLE": "Hello Angular with ngx-translate!",
+    "SELECT": "Change language"
+  }
+}

@@ -1,13 +1,16 @@
 <div class="my-5 px-5 d-flex justify-content-center">
   <div class="bg-white d-inline-block">
     <ngx-auth-firebaseui-login
-    titleText="Ingrese a su cuenta"
+    [titleText]="'LOGIN.TITLE-TEXT'|translate"
     orLabelText="O"
-    dontHaveAnAccountText="¿Aun no tiene una cuenta?"
-    createAccountButtonText="Crear cuenta"
-    emailErrorRequiredText="Email es un campo obligatorio"
-    emailErrorPatternText="Por favor ingrese un email válido"
-    passwordErrorRequiredText="Password es un campo obligatorio"
+    [dontHaveAnAccountText]="'LOGIN.DONT-HAVE-AN-ACCOUNT'|translate"
+    [createAccountButtonText]="'LOGIN.CREATE-ACCOUNT-BUTTON'|translate"
+    [emailErrorRequiredText]="'LOGIN.EMAIL-ERROR-REQUIRED'|translate"
+    [emailErrorPatternText]="'LOGIN.EMAIL-ERROR-PATTERN'|translate"
+    [passwordErrorRequiredText]="'LOGIN.PASSWORD-ERROR-REQUIRED'|translate"
+    [emailText]="'LOGIN.EMAIL'|translate"
+    [passwordText]="'LOGIN.PASSWORD'|translate"
+    [loginButtonText]="'LOGIN.LOGIN-BUTTON'|translate"
     [providers]="[providers.Google, providers.Facebook]"
     [resetPasswordEnabled]="false"
     (onCreateAccountRequested)="registrarse()"
