@@ -6,3 +6,7 @@
 ::ng-deep.mat-elevation-z4{
     box-shadow: none !important;
 }
+
+.min-height{
+    min-height: calc(100vh - 94px);
+}

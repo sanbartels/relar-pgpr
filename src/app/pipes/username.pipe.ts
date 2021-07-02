@@ -6,7 +6,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class UsernamePipe implements PipeTransform {
 
   transform(value: string|undefined ): string {
-    return value==undefined? 'USER' : value;
+    return value==undefined? 'USUARIO' : value;
   }
 
 }

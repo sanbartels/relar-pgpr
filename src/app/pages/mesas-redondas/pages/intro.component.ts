@@ -5,7 +5,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 @Component({
     selector: 'app-usuario-detalle',
     template: `
-        <article class="bg-transparente p-5 text-white">
+        <article class="bg-transparente p-5 my-5 text-white">
             <h5 class="pb-4">{{sesion.coordinadores}}</h5>
             <p>{{sesion.texto}}</p>
         </article>

@@ -51,9 +51,10 @@
                 <!--<img [src]="this.auth.user.photoURL | img " alt="Imagen de usuario">-->
                 <span>{{ this.auth.user.displayName | username }}</span>
             </li>
-            <li *ngIf="!this.auth.user.uid" [routerLink]="['/login']">
+            <li *ngIf="!this.auth.user.uid">
                 <i class="fas fa-user mx-2"></i>
-                <span>{{ 'NAV.LOGIN' | translate }}</span>
+                <span [routerLink]="['/login']">{{ 'NAV.LOGIN' | translate }}</span>
+                <span [routerLink]="['/registrarse-1']">/REGISTRARSE</span>
             </li>
         </ul>
     </div>

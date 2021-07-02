@@ -1,11 +1,11 @@
-<section class="py-5">
-    <!-- TEXTO RELAR-PGPR -->
+<section class="py-2">
+    <!-- TEXTO RELAR-PGPR 
     <div class="d-none d-sm-block letras-container">
         <div class="bg-texto-5"></div>
-    </div>
+    </div>-->
 
     <!-- TITULO -->
-    <div class="m-5 pt-3 text-white" [routerLink]="['/sesiones-de-trabajo/'+id]">
+    <div class="m-5 text-white" [routerLink]="['/sesiones-de-trabajo/'+id]">
         <h2>SESIÓN<br>{{sesion.nombre}}</h2>
         <h3 class="mt-4">{{sesion.horario}}</h3>
     </div>
@@ -15,11 +15,13 @@
         <ul class="d-md-flex justify-content-center m-0">
             <li class="border-2px" [matMenuTriggerFor]="menu">Charlas Magistrales</li>
             <li [routerLink]="['/sesiones-de-trabajo/'+id+'/poster-talk']">Póster Talk</li>
-            <li [routerLink]="['/sesiones-de-trabajo/'+id+'/dialogos-de-investigacion']" class="border-2px">Diálogos de investigación</li>
+            <li class="border-2px" [routerLink]="['/sesiones-de-trabajo/'+id+'/dialogos-de-investigacion']">Diálogos de investigación</li>
         </ul>
         
         <mat-menu #menu="matMenu">
-            <li [routerLink]="['/sesiones-de-trabajo/'+id+'/charlas-magistrales/'+cid]" *ngFor="let cid of this.sesion.conferencistas">{{ this.data.conferencistas[cid].nombre }}</li>
+            <ul class="py-2 mt-2">
+                <li class="li" [routerLink]="['/sesiones-de-trabajo/'+id+'/charlas-magistrales/'+cid]" *ngFor="let cid of this.sesion.conferencistas">{{ this.data.conferencistas[cid].nombre }}</li>
+            </ul>
         </mat-menu>
     </nav>
     <router-outlet></router-outlet>

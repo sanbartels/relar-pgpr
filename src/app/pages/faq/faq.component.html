@@ -1,13 +1,15 @@
 <article class="contenedor-principal">
     <h2 class="mb-5">PREGUNTAS FRECUENTES</h2>
-    <mat-accordion>
-        <mat-expansion-panel hideToggle *ngFor="let item of faq">
-            <mat-expansion-panel-header>
-                <mat-panel-title>
-                    {{ item.pregunta }}
-                </mat-panel-title>
-            </mat-expansion-panel-header>
-            <div [innerHTML]="item.respuesta" class="justify"></div>
-        </mat-expansion-panel>
-      </mat-accordion>
+    <div *ngFor="let items of faq" class="my-3">
+        <mat-accordion>
+            <mat-expansion-panel hideToggle *ngFor="let item of items">
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        {{ item.pregunta }}
+                    </mat-panel-title>
+                </mat-expansion-panel-header>
+                <div [innerHTML]="item.respuesta" class="justify"></div>
+            </mat-expansion-panel>
+          </mat-accordion>
+    </div>
 </article>

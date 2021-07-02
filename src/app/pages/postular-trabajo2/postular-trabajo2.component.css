@@ -33,3 +33,9 @@ mat-radio-group{
         margin-left: 8px;
     }
 }
+
+@media (min-width: 1200px) {
+    .w-lg-75{
+        width: 75%;
+    }
+}

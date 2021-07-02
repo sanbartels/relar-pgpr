@@ -1,5 +1,5 @@
 <!-- PROGRESSBAR -->
-<ul id="progressbar" class="mt-5 p-0">
+<ul id="progressbar" class="pt-5 px-0">
     <li class="active" id="account"><strong>Cuenta</strong></li>
     <li class="active" id="personal"><strong>Información Personal</strong></li>
     <li class="active" id="postular"><strong>Postular trabajo</strong></li>
@@ -7,21 +7,23 @@
     <li id="confirm"><strong>Finalizar</strong></li>
 </ul>
 
-<div class="text-center m-5 p-5 bg-white" *ngIf="!showForm">
-    <h5>¿Desea postular un trabajo de investigación ahora?</h5>
-    <p>Podrá realizar este paso más adelante</p>
-    <div class="d-flex justify-content-center">
-        <button mat-raised-button color="primary" class="w-25 mb-3 mx-3" type="button" (click)="no()">
-            No
-        </button>
-        <button mat-raised-button color="primary" class="w-25 mb-3 mx-3" type="button" (click)="si()">
-            Si
-        </button>
+<div class="my-5 p-5" *ngIf="!showForm">
+    <div class="text-center p-5 bg-white">
+        <h5>¿Desea postular un trabajo de investigación ahora?</h5>
+        <p>Podrá realizar este paso más adelante</p>
+        <div class="d-flex justify-content-center">
+            <button mat-raised-button color="primary" class="w-25 mb-3 mx-3" type="button" (click)="no()">
+                No
+            </button>
+            <button mat-raised-button color="primary" class="w-25 mb-3 mx-3" type="button" (click)="si()">
+                Si
+            </button>
+        </div>
     </div>
 </div>
     
     
-<div *ngIf="showForm" class="bg-white p-3 m-5">
+<div *ngIf="showForm" class="bg-white p-5 m-5">
     <h3>Postular trabajo</h3>
     <hr>
     <ul>

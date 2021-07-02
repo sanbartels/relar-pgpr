@@ -222,27 +222,32 @@ export class DataService {
     "pedro-lage":{
       "nombre": "Ing. Pedro Lage",
       "institucion": "Empresa LAge y Cía - Lallemand",
-      "pais": "Uruguay"
+      "pais": "Uruguay",
+      "url": "https://www.lallemand.com/"
     },
     "tomas-krostch":{
       "nombre": "Sr. Tomás Krostch",
       "institucion": "Instituto Interamericano de Cooperación para la Agricultura - IICA",
-      "pais": "Argentina"
+      "pais": "Argentina",
+      "url": "https://iica.int/es"
     },
     "jose-roberto-pereira":{
       "nombre": "Sr. Jose Roberto Pereira",
       "institucion": "Asociación Nacional de Productores e Importadores de Inoculantes - ANPII",
-      "pais": "Brasil"
+      "pais": "Brasil",
+      "url": "http://www.anpii.org.br/"
     },
     "maribel-parada":{
       "nombre": "Dra. Maribel Parada",
       "institucion": "Red Chilena de Bioinsumos",
-      "pais": "Chile"
+      "pais": "Chile",
+      "url": "https://bioinsumos.cl/"
     },
     "roberto-rapella":{
       "nombre": "Sr. Roberto Rapella",
       "institucion": "Cámara Argentina de Bioinsumos - CABIO",
-      "pais": "Argentina"
+      "pais": "Argentina",
+      "url": "http://www.cabio.com.ar/"
     }
   }
 
@@ -252,19 +257,12 @@ export class DataService {
       "coordinadores": "Coordinadora: Dra. Silvia Batista (Uruguay)",
       "horario": "Lunes 4 de octubre",
       "nombre": "Mujeres en la ciencia",
-      "texto": "Próximamente más información"
+      "texto": "La Mesa redonda propone presentar la participación de las mujeres en la ciencia en algunos países de la región, incorporando los datos generados a partir de distintas instituciones y comisiones de género que se encuentran trabajando en el tema. Asimismo, se debatirá sobre las medidas que podrían adoptarse para incentivar que las mujeres opten por estas carreras y en particular, formarse como líderes referentes."
     },
     "bioinsumos": {
       "conferencistas": ["pedro-lage", "tomas-krostch", "jose-roberto-pereira", "maribel-parada", "roberto-rapella"],
       "coordinadores": "Coordinadores: Dr. Federico Battistoni (Uruguay) y Dr. Fabricio Cassan (Brasil)",
       "horario": "Lunes 4 de octubre",
-      "instituciones":[
-        { "nombre": "Lallemand", "url": "" },
-        { "nombre": "Instituto Interamericano de Cooperación para la Agricultura", "url": "" },
-        { "nombre": "Asociación Nacional de Productores e Importadores de Inoculantes", "url": "" },
-        { "nombre": "Red Chilena de Bioinsumos", "url": "" },
-        { "nombre": "Cámara Argentina de Bioinsumos", "url": "" }
-      ],
       "nombre": "Actores involucrados en el desarrollo y aplicación de bioinsumos: ¿Es posible un modelo alternativo de producción?",
       "texto": "Uno de los principales desafíos del siglo XXI es cubrir la alta demanda alimenticia de la población mundial. En ese sentido, los sistemas productivos actuales basados en prácticas agrícolas focalizadas en el uso de agroquímicos, han llegado a su límite de sustentabilidad ambiental y económica. Para lograr un cambio significativo, nuevas prácticas agrícolas sustentables son necesarias de investigar y desarrollar. En este contexto, los microorganismos naturalmente asociados al sistema suelo-planta juegan un rol fundamental, debido a su ampliamente demostrada capacidad de promover el crecimiento vegetal directa o indirectamente. Este cambio de paradigma implica el esfuerzo de diferentes actores en la cadena productiva, en un camino no exento de adversidades. La finalidad de esta actividad, es fomentar el intercambio de experiencias entre diferentes actores internacionales involucrados en el desarrollo, producción y aplicación de bioinsumos basados en microorganismos promotores del crecimiento vegetal. Para esto, la mesa redonda cuenta con una diversidad de panelistas provenientes de Argentina, Brasil, Chile y Uruguay, así como de un organismo interamericano; que expondrán sobre las ventajas y limitaciones de la aplicación de bioinsumos en los sistemas productivos. Se propone el intercambio de opiniones en base a la necesidad y posibilidad de desarrollar modelos alternativos de producción más sustentables basadas en bioinsumos."
     }

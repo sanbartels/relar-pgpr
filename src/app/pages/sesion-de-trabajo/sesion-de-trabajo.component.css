@@ -16,6 +16,7 @@ p{
 
 .bg-transparente{background-color: rgba(88, 88, 88, 0.800);}
 .border-bottom-green{ border-bottom: #16f64b solid 2px;}
+.li{ font-size: 1.2rem; }
 
 h2, h3, h4, h5{
     font-family: 'Seravek', sans-serif;
