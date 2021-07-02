@@ -4,6 +4,10 @@
     margin: 3rem 0;
 }
 
+.pointer{
+    cursor: pointer;
+}
+
 .bg-green{
     background-color: #16f64b;
 }
@@ -30,7 +34,7 @@ h3{
 .w1{ width: 12%;}
 .w2{ width: 16%; }
 .w3{ width: 30%; }
-.w3s{ width: 30%; font-weight: bold; }
+.w3s{ width: 30%; font-weight: bold; cursor: pointer; }
 .w4{ width: 42%; }
 .w58{ width: 58%; }
 .w7{ width: 70%; }

@@ -25,7 +25,7 @@
                     <button mat-menu-item [routerLink]="['/sesiones-de-trabajo/microbioma-agrícola']">El microbioma agrícola</button>
                     <button mat-menu-item [routerLink]="['/sesiones-de-trabajo/promoción-indirecta-del-crecimiento-vegetal']">Promoción indirecta del crecimiento vegetal</button>
                     <button mat-menu-item [routerLink]="['/sesiones-de-trabajo/promoción-directa-del-crecimiento-vegetal']">Promoción directa del crecimiento vegetal</button>
-                    <button mat-menu-item [routerLink]="['/sesiones-de-trabajo/evolución-y-diversidad-de-mpvc']">Evolución y diversidad de MPVC</button>
+                    <button mat-menu-item [routerLink]="['/sesiones-de-trabajo/evolución-y-diversidad-de-mpcv']">Evolución y diversidad de microorganismos promotores de crecimiento vegetal</button>
                     <button mat-menu-item [routerLink]="['/sesiones-de-trabajo/el-holobionte-planta']">El Holobionte Planta</button>
                     <button mat-menu-item [routerLink]="['/sesiones-de-trabajo/conservación-y-manejo-microbiano']">Conservación y manejo microbiano en sistemas naturales y agroecosistemas</button>
                     <button mat-menu-item [routerLink]="['/sesiones-de-trabajo/del-laboratorio-al-campo']">Del laboratorio al campo</button>
@@ -43,10 +43,10 @@
             <!--<li (click)="useLanguage('_es')">{{ 'NAV.ES' | translate }}</li>
             <li (click)="useLanguage('_en')">{{ 'NAV.EN' | translate }}</li>
             <li (click)="useLanguage('_pt')">{{ 'NAV.PT' | translate }}</li>-->
-            <li href="https://www.facebook.com/relar.pgpr" target="_blank"><i class="fab fa-facebook"></i></li>
-            <li href="https://twitter.com/RelarPgpr" target="_blank"><i class="fab fa-twitter"></i></li>
-            <li href="https://instagram.com/relar.pgpr" target="_blank"><i class="fab fa-instagram"></i></li>
-            <li href="mailto:secretaria.alar@gmail.com"><i class="fas fa-envelope"></i></li>
+            <li><a href="https://www.facebook.com/relar.pgpr" target="_blank"><i class="fab fa-facebook"></i></a></li>
+            <li><a href="https://twitter.com/RelarPgpr" target="_blank"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="https://instagram.com/relar.pgpr" target="_blank"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="mailto:secretaria.alar@gmail.com"><i class="fas fa-envelope"></i></a></li>
             <li *ngIf="this.auth.user.uid" [routerLink]="['/user']">
                 <!--<img [src]="this.auth.user.photoURL | img " alt="Imagen de usuario">-->
                 <span>{{ this.auth.user.displayName | username }}</span>

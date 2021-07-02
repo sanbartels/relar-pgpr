@@ -27,11 +27,11 @@ export class DataService {
       "nombre": "Promoción directa del crecimiento vegetal",
       "texto": "La microbiota asociada al sistema suelo-planta ha recibido gran atención surgiendo el concepto “holobionte planta”. El mismo define a la planta como un macro-ser compuesto por todos los organismos que viven sobre o en la misma, incluyendo las microbiotas. Dichas microbiotas están compuestas por complejas comunidades microbianas que juegan un rol fundamental en la protección contra estreses bióticos y abióticos, así como en la promoción del crecimiento vegetal (PCV), mediante diferentes mecanismos incluyendo la bioestimulación o la biodisponibilización de nutrientes. El objetivo de esta sesión es intercambiar sobre el estado del arte de la PCV directa desde diferentes miradas. En ese sentido el Dr Agustín Grimoldi, expondrá sobre el rol de los hongos micorrizógenos en su interacción con gramíneas y leguminosas en sistemas con diferentes disponibilidad de fósforo. Asimismo, el Dr Euan James expondrá sobre la relevancia de la fijación biológica del nitrógeno por cepas de rizobios en cultivos de leguminosas, en suelos sin historia. La comprensión del papel de la microbiota en el holobionte planta acaba de comenzar, siendo esperable y fundamental que los conocimientos sobre la diversidad y actividad de la misma contribuyan al entendimiento de la PCV y su aplicación biotecnológica."
     },
-    "evolución-y-diversidad-de-mpvc": {
+    "evolución-y-diversidad-de-mpcv": {
       "conferencistas": ["laila-pamela-martinez", "massimiliano-cardinale"],
       "coordinadores": "Coordinadores: Dra. Ana Fernandez (Uruguay) y Dr. Mariano Pistorio (Argentina)",
       "horario": "Miércoles 6 de octubre",
-      "nombre": "Evolución y diversidad de MPVC",
+      "nombre": "Evolución y diversidad de microorganismos promotores de crecimiento vegetal (MPCV)",
       "texto": "Las plantas son sistemas altamente colonizados por microorganismos, cuya presencia determina el crecimiento y la sanidad de los cultivos. Debido al carácter ancestral de las asociaciones microbioma-planta se han observado distintos niveles de sofisticación en estas asociaciones, que incluyen tanto coevolución entre organismos como interacción de comunidades estructuradas complejas con el hospedero. Los cambios en la composición de la comunidad microbiana asociada pueden tener efectos positivos en la capacidad de adaptación a condiciones ambientales cambiantes o extremas y por tanto en la productividad de las plantas. Así, hospedadores y microbiomas constituyen sistemas biológicos complejos y dinámicos, en los cuales el mutualismo, por un lado, y el parasitismo y la patogenicidad por otro, están presentes como parte de un delgado equilibrio modulado fuertemente por el entorno y por las interacciones entre la comunidad microbiana asociada. La sesión Evolución y diversidad de Microorganismos Promotores del Crecimiento Vegetal (MPCV) está orientada a investigaciones relacionadas con la evolución y adaptación de los microorganismos al entorno y a su relación con las plantas. Además, se enfoca en la investigación de la interfaz microorganismo-hospedador, tanto las relaciones patógenas, parasíticas, como los mutualistas, así como también los estudios del microbioma."
     },
     "el-holobionte-planta": {
@@ -126,7 +126,7 @@ export class DataService {
       "horario": "10:00",
       "nombre": "Dra. Laila Pamela Martínez",
       "pais": "México",
-      "sid": "evolución-y-diversidad-de-mpvc",
+      "sid": "evolución-y-diversidad-de-mpcv",
       "texto": "En esta ponencia hablaremos de la diversidad y funciones del microbioma de los agaves y cactus y su potencial para contribuir a la agricultura sustentable en las zonas áridas.",
       "titulo": "El microbioma de los Agaves y Cactus como modelos para un planeta en calentamiento"
     },
@@ -135,7 +135,7 @@ export class DataService {
       "horario": "10:45",
       "nombre": "Dr. Massimiliano Cardinale",
       "pais": "Italia",
-      "sid": "evolución-y-diversidad-de-mpvc",
+      "sid": "evolución-y-diversidad-de-mpcv",
       "texto": "Próximamente más información",
       "titulo": "The microbiome of seeds and plant reproductive organs: diversity, co-evolution with the plant, and biotechnological potential for agriculture"
     },

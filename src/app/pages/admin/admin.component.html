@@ -6,6 +6,8 @@
             <th scope="col">Nombre</th>
             <th scope="col">Email</th>
             <th scope="col">Categoría</th>
+            <th scope="col">T</th>
+            <th scope="col">P</th>
           </tr>
         </thead>
         <tbody>
@@ -14,6 +16,8 @@
               <td>{{ user.displayName }}</td>
               <td>{{ user.email }}</td>
               <td>{{ categorias[user.categoria] }}</td>
+              <td style="color: #333;" [ngClass]="{ 'text-success': user.postulaTrabajo }"><i class="fas fa-circle"></i></td>
+              <td style="color: #333;" [ngClass]="{ 'text-warning': user.brou, 'text-primary': user.metodo=='free', 'text-success': user.metodo=='paypal' }"><i class="fas fa-circle"></i></td>
             </tr>
           </tbody>
     </table>
