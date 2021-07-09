@@ -7,7 +7,7 @@ import { ActivatedRoute, Router } from '@angular/router';
     template: `
         <article class="bg-transparente p-5 my-5 text-white">
             <h5 class="pb-4">{{sesion.coordinadores}}</h5>
-            <p>{{sesion.texto}}</p>
+            <div class="p" [innerHTML]="sesion.texto"></div>
         </article>
     `,
     styleUrls: ['../sesion-de-trabajo.component.css']

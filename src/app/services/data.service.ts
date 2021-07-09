@@ -46,14 +46,21 @@ export class DataService {
       "coordinadores": "Coordinadores: Dra. Natalia Bajsa (Uruguay) y Dr. Luis Wall (Argentina)",
       "horario": "Jueves 7 de octubre",
       "nombre": "Conservación y manejo microbiano en sistemas naturales y agroecosistemas",
-      "texto": "Próximamente más información"
+      "texto": `
+      <p>El suelo es uno de los reservorios de mayor biodiversidad del planeta, en particular a nivel microbiológico. Estos microorganismos son muy numerosos y cumplen funciones clave en el suelo y en relación al ambiente, ya sea en ecosistemas naturales como en aquellos dedicados a la producción agropecuaria.</p>
+      <p>En esta sesión abordaremos la importancia de la conservación de los microbiomas del suelo y los asociados a las plantas. Las prácticas  agropecuarias convencionales han tenido importantes impactos sobre la biodiversidad de los suelos. La conservación y recuperación de los mismos es fundamental para producir alimentos en forma sustentable y para preservar servicios ecosistémicos. Se han desarrollado formas alternativas de producción (agricultura orgánica, regenerativa, agroecología, entre otras) que reconocen la importancia de la microbiota y apuntan a su conservación. Prácticas de manejo del suelo y de los cultivos que favorezcan los microbiomas del sistema, así como el uso de biofertilizantes y agentes de control biológico, son herramientas fundamentales para la transición a sistemas de producción más sostenibles, que incorporen los aportes de los microorganismos en la producción de alimentos.</p>
+      `
     },
     "del-laboratorio-al-campo": {
       "conferencistas": ["maria-caridad-napoles", "paula-aguilera"],
       "coordinadores": "Coordinadoras: Dra. Nora Altier (Uruguay) y Dra. Mariángela Hungría (Brasil)",
       "horario": "Jueves 7 de octubre",
       "nombre": "Del laboratorio al campo",
-      "texto": "Próximamente más información"
+      "texto": `
+      <p>El concepto de intensificación sostenible de los sistemas productivos requiere gestionar la biodiversidad y los servicios ecosistémicos, mediante la promoción de estrategias para el manejo sanitario y nutricional de los cultivos que mitiguen los riesgos asociados al uso de agroquímicos.</p>
+      <p>El desarrollo de productos microbianos de uso agrícola se basa en el reconocimiento de la diversidad y la multifuncionalidad presente en el microbioma, estudiando los procesos biológicos y las características asociadas a la protección y nutrición vegetal. El desafío es identificar cepas con la función deseada que puedan ser utilizadas para desarrollar un producto tecnológico, a través de los procesos de bioproducción y formulación, y ser escaladas a nivel industrial con fines de comercialización y uso en los agroecosistemas.</p>
+      <p>El objetivo de esta sesión es promover el intercambio de conocimiento y las perspectivas de la investigación en bioinsumos agrícolas, recorriendo un camino que comienza en el laboratorio y finaliza en el campo. La Dra. María Caridad Nápoles expondrá sobre la generación de productos microbianos como pilar de una agricultura autosustentable, describiendo el caso de Cuba. La Dra. Paula Aguilera expondrá sobre el inoculante MYCONATIVA®, desarrollado en base a hongos nativos micorrícicos arbusculares, describiendo los beneficios asociados a su uso.</p>
+      `
     },
     "legislación-sobre-productos-microbianos": {
       "conferencistas": ["romina-almesia", "jerri-zilli"],
@@ -66,7 +73,7 @@ export class DataService {
 
   conferencistas={
     "kornelia-smalla":{
-      "bio": "",
+      "bio": "Professor Dr. Dr. h.c. Kornelia Smalla is the head of the microbial ecology group in the Institute for Epidemiology and Pathogen Diagnostics at the Julius Kühn-Institut (JKI), Federal Research Centre for Cultivated Plants, in Braunschweig. She studied chemistry and did her PhD in biochemistry at the Martin-Luther-University in Halle. The venia legendi for microbiology was obtained at the Technical University Braunschweig where she is an adjunct Professor for Microbiology. From the beginning of the 1990’s Kornelia Smalla contributed to the field of molecular microbial ecology and microbiome research. Cultivation-independent methods were developed to study the microbiome of soils or of plants and how the composition and functions of complex microbiomes are affected by agricultural management practice. The group is interested in developing methods to manage and stimulate the soil microbiome by reduced tillage, organic amendments or inoculants. Another research interest of the group are the factors that shape the transferable resistome and plasmid-mediated bacterial adaptation to changing environments.",
       "horario": "15:00",
       "nombre": "Dra. Kornelia Smalla",
       "pais": "Alemania",
@@ -140,16 +147,16 @@ export class DataService {
       "titulo": "The microbiome of seeds and plant reproductive organs: diversity, co-evolution with the plant, and biotechnological potential for agriculture"
     },
     "pablo-hardoim":{
-      "bio": "",
+      "bio": "Agronomist from the Federal University of Lavras (UFLA), with M.Sc. in soil fertility and plant nutrition from the Luiz de Queiroz College of Agriculture, University of São Paulo (ESALQ-USP) and Ph.D. in microbial ecology from the University of Groningen (RUG), The Netherlands. He has nearly twenty years of experience in the studies of interaction between plants and microbial mutualisms with emphasis on endophytes. Today, he works as a consultant on the implementation of crop management for the development of sustainable agriculture.",
       "horario": "15:00",
       "nombre": "Dr. Pablo Hardoim",
       "pais": "Brasil",
       "sid": "el-holobionte-planta",
-      "texto": "",
-      "titulo": "Próximamente más información"
+      "texto": "Próximamente más información",
+      "titulo": "Structural and functional plasticity in plants through microbial partners: a holistic approach"
     },
     "emanuel-de-souza":{
-      "bio": "",
+      "bio": "Possui graduação em Farmacia e Bioquimica pela Universidade Federal do Paraná (1984) e doutorado em Ciências (Bioquímica) pela Universidade Federal do Paraná (1990). Atualmente é Professor Titular da Universidade Federal do Paraná. Tem experiência na área de Bioquímica, com ênfase em Biologia Molecular. Atua principalmente nos seguintes temas: fixação biológica de nitrogênio, regulação da expressão gênica em Azospirillum brasilense e Herbaspirillium seropedicae, expressão e purificação de proteínas em Escherichia coli e mecanismos moleculares da interacao planta-bactéria.",
       "horario": "15:45",
       "nombre": "Dr. Emanuel de Souza",
       "pais": "Brasil",
@@ -157,7 +164,7 @@ export class DataService {
       "texto": "",
       "titulo": "Próximamente más información"
     },
-    "mariana-sanchez":{
+    "marina-sanchez":{
       "bio": "La profesora Mariana Sanchez es Ingeniera Agrónoma, Maestra en Administración de Empresas y en Suelos y Aguas, Doctor Ingeniero Agrónomo de la Universidad Politécnica ETSIA Madrid Área de énfasis en Tecnologías Agroambientales. Profesora Titular de Dedicación Exclusiva, Tenente de Cargo de la Universidad Nacional de Colombia-Sede Palmira, Investigadora Emérita del Departamento Administrativo de Ciencia, Tecnología e Innovación COLCIENCIAS, coordinadora grupo de investigación en Agroecología,  sus áreas de trabajo: Microbiología Agrícola, Biología y Microbiología del Suelo, Fitopatología con énfasis en hongos y bacterias, Agricultura Ecológica y en este momento integra desde su experiencia todas estas áreas en la Agroecología.",
       "horario": "10:00",
       "nombre": "Dra. Mariana Sánchez",
@@ -182,10 +189,10 @@ export class DataService {
       "pais": "Cuba",
       "sid": "del-laboratorio-al-campo",
       "texto": "Resulta cada vez más clara la necesidad de garantizar alimentos para una población creciente, conservando la fertilidad de los suelos y respetando el medio ambiente. Si existía alguna duda, la crisis impuesta por la pandemia que hoy vivimos, ha reforzado esta realidad. Este milenio ha reconocido de forma creciente el papel que juegan los procesos biológicos en el funcionamiento de la biosfera, pero en particular del suelo y de la producción agrícola. El uso de productos compuestos por microorganismos benéficos, ya sean fitoestimulantes, biofertilizantes o agentes de biocontrol, constituye una estrategia tecnológica cada vez más aceptada en las prácticas agrícolas sustentables, con lo cual cada vez son más los centros de investigación y grandes compañías que dedican recursos económicos y humanos a la búsqueda de nuevos bioproductos. En esta charla, trataremos de ejemplificar brevemente, utilizando la experiencia de Cuba, cuál ha sido el camino recorrido para convertir una cepa aislada de entre millones que se asocian a un cultivo, en un producto que regresa al campo para potenciar sus bondades y colaborar con el crecimiento, desarrollo y rendimiento de cultivos de interés.",
-      "titulo": "Necesidad de una agricultura autosustentable, generación de productos microbianos desde el laboratorio hasta el campo. Caso Cuba."
+      "titulo": "Necesidad de una agricultura autosustentable, generación de productos microbianos desde el laboratorio hasta el campo: Caso Cuba."
     },
     "paula-aguilera":{
-      "bio": "Paula Aguilera. Núcelo Científico Tecnológico (Bioren), Universidad de La Frontera, Temuco-Chile.",
+      "bio": "Académico, Investigador, Encargada de Transferencia Tecnológica en Núcleo Científico Tecnológico (BIOREN-UFRO), Universidad de la Frontera. Ing. Agrónomo, Magíster y Doctorado en Ciencias de Recursos Naturales. Co-fundadora de la Red Sudamericana de Micorrizas “South American Mycorrhizal Network” y Fundadora de la Empresa de Base Científico Tecnológica (EBCT) Myconativa Ltda.",
       "horario": "15:45",
       "nombre": "Dra. Paula Aguilera",
       "pais": "Chile",

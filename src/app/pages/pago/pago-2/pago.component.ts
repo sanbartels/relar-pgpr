@@ -3,6 +3,7 @@ import { FormGroup, FormBuilder, Validators, FormArray } from '@angular/forms';
 import { AuthService } from '../../../services/auth.service';
 import { Router } from '@angular/router';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { UserDB } from '../../../models/user.model';
 
 @Component({
   selector: 'app-pago',
@@ -43,7 +44,22 @@ export class PagoComponent implements OnInit {
   }
 
   isInvalid( nameInput : string ){ return this.form.get(nameInput).invalid && this.form.get(nameInput).touched; }
-  load(){ this.form.reset() } //this.form.reset({})
+  load(){
+    this.form.reset({
+      name: this.auth.user.name,
+      lastname: this.auth.user.lastname,
+      mail: this.auth.user.email,
+      telefono: this.auth.user.telefono,
+      sexo: this.auth.user.sexo,
+      formacion: this.auth.user.formacion,
+      categoria: this.auth.user.categoria,
+      institucion: this.auth.user.institucion,
+      seccion: this.auth.user.seccion,
+      pais: this.auth.user.pais,
+      ciudad: this.auth.user.ciudad,
+      dni: this.auth.user.dni,
+      fechaDeNacimiento: this.auth.user.fechaDeNacimiento
+  }) } //this.form.reset({})
   save(){
     this.form.markAllAsTouched();
     if(this.form.status=='VALID'){

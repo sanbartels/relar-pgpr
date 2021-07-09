@@ -19,7 +19,7 @@ export class AuthService {
   ){
     this.auth.authState.subscribe( 
       (user) =>{ if(user) this.login(user); }, 
-      (error) => console.log(error) )
+      (error) => console.log(error) );
   }
 
   login = (user) => {
