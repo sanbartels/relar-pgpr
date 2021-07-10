@@ -42,7 +42,7 @@ export class DataService {
       "texto": "Próximamente más información"
     },
     "conservación-y-manejo-microbiano": {
-      "conferencistas": ["mariana-sanchez", "alda-rodriguez"],
+      "conferencistas": ["marina-sanchez", "alda-rodriguez"],
       "coordinadores": "Coordinadores: Dra. Natalia Bajsa (Uruguay) y Dr. Luis Wall (Argentina)",
       "horario": "Jueves 7 de octubre",
       "nombre": "Conservación y manejo microbiano en sistemas naturales y agroecosistemas",
@@ -165,9 +165,9 @@ export class DataService {
       "titulo": "Próximamente más información"
     },
     "marina-sanchez":{
-      "bio": "La profesora Mariana Sanchez es Ingeniera Agrónoma, Maestra en Administración de Empresas y en Suelos y Aguas, Doctor Ingeniero Agrónomo de la Universidad Politécnica ETSIA Madrid Área de énfasis en Tecnologías Agroambientales. Profesora Titular de Dedicación Exclusiva, Tenente de Cargo de la Universidad Nacional de Colombia-Sede Palmira, Investigadora Emérita del Departamento Administrativo de Ciencia, Tecnología e Innovación COLCIENCIAS, coordinadora grupo de investigación en Agroecología,  sus áreas de trabajo: Microbiología Agrícola, Biología y Microbiología del Suelo, Fitopatología con énfasis en hongos y bacterias, Agricultura Ecológica y en este momento integra desde su experiencia todas estas áreas en la Agroecología.",
+      "bio": "La profesora Marina Sanchez es Ingeniera Agrónoma, Maestra en Administración de Empresas y en Suelos y Aguas, Doctor Ingeniero Agrónomo de la Universidad Politécnica ETSIA Madrid Área de énfasis en Tecnologías Agroambientales. Profesora Titular de Dedicación Exclusiva, Tenente de Cargo de la Universidad Nacional de Colombia-Sede Palmira, Investigadora Emérita del Departamento Administrativo de Ciencia, Tecnología e Innovación COLCIENCIAS, coordinadora grupo de investigación en Agroecología,  sus áreas de trabajo: Microbiología Agrícola, Biología y Microbiología del Suelo, Fitopatología con énfasis en hongos y bacterias, Agricultura Ecológica y en este momento integra desde su experiencia todas estas áreas en la Agroecología.",
       "horario": "10:00",
-      "nombre": "Dra. Mariana Sánchez",
+      "nombre": "Dra. Marina Sánchez",
       "pais": "Colombia",
       "sid": "conservación-y-manejo-microbiano",
       "texto": "",
