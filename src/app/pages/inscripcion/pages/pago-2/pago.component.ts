@@ -41,7 +41,6 @@ export class PagoComponent implements OnInit {
         dni:        ['', [ Validators.required, Validators.minLength(6) ]],
         fechaDeNacimiento: ['', [ Validators.required, Validators.pattern('(0?[1-9]|[1-2][0-9]|3[0-1])([\/]|[-])(0?[1-9]|1[0-2])([\/]|[-])(19[0-9]{2}|20[0-1][0-9]|202[0-1])') ]]
       })
-      this.load();
   }
 
   isInvalid( nameInput : string ){ return this.form.get(nameInput).invalid && this.form.get(nameInput).touched; }

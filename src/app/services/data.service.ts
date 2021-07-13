@@ -53,7 +53,7 @@ export class DataService {
     },
     "del-laboratorio-al-campo": {
       "conferencistas": ["maria-caridad-napoles", "paula-aguilera"],
-      "coordinadores": "Coordinadoras: Dra. Nora Altier (Uruguay) y Dra. Mariángela Hungría (Brasil)",
+      "coordinadores": "Coordinadoras: Dra. Nora Altier (Uruguay) y Dra. Mariangela Hungría (Brasil)",
       "horario": "Jueves 7 de octubre",
       "nombre": "Del laboratorio al campo",
       "texto": `
@@ -64,7 +64,7 @@ export class DataService {
     },
     "legislación-sobre-productos-microbianos": {
       "conferencistas": ["romina-almesia", "jerri-zilli"],
-      "coordinadores": "Coordinadores: Lic. Bioq. María Maryan (Uruguay) y Ing. Perticari (Argentina)",
+      "coordinadores": "Coordinadores: Lic. Bioq. María Maryan (Uruguay) y Ing. Alejandro Perticari (Argentina)",
       "horario": "Viernes 8 de octubre",
       "nombre": "Legislación sobre registro y empleo de productos microbianos",
       "texto": "Existen diferentes grados de avance en las normas sobre productos biológicos a nivel mundial. En Latinoamérica la industria de los biológicos se muestra muy activa y rica en iniciativas en casi todos los países y muchos de ellos cuentan con normativas para inoculantes formulados con bacterias del género rizobio y con otros PGPR con mecanismos de promoción directa sobre el crecimiento vegetal así como también para productos formulados con agentes de control biológico. En los últimos años han surgido nuevos productos, generalmente formulados con consorcios microbianos con diferentes funcionalidades que no se ajustan a las normas existentes. Esto ha llevado a que se utilicen una amplia variedad de términos para identificarlos (inoculantes, biofertilizantes, bioestimulantes, elicitores, bioinsumos, productos biológicos, etc.) generando confusión en su identificación. Es necesario contar con definiciones claras que nos permitan clasificar cada producto de acuerdo a su composición y efecto benéfico para poder contar con marcos normativos apropiados para su evaluación. Se deben concretar tecnologías innovadoras para la agricultura basadas en el conocimiento científico, y para ello es necesario un fuerte compromiso de las Empresas, la Academia y el Estado, acompañado de políticas de investigación, desarrollo y extensión respecto al uso de productos biológicos."
@@ -218,6 +218,10 @@ export class DataService {
       "texto": "",
       "titulo": "Próximamente más información"
     },
+    "estela-castillo":{
+      "nombre": "Dra. Estela Castillo",
+      "pais": "Uruguay"
+    },
     "mariangela-hungria":{
       "nombre": "Dra. Mariangela Hungría",
       "pais": "Brasil"
@@ -260,7 +264,7 @@ export class DataService {
 
   mesas={
     "mujeres-en-la-ciencia": {
-      "conferencistas": ["mariangela-hungria", "esperanza-martinez"],
+      "conferencistas": ["estela-castillo", "mariangela-hungria", "esperanza-martinez"],
       "coordinadores": "Coordinadora: Dra. Silvia Batista (Uruguay)",
       "horario": "Lunes 4 de octubre",
       "nombre": "Mujeres en la ciencia",

@@ -1,7 +1,7 @@
 <!-- PROGRESSBAR -->
 <ul id="progressbar" class="pt-5 px-0">
-    <li class="active" [routerLink]="['/registrarse-1']" id="account"><strong>Cuenta</strong></li>
-    <li class="active" [routerLink]="['/registrarse-2']" id="personal"><strong>Información Personal</strong></li>
+    <li class="active" id="account"><strong>Cuenta</strong></li>
+    <li class="active" id="personal"><strong>Información Personal</strong></li>
     <li class="active" id="postular"><strong>Postular trabajo</strong></li>
     <li id="payment"><strong>Pago</strong></li>
     <li id="confirm"><strong>Finalizar</strong></li>
@@ -198,7 +198,7 @@
             </button>
         </div>
     </form>
-    <div class="d-flex justify-content-between">
+    <div class="d-flex justify-content-end">
         <button mat-raised-button color="basic" class="w-25 mb-3 mx-3" type="button" (click)="no()">
             Postular más tarde
         </button>

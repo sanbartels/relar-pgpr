@@ -21,6 +21,10 @@ export class UserComponent implements OnInit {
     this.router.navigateByUrl('home');
   }
 
+  inscripcion(): void {
+    this.router.navigateByUrl(`/registrarse-${this.auth.user.inscripcion}`);
+  }
+
   ngOnInit(): void {
   }
 

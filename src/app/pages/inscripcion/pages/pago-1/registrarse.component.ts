@@ -1,30 +1,24 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthProvider, Theme} from 'ngx-auth-firebaseui';
+import { AuthProvider, Theme } from 'ngx-auth-firebaseui';
 import { Router } from '@angular/router';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { AuthService } from '../../../services/auth.service';
 
 @Component({
   selector: 'app-registrarse',
   templateUrl: './registrarse.component.html',
-  styleUrls: ['./registrarse.component.css']
+  styleUrls: ['../../inscripcion.component.css']
 })
 export class RegistrarseComponent implements OnInit {
 
   constructor(
     private router: Router,
     private snackBar : MatSnackBar,
-    public auth: AuthService
   ) {}
   
   ngOnInit(): void {}
 
   providers = AuthProvider;
   themes = Theme;
-
-  avanzar(){
-    this.router.navigateByUrl('/registrarse-2');
-  }
 
   login(){
     this.router.navigateByUrl('/login');
@@ -38,12 +32,6 @@ export class RegistrarseComponent implements OnInit {
 
   handleError($event: any){
     this.snackBar.open('A ocurrido un error inesperado', 'Aceptar', { duration: 3000 });
-  }
-
-  volverAlHome(){
-    this.auth.resetUser();
-    this.auth.resetTrabajo();
-    this.router.navigateByUrl('home');
   }
 
 }

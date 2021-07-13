@@ -17,6 +17,8 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { MatBadgeModule } from '@angular/material/badge';
+
 
 /* FIREBASE */
 import { AngularFireModule } from '@angular/fire';
@@ -129,6 +131,7 @@ import { UsernamePipe } from './pipes/username.pipe';
     MatSnackBarModule,
     MatMenuModule,
     MatExpansionModule,
+    MatBadgeModule,
     NgxPayPalModule,
     TranslateModule.forRoot({
       loader: {

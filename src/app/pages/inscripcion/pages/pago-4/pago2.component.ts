@@ -20,9 +20,7 @@ export class Pago2Component implements OnInit {
     text: ''
   }
 
-  private password = 'relarpgpr.free';
-  private passwordConferencista = 'conferencista.free';
-  private passwordCoordinador = 'coordinador.free';
+  private password = 'relar.free';
 
   saltarPago(){
     this.router.navigateByUrl('registrarse-5');

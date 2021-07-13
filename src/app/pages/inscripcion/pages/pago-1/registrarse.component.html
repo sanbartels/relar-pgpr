@@ -6,29 +6,8 @@
     <li id="payment"><strong>Pago</strong></li>
     <li id="confirm"><strong>Finalizar</strong></li>
 </ul>
-
 <div class="my-5 px-5 d-flex justify-content-center">
-    <div class="bg-white d-inline-block" *ngIf="auth.user.email">
-        <div class="m-3">
-            <ngx-auth-firebaseui-user
-            signoutButtonText="Cerrar sesión"
-            editButtonText="Editar"
-            saveChangesButtonText="Guardar cambios"
-            cancelButtonText="Cancelar"
-            notLoggedInText="Usted no está logueado"
-            emailVerifiedText="Email verificado"
-            emailNotVerifiedText="Email no verificado"
-            [canDeleteAccount]="true"
-            (onSignOut)="volverAlHome()">
-            </ngx-auth-firebaseui-user>
-        </div>
-        <div class="mb-3 mx-3">
-            <button mat-raised-button color="primary" class="w-100" (click)="avanzar()">
-                Continuar
-            </button>
-        </div>
-    </div>
-    <div class="bg-white d-inline-block" *ngIf="!auth.user.email">
+    <div class="bg-white d-inline-block">
         <ngx-auth-firebaseui-register
             titleText="REGISTRARSE"
             nameText="Nombre"
@@ -50,7 +29,7 @@
         <div class="w-50 mx-auto pb-5">
             <ngx-auth-firebaseui-providers
                 [providers]="[providers.Google, providers.Facebook]"
-                layout="row"                
+                layout="row"
                 [theme]="themes.FAB"
                 (onSuccess)="saveUser($event)"
                 (onError)="handleError($event)">

@@ -49,7 +49,7 @@
             <li><a href="mailto:secretaria.alar@gmail.com"><i class="fas fa-envelope"></i></a></li>
             <li *ngIf="this.auth.user.uid" [routerLink]="['/user']">
                 <!--<img [src]="this.auth.user.photoURL | img " alt="Imagen de usuario">-->
-                <span>{{ this.auth.user.displayName | username }}</span>
+                <span matBadge="!" [matBadgeHidden]="auth.user.inscripcion==5" matBadgeColor="warn">{{ this.auth.user.displayName | username }}</span>
             </li>
             <li *ngIf="!this.auth.user.uid">
                 <i class="fas fa-user mx-2"></i>

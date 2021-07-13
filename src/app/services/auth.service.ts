@@ -10,6 +10,7 @@ import { map, delay } from 'rxjs/operators';
 export class AuthService {
 
   public user = new UserDB();
+  public logged = false;
   private trabajo = new Trabajo();
   private url = 'https://relar-pgpr-default-rtdb.firebaseio.com';
 
@@ -18,7 +19,7 @@ export class AuthService {
     private http: HttpClient
   ){
     this.auth.authState.subscribe( 
-      (user) =>{ if(user) this.login(user); }, 
+      (user) =>{ if(user) this.login(user); this.logged = true; }, 
       (error) => console.log(error) );
   }
 

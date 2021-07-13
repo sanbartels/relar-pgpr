@@ -42,8 +42,9 @@ mat-radio-group{
     text-align: center;
 }
 
-.active { color: #16f64b }
-.pointer{ cursor: pointer; }
+#progressbar .active {
+    color: #16f64b
+}
 
 #progressbar li {
     list-style-type: none;
@@ -100,6 +101,5 @@ mat-radio-group{
 
 #progressbar li.active:before,
 #progressbar li.active:after {
-    background: #16f64b;
-    cursor: pointer;
+    background: #16f64b
 }
