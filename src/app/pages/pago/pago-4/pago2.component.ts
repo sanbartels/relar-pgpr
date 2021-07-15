@@ -20,18 +20,43 @@ export class Pago2Component implements OnInit {
     text: ''
   }
 
-  private password = 'relarpgpr.free';
-  private passwordConferencista = 'conferencista.free';
-  private passwordCoordinador = 'coordinador.free';
+  private passwordFree = 'RELARPGPRFREE';
+  private passwordConferencista = 'CONFERENCISTAS2021';
+  private passwordCoordinador = 'COORDINADORES2021';
+  private passwordPedeciba = 'PEDECIBArelarpgpr2021';
 
   saltarPago(){
     this.router.navigateByUrl('registrarse-5');
   }
 
-  onClickMe(pass: string) {
-    if(pass==this.password){
+  freePass(pass: string) {
+    if( pass==this.passwordFree ){
       this.showPassError = false;
-      this.auth.actualizarInscripcionFree().subscribe( (resp) =>{
+      this.auth.actualizarInscripcionFree('free').subscribe( (resp) =>{
+        this.snackBar.open('Los datos de inscripción se han actualizado correctamente', 'Aceptar', { duration: 3000 });
+        this.router.navigateByUrl('registrarse-5');
+      }, (error) =>{
+        this.snackBar.open('Se ha producido un error, inténtelo nuevamente', 'Aceptar', { duration: 3000 }) 
+      })
+    }else if( pass==this.passwordConferencista ){
+      this.showPassError = false;
+      this.auth.actualizarInscripcionFree('conferencista').subscribe( (resp) =>{
+        this.snackBar.open('Los datos de inscripción se han actualizado correctamente', 'Aceptar', { duration: 3000 });
+        this.router.navigateByUrl('registrarse-5');
+      }, (error) =>{
+        this.snackBar.open('Se ha producido un error, inténtelo nuevamente', 'Aceptar', { duration: 3000 }) 
+      })
+    }else if( pass==this.passwordCoordinador ){
+      this.showPassError = false;
+      this.auth.actualizarInscripcionFree('coordinador').subscribe( (resp) =>{
+        this.snackBar.open('Los datos de inscripción se han actualizado correctamente', 'Aceptar', { duration: 3000 });
+        this.router.navigateByUrl('registrarse-5');
+      }, (error) =>{
+        this.snackBar.open('Se ha producido un error, inténtelo nuevamente', 'Aceptar', { duration: 3000 }) 
+      })
+    }else if( pass==this.passwordPedeciba ){
+      this.showPassError = false;
+      this.auth.actualizarInscripcionFree('pedeciba').subscribe( (resp) =>{
         this.snackBar.open('Los datos de inscripción se han actualizado correctamente', 'Aceptar', { duration: 3000 });
         this.router.navigateByUrl('registrarse-5');
       }, (error) =>{

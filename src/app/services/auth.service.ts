@@ -120,10 +120,11 @@ export class AuthService {
   }
 
   /*FREEPASS*/
-  actualizarInscripcionFree = () =>{
+  actualizarInscripcionFree = ( cod: string ) =>{
     this.user.inscripcion = 5;
     this.user.pago = true;
     this.user.metodo = 'free';
+    this.user.type = cod;
     return this.http.put(`${ this.url }/users/${ this.user.uid }.json`, this.user );
   }
 

@@ -22,6 +22,7 @@ export class UserDB{
     inscripcion: number;
     brou?: { number:string, text:string };
     metodo?: string;
+    type?: string;
 
     getFullName = () => this.name + ' ' + this.lastname;
 

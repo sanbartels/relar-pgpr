@@ -242,8 +242,8 @@ export class DataService {
       "pais": "Argentina",
       "url": "https://iica.int/es"
     },
-    "jose-roberto-pereira":{
-      "nombre": "Sr. Jose Roberto Pereira",
+    "solon-cordeiro-de-araujo":{
+      "nombre": "Sr. Solon Cordeiro de Araujo",
       "institucion": "Asociación Nacional de Productores e Importadores de Inoculantes - ANPII",
       "pais": "Brasil",
       "url": "http://www.anpii.org.br/"
@@ -271,7 +271,7 @@ export class DataService {
       "texto": "La Mesa redonda propone presentar la participación de las mujeres en la ciencia en algunos países de la región, incorporando los datos generados a partir de distintas instituciones y comisiones de género que se encuentran trabajando en el tema. Asimismo, se debatirá sobre las medidas que podrían adoptarse para incentivar que las mujeres opten por estas carreras y en particular, formarse como líderes referentes."
     },
     "bioinsumos": {
-      "conferencistas": ["pedro-lage", "tomas-krostch", "jose-roberto-pereira", "maribel-parada", "roberto-rapella"],
+      "conferencistas": ["pedro-lage", "tomas-krostch", "solon-cordeiro-de-araujo", "maribel-parada", "roberto-rapella"],
       "coordinadores": "Coordinadores: Dr. Federico Battistoni (Uruguay) y Dr. Fabricio Cassan (Brasil)",
       "horario": "Lunes 4 de octubre",
       "nombre": "Actores involucrados en el desarrollo y aplicación de bioinsumos: ¿Es posible un modelo alternativo de producción?",
