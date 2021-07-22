@@ -29,9 +29,9 @@ import { PostularTrabajo2Component } from './pages/postular-trabajo2/postular-tr
 const redirectUnauthorizedToLogin = () => redirectUnauthorizedTo(['login']);
 
 const routes: Routes = [
-  { path: 'home', component: HomeComponent },
+  { path: 'inicio', component: HomeComponent },
   { path: 'login', component: LoginComponent },
-  { path: 'user', component: UserComponent },
+  { path: 'user', component: UserComponent, ...canActivate(redirectUnauthorizedToLogin) },
   { path: 'programa', component: ProgramaComponent },
   { path: 'faq', component: FaqComponent },
   { path: 'noticias', component: NoticiasComponent },
@@ -46,7 +46,7 @@ const routes: Routes = [
   { path: 'registrarse-4', component: Pago2Component, ...canActivate(redirectUnauthorizedToLogin) },
   { path: 'registrarse-5', component: Pago3Component, ...canActivate(redirectUnauthorizedToLogin) },
   { path: 'postular-trabajo', component: PostularTrabajo2Component, ...canActivate(redirectUnauthorizedToLogin) },
-  { path: '**', pathMatch: 'full', redirectTo: 'home' }
+  { path: '**', pathMatch: 'full', redirectTo: 'inicio' }
 ];
 
 @NgModule({

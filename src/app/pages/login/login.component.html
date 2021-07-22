@@ -11,8 +11,10 @@
     [emailText]="'LOGIN.EMAIL'|translate"
     [passwordText]="'LOGIN.PASSWORD'|translate"
     [loginButtonText]="'LOGIN.LOGIN-BUTTON'|translate"
+    [forgotPasswordText]="'LOGIN.LOGIN-FORGOT-PASSWORD'|translate"
     [providers]="[providers.Google, providers.Facebook]"
-    [resetPasswordEnabled]="false"
+    [resetPasswordEnabled]="true"
+    (onResetPasswordRequested)="resetPassword()"
     (onCreateAccountRequested)="registrarse()"
     (onSuccess)="saveUser($event)"
     (onError)="handleError($event)">

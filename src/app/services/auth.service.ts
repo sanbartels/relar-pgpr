@@ -1,4 +1,4 @@
-import { Injectable } from '@angular/core';
+import { Injectable, Pipe } from '@angular/core';
 import { AngularFireAuth } from '@angular/fire/auth';
 import { HttpClient } from '@angular/common/http';
 import { UserDB, Trabajo } from '../models/user.model';
@@ -88,8 +88,9 @@ export class AuthService {
 
   /* TRABAJO */
   getTrabajo = ( uid: string, tid: string ) => this.http.get(`${ this.url }/trabajos/${uid}/${tid}.json`);
+  getTrabajos = () => this.http.get(`${ this.url }/trabajos/${ this.user.uid }.json`);
   newTrabajo = ( trabajo: Trabajo ) => this.http.post(`${ this.url }/trabajos/${trabajo.uid}.json`, trabajo);
-  deleteTrabajo = ( uid: string, tid: string ) => this.http.delete(`${this.url}/trabajos/${uid}/${tid}.json`).subscribe();
+  deleteTrabajo = ( uid: string, tid: string ) => this.http.delete(`${this.url}/trabajos/${uid}/${tid}.json`);
   resetTrabajo = () => this.trabajo = new Trabajo();
 
   /* ACTUALIZAR TRABAJOS DEL USUARIO */
@@ -128,16 +129,6 @@ export class AuthService {
     return this.http.put(`${ this.url }/users/${ this.user.uid }.json`, this.user );
   }
 
-
-  /* LISTA USUARIOS */
-  getUsers = () => {
-    return this.http.get(`${ this.url }/users.json`)
-      .pipe(
-        map( this.fromJSONtoArray ),
-        delay(0)
-      );
-  }
-
   private fromJSONtoArray( usersObj : Object ){
 
     const usersArray : UserDB[] = [];
@@ -151,9 +142,5 @@ export class AuthService {
 
     return usersArray;
   }
-
-
-
-
 
 }

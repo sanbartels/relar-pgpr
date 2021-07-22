@@ -23,6 +23,7 @@
     "PASSWORD-ERROR-REQUIRED": "Contraseña es un campo obligatorio",
     "EMAIL": "Correo",
     "PASSWORD": "Contraseña",
-    "LOGIN-BUTTON": "Ingresar"
+    "LOGIN-BUTTON": "Ingresar",
+    "LOGIN-FORGOT-PASSWORD": "¿Olvidó su contraseña?"
   }
 }

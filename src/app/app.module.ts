@@ -18,6 +18,7 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatExpansionModule } from '@angular/material/expansion';
 import { MatBadgeModule } from '@angular/material/badge';
+import { MatDialogModule } from '@angular/material/dialog';
 
 
 /* FIREBASE */
@@ -66,6 +67,8 @@ import { FooterComponent } from './components/footer/footer.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { NavbarSmComponent } from './components/navbar-sm/navbar-sm.component';
 import { PaypalComponent } from './components/paypal/paypal.component';
+import { PostularFormComponent } from './components/postular-form/postular-form.component';
+/* HOME COMPONENTS */
 import { LogosComponent } from './components/home/logos/logos.component';
 import { ComiteComponent } from './components/home/comite/comite.component';
 import { AcercaComponent } from './components/home/acerca/acerca.component';
@@ -79,6 +82,9 @@ import { IntroduccionComponent } from './components/home/introduccion/introducci
 /* PIPES */
 import { ImgPipe } from './pipes/img.pipe';
 import { UsernamePipe } from './pipes/username.pipe';
+
+/* DIALOGS */
+import { DeleteConfirmationComponent } from './components/dialogs/delete-confirmation.component';
 
 @NgModule({
   declarations: [
@@ -113,7 +119,9 @@ import { UsernamePipe } from './pipes/username.pipe';
     FechasImportantesComponent,
     NoticiasHomeComponent,
     IntroduccionComponent,
-    MesasRedondasComponent
+    MesasRedondasComponent,
+    PostularFormComponent,
+    DeleteConfirmationComponent
   ],
   imports: [
     BrowserModule,
@@ -132,6 +140,7 @@ import { UsernamePipe } from './pipes/username.pipe';
     MatMenuModule,
     MatExpansionModule,
     MatBadgeModule,
+    MatDialogModule,
     NgxPayPalModule,
     TranslateModule.forRoot({
       loader: {
@@ -159,8 +168,6 @@ import { UsernamePipe } from './pipes/username.pipe';
       enableFirestoreSync: true, // enable/disable auto-sync users with firestore
       toastMessageOnAuthSuccess: false, // whether to open/show a snackbar message on auth success - default : true
       toastMessageOnAuthError: false, // whether to open/show a snackbar message on auth error - default : true
-      authGuardFallbackURL: '/loggedout', // url for unauthenticated users - to use in combination with canActivate feature on a route
-      authGuardLoggedInURL: '/loggedin', // url for authenticated users - to use in combination with canActivate feature on a route
       passwordMaxLength: 60, // `min/max` input parameters in components should be within this range.
       passwordMinLength: 8, // Password length min/max in forms independently of each component min/max.
       // Same as password but for the name

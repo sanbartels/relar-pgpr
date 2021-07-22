@@ -19,11 +19,6 @@ textarea{
     height: 80px;
 }
 
-h3{
-    text-transform: uppercase;
-    font-family: 'Staatliches';
-}
-
 mat-radio-group{
     margin-left: 12px;
 }

@@ -7,23 +7,24 @@
     <li id="confirm"><strong>Finalizar</strong></li>
 </ul>
 
-<div class="my-5 px-5 d-flex justify-content-center">
-    <div class="bg-white d-inline-block" *ngIf="auth.user.email">
+<div class="my-5 d-flex justify-content-center">
+    <div class="bg-white d-inline-block p-3" style="min-width: 30%;" *ngIf="auth.user.email">
         <div class="m-3">
             <ngx-auth-firebaseui-user
-            signoutButtonText="Cerrar sesión"
-            editButtonText="Editar"
-            saveChangesButtonText="Guardar cambios"
-            cancelButtonText="Cancelar"
-            notLoggedInText="Usted no está logueado"
-            emailVerifiedText="Email verificado"
-            emailNotVerifiedText="Email no verificado"
-            [canDeleteAccount]="true"
-            (onSignOut)="volverAlHome()">
+                signoutButtonText="Cerrar sesión"
+                editButtonText="Editar"
+                saveChangesButtonText="Guardar cambios"
+                cancelButtonText="Cancelar"
+                notLoggedInText="Usted no está logueado"
+                emailVerifiedText="Email verificado"
+                emailNotVerifiedText="Email no verificado"
+                [canEditAccount]="false"
+                [canDeleteAccount]="false"
+                (onSignOut)="signOut()">
             </ngx-auth-firebaseui-user>
         </div>
         <div class="mb-3 mx-3">
-            <button mat-raised-button color="primary" class="w-100" (click)="avanzar()">
+            <button mat-raised-button color="primary" class="w-100" (click)="continuar()">
                 Continuar
             </button>
         </div>
@@ -43,7 +44,7 @@
             passwordErrorMaxLengthText="La contraseña es muy larga!"
             createAccountButtonText="Crear cuenta"
             alreadyHaveAccountText="¿Ya tienes una cuenta?"
-            (onLoginRequested)="login()"
+            (onLoginRequested)="goToLogin()"
             (onSuccess)="saveUser($event)"
             (onError)="handleError($event)"
         ></ngx-auth-firebaseui-register>

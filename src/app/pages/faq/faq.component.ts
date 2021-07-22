@@ -92,6 +92,13 @@ export class FaqComponent implements OnInit {
         `
         },
         { 
+        "pregunta": "¿Puedo abonar el costo de inscripción por medio de la alicuota de PEDECIBA (Biología-Química)? ",
+        "respuesta": `
+        <p>Si, investigadores y estudiantes de PEDECIBA (Biología o Químimca) pueden abonar el costo de inscripción por medio de la alícuota PEDECIBA, enviando formulario: <a href="https://firebasestorage.googleapis.com/v0/b/relar-pgpr.appspot.com/o/FormularioPagoRELAR_PGPR_Pedeciba.odt?alt=media&amp;token=007214a8-03f6-43e4-85ff-dbee06824e0b" target="_blank" rel="Formulario PEDECIBA">Descargar Formulario</a> a PEDECIBA Biologia: <a href="mailto:presupuestobiologia@pedeciba.edu.uy">presupuestobiologia@pedeciba.edu.uy</a> con copia a <a href="mailto:secretaria.alar@gmail.com">secretaria.alar@gmail.com</a>  / PEDECIBA Química: <a href="mailto:gabig@fq.edu.uy">gabig@fq.edu.uy</a> con copia a <a href="mailto:secretaria.alar@gmail.com">secretaria.alar@gmail.com</a>.</p>
+        <p>Toda persona que haya realizado el pago de inscripción a través de la alícuota PEDECIBA deberá solicitar su código de inscripción a <a href="mailto:secretaria.alar@gmail.com">secretaria.alar@gmail.com</a></p>
+        `
+        },
+        { 
         "pregunta": "¿Cómo aplico a una beca completa?",
         "respuesta": `
         <p>En la sección POSTULAR TRABAJO de nuestra web, deberá seleccionar la opción “SI” en “POSTULAR  A BECA” (parte inferior de la página), luego:</p>

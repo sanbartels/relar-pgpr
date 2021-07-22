@@ -23,6 +23,7 @@
     "PASSWORD-ERROR-REQUIRED": "Password is a required field",
     "EMAIL": "Email",
     "PASSWORD": "Password",
-    "LOGIN-BUTTON": "Login"
+    "LOGIN-BUTTON": "Login",
+    "LOGIN-FORGOT-PASSWORD": "Forgot Password?"
   }
 }

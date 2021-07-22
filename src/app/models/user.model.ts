@@ -49,6 +49,7 @@ export class Trabajo{
     beca: boolean;
     tipoBeca?: string;
     file?: string;
+    tid?: string;
 
     constructor(){
         this.beca = false;

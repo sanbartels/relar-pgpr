@@ -22,25 +22,26 @@ export class RegistrarseComponent implements OnInit {
   providers = AuthProvider;
   themes = Theme;
 
-  avanzar(){
-    this.router.navigateByUrl('/registrarse-2');
-  }
+  /* NAVEGACIÓN */
+  continuar = () => this.router.navigateByUrl('/registrarse-2');
+  goToLogin = () => this.router.navigateByUrl('/login');
 
-  login(){
-    this.router.navigateByUrl('/login');
-  }
-
-  saveUser($event: any){
+  /* REGISTRARSE */
+  saveUser(event: any){
     this.snackBar.open('El usuario se creó correctamente', 'Aceptar', { duration: 3000 });
-    console.log($event);
     this.router.navigateByUrl('/registrarse-2');
   }
 
-  handleError($event: any){
-    this.snackBar.open('A ocurrido un error inesperado', 'Aceptar', { duration: 3000 });
+  handleError(event: any){
+    if(event.code == "auth/email-already-in-use" ){
+      this.snackBar.open('Ya hay un usuario registrado con este e-mail', 'Aceptar', { duration: 3000 });
+    }else{
+      this.snackBar.open('Ha ocurrido un error inesperado', 'Aceptar', { duration: 3000 });
+    }
   }
 
-  volverAlHome(){
+  /* USER SIGN OUT */
+  signOut(){
     this.auth.resetUser();
     this.auth.resetTrabajo();
     this.router.navigateByUrl('home');

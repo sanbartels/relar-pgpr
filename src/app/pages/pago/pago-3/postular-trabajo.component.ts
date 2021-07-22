@@ -72,7 +72,6 @@ export class PostularTrabajoComponent implements OnInit {
   }
 
   save(){
-    console.log(this.form2);
     this.form2.markAllAsTouched();
     if(this.form2.controls.file !== null&&this.form2.status=='VALID'){
       this.subirArchivo()

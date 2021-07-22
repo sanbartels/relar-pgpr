@@ -11,7 +11,7 @@ export class DataService {
       "coordinadores": "Coordinadores: Dra. Carolina Leoni (Uruguay) y Dr. Rodrigo Mendes (Brasil)",
       "horario": "Lunes 4 de octubre",
       "nombre": "El microbioma agrícola",
-      "texto": "Próximamente más información"
+      "texto": "La agricultura moderna convencional ha experimentado procesos de intensificación y especialización asociados a un aumento del uso de energía fósil por el incremento en el uso de agroquímicos, mecanización y riego. Como consecuencia, se constatan importantes pérdidas en la salud del suelo y los agroecosistemas, con sistemas de producción no sustentables. Por ello es necesario transitar hacia sistemas de producción alternativos, que aseguren la productividad en el mediano y largo plazo mediante el fortalecimiento de los ciclos ecológicos, la reducción de la dependencia de insumos externos no renovables y la optimización del uso del agua y la energía. El microbioma agrícola es clave en la transición hacia sistemas agrícolas sostenibles. Es necesario explorar y conocer la gran diversidad taxonómica y funcional de los microorganismos del suelo, así como las interacciones planta-microorganismo en la multiplicidad de ambientes agrícolas y manejos agronómicos existentes, de forma de abrir nuevos caminos para una producción sostenible desde una perspectiva ambiental, económica y social. En esta sección se presentarán algunos avances de la comunidad científica en el estudio y comprensión del microbioma agrícola."
     },
     "promoción-indirecta-del-crecimiento-vegetal": {
       "conferencistas": ["jeroen-wagemans", "alexandra-stoll"],
@@ -39,7 +39,11 @@ export class DataService {
       "coordinadores": "Coordinadores: Dra. Elena Fabiano (Uruguay) y Dr. Antonio Lagares (Argentina)",
       "horario": "Miércoles 6 de octubre",
       "nombre": "El Holobionte Planta",
-      "texto": "Próximamente más información"
+      "texto": `
+      <p>«Todos somos comunidades de microbios. Cada planta y cada animal en la Tierra es hoy producto de la simbiosis» Lynn Margulis.</p>
+      <p>Justamente el concepto de “holobionte” hace referencia a esa estrecha asociación entre individuos de diferentes reinos, generando una unidad en sí misma con desarrollo y evolución propios, con características anatómicas y fisiológicas únicas.</p>  
+      <p>En esta mesa nos vamos a centrar en el “holobionte planta”. Las presentaciones de Emanuel de Souza y Pablo Hardoim nos van a mostrar una visión holística, integral, sobre la unidad planta-microbiota. ¿Las plantas tendrían el mismo aroma, producirían los mismos compuestos, se alimentarán por igual sin su microbiota? ¿Podrían defenderse de las enfermedades, enfrentar a los patógenos estando solas? ¿Habrían tenido el mismo proceso evolutivo y desarrollo si no hubiesen estado estrechamente asociadas a su microbiota?</p>
+      `
     },
     "conservación-y-manejo-microbiano": {
       "conferencistas": ["marina-sanchez", "alda-rodriguez"],
