@@ -22,9 +22,7 @@
         <mat-menu #invitados="matMenu">
             <ul class="py-2 mt-2">
                 <li class="li" *ngFor="let cid of this.sesion.conferencistas">
-                    <a [href]="this.data.conferencistas[cid].url" target="_blank">
                     <span class="uppercase">{{ this.data.conferencistas[cid].nombre }}</span><br>{{ this.data.conferencistas[cid].institucion }}
-                    </a>
                 </li>
             </ul>
         </mat-menu>

@@ -9,9 +9,11 @@ import { map, delay } from 'rxjs/operators';
 })
 export class AuthService {
 
-  public user = new UserDB();
   public logged = false;
+  public popup = true;
+  public user = new UserDB();
   private trabajo = new Trabajo();
+
   private url = 'https://relar-pgpr-default-rtdb.firebaseio.com';
 
   constructor( 

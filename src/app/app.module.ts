@@ -85,6 +85,8 @@ import { UsernamePipe } from './pipes/username.pipe';
 
 /* DIALOGS */
 import { DeleteConfirmationComponent } from './components/dialogs/delete-confirmation.component';
+import { PopUpComponent } from './components/dialogs/pop-up-home.component';
+
 
 @NgModule({
   declarations: [
@@ -121,7 +123,8 @@ import { DeleteConfirmationComponent } from './components/dialogs/delete-confirm
     IntroduccionComponent,
     MesasRedondasComponent,
     PostularFormComponent,
-    DeleteConfirmationComponent
+    DeleteConfirmationComponent,
+    PopUpComponent
   ],
   imports: [
     BrowserModule,
