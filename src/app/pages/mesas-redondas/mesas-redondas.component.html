@@ -1,38 +1,28 @@
-<section class="py-2">
-    <!-- TEXTO RELAR-PGPR 
-    <div class="d-none d-sm-block letras-container">
-        <div class="bg-texto-5"></div>
-    </div>-->
-
+<section *ngIf="mesa">
 
     <!-- TITULO -->
-    <div class="m-5 text-white" [routerLink]="['/mesas-redondas/'+id]">
-        <h2>MESA REDONDA<br>{{sesion.nombre}}</h2>
-        <h3 class="mt-4">{{sesion.horario}}</h3>
+    <div class="p-5 text-white" [routerLink]="['/mesas-redondas/'+id]">
+        <h2>MESA REDONDA<br>{{ mesa[lang.lang].titulo }}</h2>
+        <h3 class="mt-4">{{ mesa.horario }}</h3>
     </div>
 
     <!-- MENU -->
     <nav class="my-5">
         <ul class="d-md-flex justify-content-center m-0">
             <li class="border-left border-right uppercase" [matMenuTriggerFor]="invitados">Panelistas</li>
-            <!--<li class="border-right uppercase" [matMenuTriggerFor]="instituciones"  *ngIf="sesion['instituciones']">Instituciones</li>-->
         </ul>
         
         <!-- INVITADOS -->
         <mat-menu #invitados="matMenu">
             <ul class="py-2 mt-2">
-                <li class="li" *ngFor="let cid of this.sesion.conferencistas">
-                    <span class="uppercase">{{ this.data.conferencistas[cid].nombre }}</span><br>{{ this.data.conferencistas[cid].institucion }}
+                <li class="li" *ngFor="let cid of mesa.conferencistas">
+                    <span class="uppercase">{{ data.getPanelista(cid).nombre }}</span>
+                    <br>
+                    <span *ngIf="data.getPanelista(cid).institucion">{{ data.getPanelista(cid).institucion }}</span>
                 </li>
             </ul>
         </mat-menu>
 
-        <!-- INSTITUCIONES
-        <mat-menu #instituciones="matMenu">
-            <ul class="py-2 mt-2">
-                <li class="li" *ngFor="let institucion of sesion['instituciones']">{{ institucion.nombre }}</li>
-            </ul>
-        </mat-menu> -->
     </nav>
     <router-outlet></router-outlet>
 </section>

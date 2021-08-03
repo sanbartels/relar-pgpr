@@ -1,0 +1,57 @@
+<section class="bg-white p-5 my-md-5 mx-auto w-lg-75">
+    <h3>Actualizar Conferencista</h3>
+    <hr>
+    <form autocomplete="off" [formGroup]="form" (ngSubmit)="save()">
+
+        <div class="d-md-flex">
+            <!-- CONFERENCISTA -->
+            <mat-form-field appearance="fill">
+                <mat-label>Conferencista</mat-label>
+                    <mat-select formControlName="name">
+                        <mat-option *ngFor="let item of conferencistas" [value]="item.key">{{ item.nombre }}</mat-option>
+                    </mat-select>
+            </mat-form-field>
+
+            <!-- LENGUAJE -->
+            <mat-form-field appearance="fill" class="ml-md">
+                <mat-label>Lenguaje</mat-label>
+                    <mat-select formControlName="lang">
+                        <mat-option value="_es">{{ 'NAV.ES' | translate }}</mat-option>
+                        <mat-option value="_en">{{ 'NAV.EN' | translate }}</mat-option>
+                        <mat-option value="_pt">{{ 'NAV.PT' | translate }}</mat-option>
+                    </mat-select>
+            </mat-form-field>
+        </div>
+
+        <!-- TÍTULO -->
+        <mat-form-field appearance="fill">
+            <mat-label>Título</mat-label>
+            <input type="text" matInput formControlName="titulo">
+        </mat-form-field>
+
+        <!-- COLABORADORES -->
+        <mat-form-field appearance="fill">
+            <mat-label>Colaboradores</mat-label>
+            <input type="text" matInput formControlName="colaboradores">
+        </mat-form-field>
+
+        <!-- TEXTO -->
+        <mat-form-field appearance="fill">
+            <mat-label>Texto</mat-label>
+            <textarea matInput formControlName="texto"></textarea>
+        </mat-form-field>
+
+        <!-- BIO -->
+        <mat-form-field appearance="fill">
+            <mat-label>Biografía</mat-label>
+            <textarea matInput formControlName="bio"></textarea>
+        </mat-form-field>
+
+        <!-- SUBMIT -->
+        <div class="d-flex justify-content-end">
+            <button mat-raised-button color="primary" class="w-25 mb-3 mx-3" type="submit">
+                Subir
+            </button>
+        </div>
+    </form>
+</section>

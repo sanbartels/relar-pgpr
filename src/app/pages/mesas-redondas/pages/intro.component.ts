@@ -15,6 +15,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 export class IntroComponent implements OnInit {
 
     sesion: any;
+    loaded = false;
 
     constructor(
         private data: DataService,
@@ -25,6 +26,7 @@ export class IntroComponent implements OnInit {
         this.router.events.subscribe(()=>{
             const id : string = this.route.snapshot.paramMap.get('id');
             this.sesion = this.data.getMesa(id);
+            this.loaded = true;
         })
     }
 

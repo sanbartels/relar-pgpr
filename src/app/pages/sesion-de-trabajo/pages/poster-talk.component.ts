@@ -4,15 +4,7 @@ import { ActivatedRoute } from '@angular/router';
 
 @Component({
     selector: 'app-usuario-detalle',
-    template: `
-        <article class="bg-transparente p-5 text-white">
-            <h5 class="pb-4">POSTER TALKS</h5>
-            <p>Al culminar las dos Charlas Magistrales, se exhibirán los video-minuto de todos aquellos trabajos aceptados y sugeridos a Póster Talk por la dupla coordinadora de esta sesión.</p>
-            <p>Cada presentador/a realizará un video, de un minuto de duración, donde relate los principales puntos de su trabajo, teniendo en cuenta: introducción, objetivo/pregunta de investigación, metodología, resultados-discusión y conclusiones.</p>
-            <p>Se promueve este espacio como una ventanilla de exhibición y reconocimiento de trabajos destacados.</p>
-            <p>Los PÓSTER TALK son una excelente oportunidad para despertar el interés de otros colegas respecto a los avances y/o resultados de tu investigación. Así, al finalizar la jornada, podrás intercambiar, en vivo, con ellas y ellos, en la SESIÓN de PÓSTER.</p>
-        </article>
-    `,
+    templateUrl: './poster-talk.component.html',
     styleUrls: ['../sesion-de-trabajo.component.css']
 })
 export class PosterTalkComponent implements OnInit {
@@ -24,8 +16,10 @@ export class PosterTalkComponent implements OnInit {
         private route: ActivatedRoute
     ){
         /* GET ID */
-        const id : string = this.route.snapshot.paramMap.get('id');
-        this.sesion = this.data.getSesion(id);
+        this.route.params.subscribe(
+            (resp) => this.sesion = this.data.getSesion(resp.id),
+            (error) => console.log(error)
+        )
     }
 
     ngOnInit() {

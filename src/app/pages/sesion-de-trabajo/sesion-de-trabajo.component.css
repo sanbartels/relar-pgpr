@@ -38,31 +38,6 @@ li{
     cursor: pointer;
 }
 
-/* TEXTO EFECTO */
-
-.letras-container{
-    z-index: 2;
-    width: 100%;
-    overflow: hidden;
-}
-
-.bg-texto-5{
-    min-height: 40px;
-    width: 1000%;
-    background-image: url("/assets/img/texto-6.png");
-    background-repeat: repeat;
-    animation: texto-loco 90s linear infinite;
-}
-
-@keyframes texto-loco{
-	0% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
-}
-
 /* MEDIA QUERYS */
 
 /* Small devices (landscape phones, 576px and up)*/

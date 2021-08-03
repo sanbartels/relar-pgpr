@@ -1,25 +1,15 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, LOCALE_ID } from '@angular/core';
 
-/* MODULES */
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 
-/* MATERIAL */
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatInputModule } from '@angular/material/input';
-import { MatButtonModule } from '@angular/material/button';
-import { MatRadioModule } from '@angular/material/radio';
-import { MatSelectModule } from '@angular/material/select';
-import { MatSnackBarModule } from '@angular/material/snack-bar';
-import { MatMenuModule } from '@angular/material/menu';
-import { MatExpansionModule } from '@angular/material/expansion';
-import { MatBadgeModule } from '@angular/material/badge';
-import { MatDialogModule } from '@angular/material/dialog';
-
+import { AdminModule } from './pages/admin/admin.module';
+import { SesionModule } from './pages/sesion-de-trabajo/sesion.module';
+import { MaterialModule } from './modules/material.module';
 
 /* FIREBASE */
 import { AngularFireModule } from '@angular/fire';
@@ -41,6 +31,15 @@ export function createTranslateLoader(httpClient: HttpClient): TranslateHttpLoad
   return new TranslateHttpLoader(httpClient, './assets/i18n/', '.json');
 }
 
+/* LOCALES */
+import { registerLocaleData } from '@angular/common';
+import localeEs from '@angular/common/locales/es';
+import localePt from '@angular/common/locales/pt';
+import localeEn from '@angular/common/locales/en';
+registerLocaleData(localeEs, '_es');
+registerLocaleData(localePt, '_pt');
+registerLocaleData(localeEn, '_en');
+
 /* PAGES */
 import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
@@ -50,10 +49,8 @@ import { UserComponent } from './pages/user/user.component';
 import { ProgramaComponent } from './pages/programa/programa.component';
 import { FaqComponent } from './pages/faq/faq.component';
 import { NoticiasComponent } from './pages/noticias/noticias.component';
-import { SesionDeTrabajoComponent } from './pages/sesion-de-trabajo/sesion-de-trabajo.component';
+//import { SesionDeTrabajoComponent } from './pages/sesion-de-trabajo/sesion-de-trabajo.component';
 import { MesasRedondasComponent } from './pages/mesas-redondas/mesas-redondas.component';
-import { AdminComponent } from './pages/admin/admin.component';
-
 /* PAGO */
 import { RegistrarseComponent } from './pages/pago/pago-1/registrarse.component';
 import { PagoComponent } from './pages/pago/pago-2/pago.component';
@@ -67,7 +64,9 @@ import { FooterComponent } from './components/footer/footer.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { NavbarSmComponent } from './components/navbar-sm/navbar-sm.component';
 import { PaypalComponent } from './components/paypal/paypal.component';
-import { PostularFormComponent } from './components/postular-form/postular-form.component';
+/* FORMS */
+import { PostularFormComponent } from './components/forms/postular-trabajo/postular-form.component';
+import { ActualizarConferencistaComponent } from './components/forms/actualizar-conferencista/actualizar-conferencista.component';
 /* HOME COMPONENTS */
 import { LogosComponent } from './components/home/logos/logos.component';
 import { ComiteComponent } from './components/home/comite/comite.component';
@@ -82,6 +81,7 @@ import { IntroduccionComponent } from './components/home/introduccion/introducci
 /* PIPES */
 import { ImgPipe } from './pipes/img.pipe';
 import { UsernamePipe } from './pipes/username.pipe';
+import { OrderTranslatePipe } from './pipes/countries-translate.pipe';
 
 /* DIALOGS */
 import { DeleteConfirmationComponent } from './components/dialogs/delete-confirmation.component';
@@ -105,13 +105,15 @@ import { PopUpComponent } from './components/dialogs/pop-up-home.component';
     PostularTrabajo2Component,
     LoginComponent,
     UserComponent,
+    //
     ImgPipe,
     UsernamePipe,
+    OrderTranslatePipe,
+    //
     ProgramaComponent,
     FaqComponent,
     NoticiasComponent,
-    SesionDeTrabajoComponent,
-    AdminComponent,
+    //SesionDeTrabajoComponent,
     LogosComponent,
     ComiteComponent,
     AcercaComponent,
@@ -124,26 +126,22 @@ import { PopUpComponent } from './components/dialogs/pop-up-home.component';
     MesasRedondasComponent,
     PostularFormComponent,
     DeleteConfirmationComponent,
-    PopUpComponent
+    PopUpComponent,
+    ActualizarConferencistaComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    //
+    AdminModule,
+    MaterialModule,
+    SesionModule,
+    //
     FormsModule,
     ReactiveFormsModule,
     NgbModule,
     CarouselModule,
-    MatFormFieldModule,
-    MatInputModule,
-    MatButtonModule,
-    MatRadioModule,
-    MatSelectModule,
-    MatSnackBarModule,
-    MatMenuModule,
-    MatExpansionModule,
-    MatBadgeModule,
-    MatDialogModule,
     NgxPayPalModule,
     TranslateModule.forRoot({
       loader: {
@@ -184,7 +182,9 @@ import { PopUpComponent } from './components/dialogs/pop-up-home.component';
     }
     )
   ],
-  providers: [],
+  providers: [
+    { provide: LOCALE_ID, useValue: 'es' }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../../services/data.service';
-import { ActivatedRoute, Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
+import { LangService } from '../../services/lang.service';
 
 @Component({
   selector: 'app-sesion-de-trabajo',
@@ -14,15 +15,17 @@ export class SesionDeTrabajoComponent implements OnInit {
 
   constructor( 
     public data: DataService,
+    public lang: LangService,
     private route: ActivatedRoute,
-    private router: Router
   ){
     /* GET ID */
-    this.router.events.subscribe(()=>{
-      const id : string = this.route.snapshot.paramMap.get('id');
-      this.id = id;
-      this.sesion = this.data.getSesion(id);
-    })
+    this.route.params.subscribe(
+      (resp) =>{
+        this.sesion = this.data.getSesion(resp.id);
+        this.id = resp.id;
+      },
+      (error) => console.log(error)
+    )
   }
 
   ngOnInit(): void {

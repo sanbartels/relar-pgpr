@@ -1,0 +1,174 @@
+<div class="bg-white p-5 m-5">
+    <h3>Postular Trabajo</h3>
+    <hr>
+    <ul>
+        <li>Fecha límite de postulación: 15 de agosto.</li>
+        <li>Fecha de notificación de los trabajos aceptados: 30 de agosto.</li>
+        <li>Se podrá postular hasta 2 trabajos por participante.</li>
+        <li>Se aceptarán resúmenes en idioma español, portugués o inglés.</li>
+        <li>Los trabajos postulados serán evaluados por un comité científico designado para cada sesión de trabajo del evento.</li>
+        <li>Todos los trabajos aceptados participarán en el PÓSTER HALL y en las SESIONES DE PÓSTERS. y, aquellos seleccionados por el comité científico, tendrán la oportunidad de ser expuestos en los POSTER TALK y/o en los DIÁLOGOS DE INVESTIGACIÓN.</li>
+        <li>Todos los trabajos aceptados tendrán la oportunidad de ser publicados, en formato de artículo científico, en la Special Issue (July-Sept 2022) Plant growth-promoting microorganisms in the New Era: from Ecology to Biotechnology in America, de la revista Environmental Sustainability. Editorial Springer. <a href="https://www.springer.com/journal/42398/updates/19148470">Más información aquí</a></li>
+    </ul>
+    <hr>
+    <!-- FORM -->
+    <form autocomplete="off" [formGroup]="form2" (ngSubmit)="save()">
+        <!-- TEMA -->
+        <mat-form-field appearance="fill">
+            <mat-label>Seleccione la sesión a la que postula</mat-label>
+            <mat-select formControlName="tema">
+                <mat-option value="1">1. Evolución y diversidad de MPCV</mat-option>
+                <mat-option value="2">2. Promoción indirecta del crecimiento vegetal</mat-option>
+                <mat-option value="3">3. Promoción directa del crecimiento vegetal</mat-option>
+                <mat-option value="4">4. El microbioma agrícola </mat-option>
+                <mat-option value="5">5. El holobionte planta</mat-option>
+                <mat-option value="6">6. Conservación y manejo del microbioma en sistemas naturales y
+                    agroecosistemas</mat-option>
+                <mat-option value="7">7. Del laboratorio al campo</mat-option>
+                <mat-option value="8">8. Legislación sobre registro y empleo de productos microbiano</mat-option>
+            </mat-select>
+        </mat-form-field>
+
+        <div class="d-md-flex">
+            <!-- TÍTULO -->
+            <mat-form-field appearance="fill">
+                <mat-label>Título</mat-label>
+                <input type="text" matInput formControlName="titulo">
+                <mat-error *ngIf="isInvalid('titulo')">El campo título es obligatorio</mat-error>
+            </mat-form-field>
+
+            <!-- AUTORES -->
+            <mat-form-field appearance="fill" class="ml-md">
+                <mat-label>Autores</mat-label>
+                <input type="text" matInput formControlName="autores">
+                <mat-error *ngIf="isInvalid('autores')">El campo autores es obligatorio</mat-error>
+            </mat-form-field>
+        </div>
+
+
+        <div class="d-md-flex">
+            <!-- INSTITUCIÓN -->
+            <mat-form-field appearance="fill">
+                <mat-label>Institución/ Afiliación</mat-label>
+                <input type="text" matInput formControlName="institucion">
+                <mat-error *ngIf="isInvalid('institucion')">El campo afilición/ institución es obligatorio
+                </mat-error>
+            </mat-form-field>
+
+            <!-- EXPONE -->
+            <mat-form-field appearance="fill" class="ml-md">
+                <mat-label>Autor/ Presentador</mat-label>
+                <input type="text" matInput formControlName="expone">
+                <mat-error *ngIf="isInvalid('expone')">El campo presentador es obligatorio</mat-error>
+            </mat-form-field>
+        </div>
+
+        <!-- RESUEMEN -->
+        <mat-form-field appearance="fill">
+            <mat-label>Resumen - Máximo 300 palabras</mat-label>
+            <textarea matInput formControlName="resumen"></textarea>
+            <mat-error *ngIf="isInvalid('institucion')">El campo resumen es obligatorio</mat-error>
+        </mat-form-field>
+
+        <div>
+        <!-- ¿POSTERTALKS? -->
+        <hr class="mt-0">
+        <div class="d-flex">
+            <label>¿Le interesa a usted realizar un video minuto de su trabajo para participar de los
+                Poster talk?</label>
+            <mat-radio-group formControlName="postertalk" class="d-flex">
+                <mat-radio-button value="0">No</mat-radio-button>
+                <mat-radio-button value="1">Si</mat-radio-button>
+                <mat-error *ngIf="isInvalid('postertalk')"><small>Este campo es obligatorio</small></mat-error>
+            </mat-radio-group>
+        </div>
+        <hr>
+        <!-- ¿VIDEO 15 MINUTOS? -->
+        <div class="d-flex">
+            <label>¿Le interesa a usted realizar un video de hasta 15 minutos de su trabajo y participar en
+                la actividad Diálogos de investigación?</label>
+            <mat-radio-group formControlName="dialogos" class="d-flex">
+                <mat-radio-button value="0">No</mat-radio-button>
+                <mat-radio-button value="1">Si</mat-radio-button>
+                <mat-error *ngIf="isInvalid('dialogos')"><small>Este campo es obligatorio</small></mat-error>
+            </mat-radio-group>
+        </div>
+        <hr>
+        <!-- ¿REQUIERE CERTIFICACIÓN? -->
+        <div class="d-flex">
+            <label>¿Para culminar su inscripción a la RELAR-PGPR necesita certificación de que su trabajo fue aceptado por el comité evaluador?</label>
+            <mat-radio-group formControlName="certificacion" class="d-flex">
+                <mat-radio-button value="0">No</mat-radio-button>
+                <mat-radio-button value="1">Si</mat-radio-button>
+                <mat-error *ngIf="isInvalid('certificacion')"><small>Este campo es obligatorio</small></mat-error>
+            </mat-radio-group>
+        </div>
+        <hr>
+        <!-- BECA -->
+        <div class="d-flex mt-5">
+            <label><h3 class="my-0 py-0">Postular a beca</h3></label>
+            <mat-radio-group formControlName="beca" class="d-flex">
+                <mat-radio-button value="0">No</mat-radio-button>
+                <mat-radio-button value="1">Si</mat-radio-button>
+                <mat-error *ngIf="isInvalid('beca')"><small>Este campo es obligatorio</small></mat-error>
+            </mat-radio-group>
+        </div>
+        <hr>
+    </div>
+
+        <div *ngIf="this.form2.value.beca=='1'">
+            La Asociación Latinoamericana de Rizobiología ALAR otorgará hasta 20 becas para estudiantes y jóvenes investigadores socios de la ALAR que presenten trabajos destacados. Complementariamente, el evento otorgará un número limitado de becas otorgadas por la organización del congreso, que serán destinadas a participantes no socios de la ALAR que presenten trabajos destacados y no dispongan de fondos para cubrir los costos de inscripción. 
+            <hr>
+            <ul>
+                <li>Inscribirse a uno de los dos tipos de becas</li>
+                <li>Presentar un trabajo como primer autor o autor de correspondencia</li>
+                <li>Estar dispuesto a participar de todas las instancias del congreso</li>
+                <li>En caso de postular a beca ALAR, presentar un comprobante de que la persona y/o tutor/a son socios de la asociación.ALAR</li>
+            </ul>
+            <hr>
+            <!-- TIPO DE BECA -->
+            <mat-form-field appearance="fill">
+                <mat-label>Seleccione el tipo de beca</mat-label>
+                <mat-select formControlName="tipoBeca">
+                    <mat-option value="ALAR">Beca ALAR</mat-option>
+                    <mat-option value="RELAR">Beca RELAR-PGPR</mat-option>
+                </mat-select>
+            </mat-form-field>
+            <hr class="mt-0">
+            <div class="d-flex">
+                <!-- BECA 01 -->
+                <label>¿Es usted primer autor o autor de correspondencia del trabajo?</label>
+                <mat-radio-group formControlName="beca1" class="d-flex">
+                    <mat-radio-button value="0">No</mat-radio-button>
+                    <mat-radio-button value="1">Si</mat-radio-button>
+                    <mat-error *ngIf="isInvalid('beca1')"><small>Es requisito ser primer autor o autor de correspondencia para postularse a la beca</small></mat-error>
+                </mat-radio-group>
+            </div>
+            <hr>
+            <div class="d-flex">
+                <!-- BECA 02 -->
+                <label>¿Usted está dispuesto a participar de todas las instancias del congreso?</label>
+                <mat-radio-group formControlName="beca2" class="d-flex">
+                    <mat-radio-button value="0">No</mat-radio-button>
+                    <mat-radio-button value="1">Si</mat-radio-button>
+                    <mat-error *ngIf="isInvalid('beca2')"><small>Es requisito aceptar este campo para postularse a la beca</small></mat-error>
+                </mat-radio-group>
+            </div>
+            <hr>
+        </div>
+        <div class="form-group" *ngIf="showFile">
+            <!-- COMPROBANTE -->
+            <label>Adjunte el comprobante de socio ALAR (.pdf):</label>
+            <input class="form-control-file mx-3" type="file" formControlName="file">
+            <mat-error *ngIf="isInvalid('file')"><small>Es requisito para postularse a la beca ALAR</small></mat-error>
+            <hr>
+        </div>
+
+        <!-- SUBMIT -->
+        <div class="d-flex justify-content-end">
+            <button mat-raised-button color="primary" class="w-25 mb-3 mx-3" type="submit">
+                Postular
+            </button>
+        </div>
+    </form>
+</div>

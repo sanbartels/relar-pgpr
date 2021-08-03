@@ -10,5 +10,7 @@ export class AdminService {
 
   constructor( private http: HttpClient ) { }
 
-  getUsers = () => this.http.get(`${ this.url }/users.json`)
+  getUsers = () => this.http.get(`${ this.url }/users.json`);
+
+  setConferencista = ( data: any, lang: string, key: string ) => this.http.put(`${ this.url }/data/conferencistas/${ key }/${ lang }.json`, data);
 }

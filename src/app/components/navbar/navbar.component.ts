@@ -9,8 +9,10 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor( public auth: AuthService,
-               private translate: TranslateService) {}
+  constructor( 
+    public auth: AuthService,
+    private translate: TranslateService
+  ) {}
 
   ngOnInit(): void {
   }

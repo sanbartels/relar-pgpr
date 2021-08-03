@@ -1,13 +1,9 @@
-<section class="py-2">
-    <!-- TEXTO RELAR-PGPR 
-    <div class="d-none d-sm-block letras-container">
-        <div class="bg-texto-5"></div>
-    </div>-->
+<section>
 
     <!-- TITULO -->
-    <div class="m-5 text-white" [routerLink]="['/sesiones-de-trabajo/'+id]">
-        <h2>SESIÓN<br>{{sesion.nombre}}</h2>
-        <h3 class="mt-4">{{sesion.horario}}</h3>
+    <div class="p-5 text-white" [routerLink]="['/sesiones-de-trabajo/'+id]">
+        <h2>SESIÓN<br>{{ sesion[lang.lang].titulo }}</h2>
+        <h3 class="mt-4">{{ sesion.horario }}</h3>
     </div>
 
     <!-- MENU -->
@@ -20,7 +16,7 @@
         
         <mat-menu #menu="matMenu">
             <ul class="py-2 mt-2">
-                <li class="li" [routerLink]="['/sesiones-de-trabajo/'+id+'/charlas-magistrales/'+cid]" *ngFor="let cid of this.sesion.conferencistas">{{ this.data.conferencistas[cid].nombre }}</li>
+                <li class="li" [routerLink]="['/sesiones-de-trabajo/'+id+'/charlas-magistrales/'+cid]" *ngFor="let cid of sesion.conferencistas">{{ data.getConferencista(cid).nombre }}</li>
             </ul>
         </mat-menu>
     </nav>

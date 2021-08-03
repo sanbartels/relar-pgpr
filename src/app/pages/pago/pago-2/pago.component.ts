@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators, FormArray } from '@angular/forms';
 import { AuthService } from '../../../services/auth.service';
+import { DataService } from '../../../services/data.service';
 import { Router } from '@angular/router';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { UserDB } from '../../../models/user.model';
@@ -23,6 +24,7 @@ export class PagoComponent implements OnInit {
   constructor(
     private formBuilder: FormBuilder,
     private auth: AuthService,
+    public data: DataService,
     private snackBar : MatSnackBar,
     private router: Router )
   {

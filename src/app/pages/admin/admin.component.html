@@ -1,25 +1,25 @@
-<section class="m-5 p-5">
-    <table class="table table-dark table-hover">
-        <thead>
-          <tr>
-            <th scope="col">#</th>
-            <th scope="col">Nombre</th>
-            <th scope="col">Email</th>
-            <th scope="col">Categoría</th>
-            <th scope="col">T</th>
-            <th scope="col">P</th>
-          </tr>
-        </thead>
-        <tbody>
-            <tr *ngFor="let user of usersArray; let i = index">
-              <th scope="row">{{i}}</th>
-              <td>{{ user.displayName }}</td>
-              <td>{{ user.email }}</td>
-              <td>{{ categorias[user.categoria] }}</td>
-              <td style="color: #333;" [ngClass]="{ 'text-success': user.postulaTrabajo }"><i class="fas fa-circle"></i></td>
-              <td style="color: #333;" [ngClass]="{ 'text-warning': user.brou, 'text-primary': user.metodo=='free', 'text-success': user.metodo=='paypal' }"><i class="fas fa-circle"></i></td>
-            </tr>
-          </tbody>
-    </table>
+<section>
+    <!-- TITULO -->
+    <div class="p-5 text-white" [routerLink]="['/admin']">
+        <h2>ADMINISTRADOR</h2>
+    </div>
 
+    <!-- MENU -->
+    <nav class="my-md-5">
+        <ul class="d-md-flex justify-content-center m-0">
+            <li class="border-2px" [matMenuTriggerFor]="menu">Actualizar</li>
+            <!--<li [routerLink]="['/admin/trabajos']">Trabajos</li>
+            <li [routerLink]="['/admin/usuarios']" class="border-2px">usuarios</li>-->
+        </ul>
+        
+        <mat-menu #menu="matMenu">
+            <ul class="py-2 mt-2">
+                <li class="li" [routerLink]="['/admin/conferencista']">Conferencista</li>
+                <!--<li class="li" [routerLink]="['/admin/panelista']">Panelista</li>
+                <li class="li" [routerLink]="['/admin/actualizar-sesion-de-trabajo']">Sesión de trabajo</li>
+                <li class="li" [routerLink]="['/admin/actualizar-mesa-redonda']">Mesa Redonda</li>-->
+            </ul>
+        </mat-menu>
+    </nav>
+    <router-outlet></router-outlet>
 </section>

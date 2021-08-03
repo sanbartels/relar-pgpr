@@ -10,13 +10,9 @@ import { UserComponent } from './pages/user/user.component';
 import { ProgramaComponent } from './pages/programa/programa.component';
 import { FaqComponent } from './pages/faq/faq.component';
 import { NoticiasComponent } from './pages/noticias/noticias.component';
-import { SesionDeTrabajoComponent } from './pages/sesion-de-trabajo/sesion-de-trabajo.component';
-import { SESION_ROUTES } from './pages/sesion-de-trabajo/sesion-routes';
+//
 import { MesasRedondasComponent } from './pages/mesas-redondas/mesas-redondas.component';
-import { MESAS_ROUTES } from './pages/mesas-redondas/mesas-routes';
-
-/* ADMIN */
-import { AdminComponent } from './pages/admin/admin.component';
+import { MESAS_ROUTES } from './pages/mesas-redondas/mesas.routes';
 
 /*PAGO*/
 import { RegistrarseComponent } from './pages/pago/pago-1/registrarse.component';
@@ -35,10 +31,10 @@ const routes: Routes = [
   { path: 'programa', component: ProgramaComponent },
   { path: 'faq', component: FaqComponent },
   { path: 'noticias', component: NoticiasComponent },
-  { path: "sesiones-de-trabajo/:id", component: SesionDeTrabajoComponent, children: SESION_ROUTES },
+  { path: 'sesiones-de-trabajo/:id', loadChildren: () => import('./pages/sesion-de-trabajo/sesion.module').then(m => m.SesionModule) },
   { path: "mesas-redondas/:id", component: MesasRedondasComponent, children: MESAS_ROUTES },
   /*ADMIN*/
-  { path: "admin", component: AdminComponent, ...canActivate(redirectUnauthorizedToLogin) },
+  { path: 'admin', loadChildren: () => import('./pages/admin/admin.module').then(m => m.AdminModule), ...canActivate(redirectUnauthorizedToLogin) },
   /*PAGO*/
   { path: 'registrarse-1', component: RegistrarseComponent },
   { path: 'registrarse-2', component: PagoComponent, ...canActivate(redirectUnauthorizedToLogin) },
