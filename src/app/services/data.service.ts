@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Data, Conferencista, Panelista, Sesion, MesaRedonda } from '../models/data.model';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { LangService } from './lang.service';
 
 @Injectable({
   providedIn: 'root'
@@ -576,7 +576,8 @@ export class DataService {
   
   constructor(
     private http: HttpClient,
-    private snackBar: MatSnackBar
+    private snackBar: MatSnackBar,
+    public lang: LangService,
   ){
     this.setData();
   }
@@ -592,6 +593,12 @@ export class DataService {
   getConferencista = ( id: string ) => this.data.conferencistas[id];
   getMesa = ( id: string ) => this.data.mesas[id];
   getPanelista = ( id: string ) => this.data.panelistas[id];
+  
+  getSesionLang = ( id: string ) => this.data.sesiones[id][this.lang.lang];
+  getConferencistaLang = ( id: string ) => this.data.conferencistas[id][this.lang.lang];
+  getMesaLang = ( id: string ) => this.data.mesas[id][this.lang.lang];
+  getPanelistaLang = ( id: string ) => this.data.panelistas[id][this.lang.lang];
+
 
   ///////////
   ///

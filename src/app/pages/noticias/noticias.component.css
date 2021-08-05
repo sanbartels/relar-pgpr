@@ -1,8 +1,12 @@
 section{
-    background-color: rgba(55, 55, 55, 0.800);
-    color: white;
+    background-color: white;
+    border-radius: 50px 0px;
     padding: 1.8rem 1rem;
     margin: 3rem 0;
+}
+
+img{
+    border-radius: 50px 0px;
 }
 
 h3{
@@ -11,7 +15,7 @@ h3{
 }
 p{ text-align: justify; }
 hr{ color: #16f64b; }
-a{ color: white; }
+a{ color: black; }
 a:hover{ color: #16f64b;}
 
 /* TEXTO NOTICIAS */

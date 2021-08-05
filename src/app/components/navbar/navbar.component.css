@@ -6,6 +6,7 @@ nav{
     box-shadow: #666 0 0 10px;
     position: fixed;
     width: 100%;
+    min-height: 44px;
     top: 0;
     z-index: 1000;
     font-family: 'Seravek', sans-serif;
@@ -28,23 +29,8 @@ nav li{
 }
 
 nav, ul{ background-color: #16f64b !important; margin:0; padding:0; }
-nav li i{ font-size: 20px; }
+nav i{ font-size: 20px; }
 nav img{ width: 30px; border-radius: 50%; }
 .d-flex-center{ display: flex; align-items: center; }
 .border-left{ border-left: solid black 2px; }
 .border-right{ border-right: solid black 2px; }
-
-
-/*
-nav li:hover{
-    animation-name: grow-up;
-    animation-duration: 0.2s;
-    animation-fill-mode: forwards
-}
-
-@keyframes grow-up {
-    100% {
-        transform: scale(1.1);
-    }
-}
-*/

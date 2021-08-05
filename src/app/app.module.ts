@@ -62,7 +62,6 @@ import { Pago3Component } from './pages/pago/pago-5/pago3.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
-import { NavbarSmComponent } from './components/navbar-sm/navbar-sm.component';
 import { PaypalComponent } from './components/paypal/paypal.component';
 /* FORMS */
 import { PostularFormComponent } from './components/forms/postular-trabajo/postular-form.component';
@@ -95,7 +94,6 @@ import { PopUpComponent } from './components/dialogs/pop-up-home.component';
     HeaderComponent,
     FooterComponent,
     NavbarComponent,
-    NavbarSmComponent,
     RegistrarseComponent,
     PagoComponent,
     Pago2Component,

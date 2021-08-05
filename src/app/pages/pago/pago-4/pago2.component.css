@@ -9,6 +9,12 @@ h3{
     color: white;
 }
 
+@media (min-width: 768px) {
+    .w-lg-75{
+        width: 75%;
+    }
+}
+
 /* PROGRESSBAR */
 #progressbar {
     margin-bottom: 30px;

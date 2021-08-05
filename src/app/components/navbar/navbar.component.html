@@ -1,24 +1,13 @@
-<nav class="d-none d-sm-block">
+<!-- LARGE DEVICES -->
+<nav *ngIf="layout.currentScreenSize==='large'">
     <div class="d-flex-center justify-content-between">
         <ul class="d-flex-center">
-            <li class="border-right" [routerLink]="['/home']">
-                {{ 'NAV.HOME' | translate }}
-            </li>
-            <li class="border-right" [routerLink]="['/programa']">
-                {{ 'NAV.PROGRAMA' | translate }}
-            </li>
-            <li class="border-right" [matMenuTriggerFor]="sesiones">
-                {{ 'NAV.SESIONES' | translate }}
-            </li>
-            <li class="border-right" [matMenuTriggerFor]="mesas">
-                MESAS REDONDAS
-            </li>
-            <li  class="border-right" [routerLink]="['/noticias']">
-                {{ 'NAV.NOTICIAS' | translate }}
-            </li>
-            <li  class="border-right" [routerLink]="['/faq']">
-                FAQ
-            </li>
+            <li class="border-right" [routerLink]="['/home']">{{ 'NAV.HOME' | translate }}</li>
+            <li class="border-right" [routerLink]="['/programa']">{{ 'NAV.PROGRAMA' | translate }}</li>
+            <li class="border-right" [matMenuTriggerFor]="sesiones">{{ 'NAV.SESIONES' | translate }}</li>
+            <li class="border-right" [matMenuTriggerFor]="mesas">{{ 'MESAS REDONDAS' }}</li>
+            <li  class="border-right" [routerLink]="['/noticias']">{{ 'NAV.NOTICIAS' | translate }}</li>
+            <li  class="border-right" [routerLink]="['/faq']">{{ 'FAQ' }}</li>
 
             <mat-menu #sesiones="matMenu">
                 <div class="bg-white">
@@ -58,8 +47,44 @@
             </li>
         </ul>
     </div>
+</nav>
 
+<!-- SMALL DEVICES-->
+<nav *ngIf="layout.currentScreenSize!=='large'" class="d-flex-center">
+    <button mat-icon-button [matMenuTriggerFor]="menu"><i class="fas fa-bars"></i></button>
+
+    <mat-menu #menu="matMenu">
+        <div class="bg-white">
+            <button mat-menu-item [routerLink]="['/home']">{{ 'NAV.HOME' | translate }}</button>
+            <!--<button mat-menu-item [routerLink]="['/programa']">{{ 'NAV.PROGRAMA' | translate }}</button>-->
+            <button mat-menu-item [matMenuTriggerFor]="sesiones">{{ 'NAV.SESIONES' | translate }}</button>
+            <button mat-menu-item [matMenuTriggerFor]="mesas">{{ 'MESAS REDONDAS' }}</button>
+            <button mat-menu-item [routerLink]="['/noticias']">{{ 'NAV.NOTICIAS' | translate }}</button>
+            <button mat-menu-item [routerLink]="['/faq']">{{ 'FAQ' }}</button>
+            <button mat-menu-item [routerLink]="['/user']">{{ 'USUARIO' }}</button>
+        </div>
+    </mat-menu>
+
+        <mat-menu #sesiones="matMenu">
+            <div class="bg-white">
+                <button mat-menu-item [routerLink]="['/sesiones-de-trabajo/microbioma-agrícola']">El microbioma agrícola</button>
+                <button mat-menu-item [routerLink]="['/sesiones-de-trabajo/promoción-indirecta-del-crecimiento-vegetal']">Promoción indirecta del crecimiento vegetal</button>
+                <button mat-menu-item [routerLink]="['/sesiones-de-trabajo/promoción-directa-del-crecimiento-vegetal']">Promoción directa del crecimiento vegetal</button>
+                <button mat-menu-item [routerLink]="['/sesiones-de-trabajo/evolución-y-diversidad-de-mpcv']">Evolución y diversidad de microorganismos promotores de crecimiento vegetal</button>
+                <button mat-menu-item [routerLink]="['/sesiones-de-trabajo/el-holobionte-planta']">El Holobionte Planta</button>
+                <button mat-menu-item [routerLink]="['/sesiones-de-trabajo/conservación-y-manejo-microbiano']">Conservación y manejo microbiano en sistemas naturales y agroecosistemas</button>
+                <button mat-menu-item [routerLink]="['/sesiones-de-trabajo/del-laboratorio-al-campo']">Del laboratorio al campo</button>
+                <button mat-menu-item [routerLink]="['/sesiones-de-trabajo/legislación-sobre-productos-microbianos']">Legislación sobre registro y empleo de productos microbianos</button>
+            </div>
+        </mat-menu>
+        <mat-menu #mesas="matMenu">
+            <div class="bg-white">
+                <button mat-menu-item [routerLink]="['/mesas-redondas/mujeres-en-la-ciencia']">Mujeres en la ciencia</button>
+                <button mat-menu-item [routerLink]="['/mesas-redondas/bioinsumos']">Actores involucrados en el desarrollo y aplicación de bioinsumos: ¿Es posible un modelo alternativo de producción?</button>
+            </div>
+        </mat-menu>
 
 </nav>
+
 <!-- Workaround NAV offset -->
 <div class="nav-fix"></div>

@@ -6,11 +6,11 @@
     <li class="active" id="payment"><strong>Pago</strong></li>
     <li id="confirm"><strong>Finalizar</strong></li>
 </ul>
-<div class="bg-white p-5 mx-5 mt-5 mx-auto w-75">
+<div class="bg-white p-3 p-md-5 my-md-5 mx-auto w-lg-75">
     <div class="d-flex justify-content-between align-items-end">
         <h3 class="mb-0">Pago</h3>
         <div>
-            <span class="mx-3 d-none d-sm-inline">Saltear este paso</span>
+            <span class="mx-2">Saltar este paso</span>
             <button mat-mini-fab color="primary" (click)="saltarPago()" aria-label="Terminar inscripción sin pagar">
                 <i class="fas fa-arrow-right"></i>
             </button>
@@ -76,10 +76,12 @@
         </div>
     </div>
 </div>
-<div class="bg-white mb-5 mx-auto w-75">
+<div class="bg-white mb-md-5 mx-auto w-lg-75">
     <hr class="m-0">
-    <div class="d-flex justify-content-end align-items-center p-3">
-        <span class="mx-2">Si usted tiene un código de inscripción, por favor ingréselo aquí:</span>
+    <div class="d-flex align-items-center p-3">
+        <div class="w-75 px-2 text-end">
+            Si usted tiene un código de inscripción, por favor ingréselo aquí:
+        </div>
         <div class="input-group w-25">
             <input class="form-control" type="password" #pass>
             <button class="btn btn-primary" (click)="freePass(pass.value)" type="button"><i class="fas fa-arrow-right"></i></button>

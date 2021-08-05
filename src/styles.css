@@ -5,7 +5,6 @@ font-family: 'Seravek Medium', sans-serif;
 font-family: 'Seravek', sans-serif;
 font-family: 'Seravek ExtraLight', sans-serif;
 font-family: 'Seravek Light', sans-serif;
-*/
 
 @font-face {
   font-family: 'MacType';
@@ -16,6 +15,10 @@ font-family: 'Seravek Light', sans-serif;
   font-family: 'Roboto';
   src: url(/assets/fonts/roboto/Roboto-Regular.ttf) format('truetype');
 }
+
+*/
+
+::-webkit-scrollbar { display: none; }
 
 body, html{
     height: 100%;

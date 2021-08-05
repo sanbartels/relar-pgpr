@@ -1,21 +1,22 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { AuthService } from '../../services/auth.service';
+import { DataService } from '../../services/data.service';
 import { TranslateService } from '@ngx-translate/core';
+import { LayoutgService } from '../../services/layout.service';
 
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
   styleUrls: ['./navbar.component.css']
 })
-export class NavbarComponent implements OnInit {
+export class NavbarComponent{
 
   constructor( 
     public auth: AuthService,
-    private translate: TranslateService
+    public data: DataService,
+    private translate: TranslateService,
+    public layout: LayoutgService
   ) {}
-
-  ngOnInit(): void {
-  }
 
   useLanguage(language: string): void {
     this.translate.use(language);

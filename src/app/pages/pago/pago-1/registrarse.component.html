@@ -7,23 +7,21 @@
     <li id="confirm"><strong>Finalizar</strong></li>
 </ul>
 
-<div class="my-5 d-flex justify-content-center">
+<div class="p-3 p-md-5 d-flex justify-content-center">
     <div class="bg-white d-inline-block p-3" style="min-width: 30%;" *ngIf="auth.user.email">
+        <ngx-auth-firebaseui-user
+            signoutButtonText="Cerrar sesión"
+            editButtonText="Editar"
+            saveChangesButtonText="Guardar cambios"
+            cancelButtonText="Cancelar"
+            notLoggedInText="Usted no está logueado"
+            emailVerifiedText="Email verificado"
+            emailNotVerifiedText="Email no verificado"
+            [canEditAccount]="false"
+            [canDeleteAccount]="false"
+            (onSignOut)="signOut()">
+        </ngx-auth-firebaseui-user>
         <div class="m-3">
-            <ngx-auth-firebaseui-user
-                signoutButtonText="Cerrar sesión"
-                editButtonText="Editar"
-                saveChangesButtonText="Guardar cambios"
-                cancelButtonText="Cancelar"
-                notLoggedInText="Usted no está logueado"
-                emailVerifiedText="Email verificado"
-                emailNotVerifiedText="Email no verificado"
-                [canEditAccount]="false"
-                [canDeleteAccount]="false"
-                (onSignOut)="signOut()">
-            </ngx-auth-firebaseui-user>
-        </div>
-        <div class="mb-3 mx-3">
             <button mat-raised-button color="primary" class="w-100" (click)="continuar()">
                 Continuar
             </button>

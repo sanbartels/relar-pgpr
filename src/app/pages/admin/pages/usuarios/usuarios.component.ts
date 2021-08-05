@@ -10,13 +10,13 @@ import { UserDB } from '../../../../models/user.model';
 export class UsuariosComponent implements OnInit {
 
   usersArray: UserDB[];
-  categorias: string[] = [ "Investigador/ Profesional socio ALAR", "Investigador/ Prefesional", "Estudiante socio ALAR", "Estudiante", "Productor"]
+  categorias: string[] = [ "I/P ALAR", "I/P", "Est ALAR", "Est", "Prod"]
 
   constructor(
     private admin: AdminService
   ){
     this.admin.getUsers().subscribe(
-      (resp) => this.usersArray = this.fromJSONtoArray(resp),
+      (resp) => this.usersArray = this.fromJSONtoArray(resp).sort((a, b) => a.lastname > b.lastname && 1 || -1),
       (error) => console.log(error)
     );
   }

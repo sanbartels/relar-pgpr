@@ -3,29 +3,23 @@ h3{
     font-family: 'Staatliches';
 }
 
-li{
-    margin: 0.6rem 0;
-}
+li{ margin: 0.6rem 0; }
+textarea{ height: 80px; }
+.min-width-25{ min-width: 25%;}
 
-mat-form-field{
-    width: 100%;
-}
+mat-form-field{ width: 100%; }
+mat-radio-button{ margin: 0 10px; }
+mat-radio-group{ margin-left: 12px; }
 
-mat-radio-button{
-    margin: 0 10px;
-}
-
-textarea{
-    height: 80px;
-}
-
-mat-radio-group{
-    margin-left: 12px;
-}
 
 @media (min-width: 768px) {
     .ml-md{
         margin-left: 8px;
+    }
+}
+@media (min-width: 992px) {
+    .w-lg-75{
+        width: 75%;
     }
 }
 

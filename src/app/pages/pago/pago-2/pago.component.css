@@ -1,23 +1,21 @@
-.bg-white{
-    background-color: white;
-}
-
-mat-form-field{
-    width: 100%;
-}
-
-mat-radio-button{
-    margin: 0 10px;
-}
+mat-form-field{ width: 100%; }
+mat-radio-button{ margin: 0 10px; }
 
 h3{
     text-transform: uppercase;
     font-family: 'Staatliches';
 }
 
+.min-width-25{ min-width: 25%;}
+
 @media (min-width: 768px) {
     .ml-md{
         margin-left: 8px;
+    }
+}
+@media (min-width: 992px) {
+    .w-lg-75{
+        width: 75%;
     }
 }
 
