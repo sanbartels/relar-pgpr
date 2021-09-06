@@ -1,0 +1,14 @@
+mat-form-field{ width: 100%; }
+textarea{ height: 80px; }
+
+@media (min-width: 768px) {
+    .ml-md{
+        margin-left: 8px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .w-lg-75{
+        width: 75%;
+    }
+}

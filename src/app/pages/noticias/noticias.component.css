@@ -7,6 +7,7 @@ section{
 
 img{
     border-radius: 50px 0px;
+    display: none;
 }
 
 h3{
@@ -28,10 +29,10 @@ a:hover{ color: #16f64b;}
 
 .bg-texto-5{
     min-height: 45px;
-    width: 1000%;
+    width: 10000px;
     background-image: url("/assets/img/texto-5.png");
     background-repeat: repeat;
-    animation: texto-loco 80s linear infinite;
+    animation: texto-loco 60s linear infinite;
 }
 
 @keyframes texto-loco{
@@ -41,4 +42,11 @@ a:hover{ color: #16f64b;}
 	100% {
 		background-position: 0% 50%;
 	}
+}
+
+/* Medium devices (tablets, 768px and up)*/
+@media (min-width: 768px) {
+    img{
+        display: inline;
+    }
 }

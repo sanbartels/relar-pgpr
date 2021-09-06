@@ -1,19 +1,19 @@
-<section class="m-md-5 p-3 p-md-5">
+<section *ngIf="admin.usuariosLoadded">
     <table class="table table-dark table-hover">
         <thead>
           <tr>
             <th scope="col">#</th>
-            <th scope="col">Nombre</th>
-            <th scope="col">Email</th>
-            <th scope="col">Institución</th>
-            <th scope="col">Categoría</th>
-            <th scope="col">País</th>
+            <th scope="col" (click)="admin.sortUsersBy('lastname')">Nombre</th>
+            <th scope="col" (click)="admin.sortUsersBy('email')">Email</th>
+            <th scope="col" (click)="admin.sortUsersBy('institucion')">Institución</th>
+            <th scope="col" (click)="admin.sortUsersBy('categoria')">Categoría</th>
+            <th scope="col" (click)="admin.sortUsersBy('pais')">País</th>
             <th scope="col">T</th>
             <th scope="col">P</th>
           </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let user of usersArray; let i = index">
+            <tr *ngFor="let user of admin.usuarios; let i = index">
               <th scope="row">{{i}}</th>
               <td>{{ user.lastname | titlecase }}, {{ user.name | titlecase }}</td>
               <td>{{ user.email }}</td>

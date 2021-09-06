@@ -10,11 +10,15 @@ import { MaterialModule } from '../../modules/material.module';
 import { AdminComponent } from './admin.component';
 import { InicioAdminComponent } from './pages/inicio/inicio.component';
 import { UsuariosComponent } from './pages/usuarios/usuarios.component';
+import { TrabajoComponent } from './pages/trabajo/trabajo.component';
 import { TrabajosComponent } from './pages/trabajos/trabajos.component';
 import { ConferencistaComponent } from './pages/conferencista/conferencista.component';
 import { PanelistaComponent } from './pages/panelista/panelista.component';
 import { ActualizarMesaComponent } from './pages/actualizar-mesa/actualizar-mesa.component';
 import { ActualizarSesionComponent } from './pages/actualizar-sesion/actualizar-sesion.component';
+
+/*SERVICES */
+import { AdminService } from '../../services/admin.service';
 
 @NgModule({
   declarations: [
@@ -25,7 +29,8 @@ import { ActualizarSesionComponent } from './pages/actualizar-sesion/actualizar-
     ConferencistaComponent,
     PanelistaComponent,
     ActualizarMesaComponent,
-    ActualizarSesionComponent
+    ActualizarSesionComponent,
+    TrabajoComponent
   ],
   imports: [
     CommonModule,
@@ -33,6 +38,9 @@ import { ActualizarSesionComponent } from './pages/actualizar-sesion/actualizar-
     FormsModule,
     ReactiveFormsModule,
     MaterialModule,
+  ],
+  providers: [
+    AdminService
   ]
 })
 export class AdminModule { }

@@ -1,6 +1,7 @@
 h2{
     text-transform: uppercase;
     font-family: 'Staatliches';
+    color: white;
 }
 
 .justify{ text-align: justify; }
@@ -9,4 +10,13 @@ h2{
     height: auto !important;
     padding: 16px 24px !important;
     min-height: 48px;
+}
+
+@media (min-width: 768px) {
+    h2{
+        color: black;
+    }
+    section{
+        background-color: white;
+    }
 }

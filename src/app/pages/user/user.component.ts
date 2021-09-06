@@ -28,26 +28,24 @@ export class UserComponent{
 
   /* LINK INSCRIPCIÓN INCOMPLETA */
   inscripcion(): void { this.router.navigateByUrl(`/registrarse-${this.auth.user.inscripcion}`); }
+  /* LINK POSTULAR TRABAJO */
+  postularTrabajo(): void { this.router.navigateByUrl(`/postular-trabajo`); }
 
   /* USER TRABAJOS PUBLICADOS */
+  trabajosLoadded = false;
   trabajos: Trabajo[] = [];
-  temas = [
-    "Evolución y diversidad de microorganismos promotores de crecimiento vegetal", 
-    "Promoción indirecta del crecimiento vegetal",
-    "Promoción directa del crecimiento vegetal",
-    "El microbioma agrícola",
-    "El holobionte planta",
-    "Conservación y manejo del microbioma en sistemas naturales y agroecosistemas",
-    "Del laboratorio al campo",
-    "Legislación sobre registro y empleo de productos microbiano"
-  ]
 
   importarTrabajos(){
     if(this.auth.user.postulaTrabajo){
       this.auth.getTrabajos().subscribe(
-        (resp) => this.trabajos = this.fromJSONtoArray(resp),
+        (resp) =>{
+          this.trabajos = this.fromJSONtoArray(resp);
+          this.trabajosLoadded = true;
+        },
         (error) => console.log(error)
       )
+    }else{
+      this.trabajosLoadded = true
     }
   }
 

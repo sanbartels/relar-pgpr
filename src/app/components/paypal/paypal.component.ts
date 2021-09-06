@@ -24,8 +24,9 @@ export class PaypalComponent implements OnInit {
     }
 
     precios = ['80.00', '100.00', '40.00', '50.00', '50.00'];
+    preciosInscripcionTardia = ['100.00', '120.00', '60.00', '70.00', '70.00'];
     categoria = ['Investigador socio ALAR', 'Investigador no socio', 'Estudiante socio ALAR', 'Estudiante no socio', 'Productores' ];
-    precioActual = this.precios[parseInt(this.auth.user.categoria)];
+    precioActual = this.auth.user.postulaTrabajo? this.precios[parseInt(this.auth.user.categoria)] : this.preciosInscripcionTardia[parseInt(this.auth.user.categoria)];
     categoriaActual = this.categoria[parseInt(this.auth.user.categoria)];
 
     private initConfig(): void {

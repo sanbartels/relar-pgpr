@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AdminService } from '../../../../services/admin.service';
+import { DataService } from '../../../../services/data.service';
 
 @Component({
   selector: 'app-trabajos',
@@ -7,9 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TrabajosComponent implements OnInit {
 
-  constructor() { }
+  tema = '1';
+
+  constructor(
+    public admin: AdminService ,
+    public data: DataService
+  ){}
 
   ngOnInit(): void {
   }
+
+  filtrarTrabajos = (trabajos: any) => trabajos.filter( trabajo => trabajo.tema == this.tema );
+  openNewTab = (url: string) => window.open(url, '_blank');
 
 }

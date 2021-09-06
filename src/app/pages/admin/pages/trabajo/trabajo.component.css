@@ -1,0 +1,12 @@
+h2{
+    font-family: 'Seravek', sans-serif;
+    font-size: 2rem;
+}
+i{ 
+    font-size: 2rem; 
+    color: #16f64b;
+    margin-left: 10px;
+}
+
+.mr{ margin-right: 1.5rem;}
+.min-width-25{ min-width: 25%;}

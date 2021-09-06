@@ -1,50 +1,68 @@
-<div class="pt-5 col-12 col-md-8 m-auto">
+<div class="pt-5 col-12 col-md-10 m-auto">
 
-    <!-- AVISO -->
-    <div *ngIf="auth.user.inscripcion<5">
-        <div class="jumbotron jumbotron-fluid bg-white text-center mb-5 p-3 p-md-5">
-            <h2>Inscripción incompleta</h2>
-            <hr>
-            <p class="lead">Su inscripción está pendiente de pago.</p>
-            <button mat-raised-button color="primary" class="w-50 mb-3" (click)="inscripcion()">
-                Completar inscripcion
-            </button>
-        </div>
-    </div>
+    <div class="mb-5 d-flex flex-row-reverse d-flex flex-wrap">
 
-    <!-- USUARIO -->
-    <div class="bg-white mb-5 p-md-3">
-        <ngx-auth-firebaseui-user
-        signoutButtonText="Cerrar sesión"
-        editButtonText="Editar"
-        saveChangesButtonText="Guardar cambios"
-        cancelButtonText="Cancelar"
-        notLoggedInText="Usted no está logueado"
-        emailVerifiedText="Email verificado"
-        emailNotVerifiedText="Email no verificado"
-        [canDeleteAccount]="false"
-        (onSignOut)="signOut()">
-        </ngx-auth-firebaseui-user>
-    </div>
-
-    <!-- TRABAJOS PRESENTADOS
-    <div *ngIf="trabajos.length>0">
-        <div class="bg-white p-3 p-md-5 my-5">
-            <h2>Trabajos presentados</h2>
-            <hr>
-            <div *ngFor="let trabajo of trabajos">
-                <div class="d-lg-flex justify-content-between">
-                    <h4>{{ trabajo.titulo }} - <small>{{ temas[trabajo.tema] }}</small></h4>
-                    <div class="text-end" style="min-width: 150px;">
-                        <button mat-mini-fab mat-icon-button color="primary" class="mx-1"><i class="fas fa-edit"></i></button>
-                        <button mat-mini-fab color="warn" (click)="openDialog(trabajo.tid)"><i class="fas fa-trash-alt"></i></button>
-                    </div>
-                </div>
-                <hr>
+        <!-- USUARIO -->
+        <div class="col-12 col-md-4 p-3">
+            <div class="bg-white mb-3 p-md-3">
+                <ngx-auth-firebaseui-user
+                signoutButtonText="Cerrar sesión"
+                editButtonText="Editar"
+                saveChangesButtonText="Guardar cambios"
+                cancelButtonText="Cancelar"
+                notLoggedInText="Usted no está logueado"
+                emailVerifiedText="Email verificado"
+                emailNotVerifiedText="Email no verificado"
+                [canDeleteAccount]="false"
+                (onSignOut)="signOut()">
+                </ngx-auth-firebaseui-user>
             </div>
         </div>
-    </div> -->
+        
+        <div class="col-12 col-md-8 p-3">
+            
+            <!-- AVISO -->
+            <div *ngIf="auth.user.inscripcion<5">
+                <div class="jumbotron jumbotron-fluid bg-white text-center p-3 p-md-5">
+                    <h2>Inscripción incompleta</h2>
+                    <hr>
+                    <p class="lead">Su inscripción está pendiente de pago.</p>
+                    <button mat-raised-button color="primary" class="min-width-50 mb-3" (click)="inscripcion()">
+                        Completar inscripcion
+                    </button>
+                </div>
+            </div>
+    
+            <div *ngIf="auth.user.inscripcion==5">
+                <div class="jumbotron jumbotron-fluid bg-white text-center p-3 p-md-5">
+                    <h2>Inscripción completa</h2>
+                    <hr>
+                    <p class="lead">Su inscripción se ha completado correctamente.</p>
+                </div>
+            </div>
 
+            <!-- TRABAJOS PRESENTADOS -->
+            <div *ngIf="trabajosLoadded&&trabajos.length>0">
+                <div class="bg-white p-3 p-md-5 my-5">
+                    <h2>Trabajos presentados</h2>
+                    <hr>
+
+                    <div *ngFor="let trabajo of trabajos">
+                        <div class="d-lg-flex justify-content-between align-items-center">
+                            <p style="font-size: 1.2rem; margin: 0;"><strong class="mx-3">{{ trabajo.date | date: 'dd/MM/yyyy':undefined:'en' }}</strong>{{ trabajo.titulo }}</p>
+                            <div class="text-end" style="min-width: 150px;">
+                                <!--<button mat-mini-fab mat-icon-button color="primary" class="mx-1"><i class="fas fa-edit"></i></button>-->
+                                <button mat-mini-fab color="warn" (click)="openDialog(trabajo.tid)"><i class="fas fa-trash-alt"></i></button>
+                            </div>
+                        </div>
+                        <hr>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
 </div>
 
 

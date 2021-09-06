@@ -9,30 +9,13 @@ import { UserDB } from '../../../../models/user.model';
 })
 export class UsuariosComponent implements OnInit {
 
-  usersArray: UserDB[];
   categorias: string[] = [ "I/P ALAR", "I/P", "Est ALAR", "Est", "Prod"]
 
   constructor(
-    private admin: AdminService
-  ){
-    this.admin.getUsers().subscribe(
-      (resp) => this.usersArray = this.fromJSONtoArray(resp).sort((a, b) => a.lastname > b.lastname && 1 || -1),
-      (error) => console.log(error)
-    );
-  }
+    public admin: AdminService
+  ){}
 
   ngOnInit(): void {
-  }
-
-  private fromJSONtoArray( usersObj : Object ){
-    const usersArray = [];
-    if(usersObj === null) return [];
-    Object.keys(usersObj)
-      .forEach( (key) =>{
-        const user: UserDB = usersObj[key];
-        usersArray.push(user);
-    })
-    return usersArray
   }
 
 }

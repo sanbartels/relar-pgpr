@@ -1,0 +1,28 @@
+<section class="bg-white m-md-5 p-3 p-md-5" *ngIf="admin.usuariosLoadded&&admin.trabajosLoadded">
+    <div class="d-flex justify-content-between">
+        <p>{{ t().date | date: 'dd/MM/yyyy':undefined:'en' }}</p>
+        <p>{{ admin.temas[t().tema] | uppercase }}</p>
+    </div>
+    <h2 class="py-3">{{ t().titulo }}<i *ngIf="t().aprobado" class="far fa-check-circle"></i></h2>
+    <p><strong>Autores: </strong>{{ t().autores }}</p>
+    <p><strong>Expone: </strong>{{ t().expone }}</p>
+    <p><strong>Instituciones: </strong>{{ t().institucion }}</p>
+    <p><strong>Resumen: </strong>{{ t().resumen }}</p>
+    <div class="d-flex mt-4 flex-wrap">
+        <p class="mr"><strong>Postertalk: </strong>{{ si(t().postertalk) }}</p>
+        <p class="mr"><strong>Diálogos de investigación: </strong>{{ si(t().dialogos) }}</p>
+        <p class="mr"><strong>Solicita certificación: </strong>{{ si(t().beca) }}</p>
+        <p class="mr"><strong>Solicita beca: </strong>{{ si(t().beca) }}</p>
+        <p *ngIf="t().beca"><strong>Tipo de beca: </strong>{{ t().tipoBeca }}</p>
+    </div>
+    <div class="d-flex justify-content-end" *ngIf="!t().aprobado">
+        <button mat-raised-button color="primary" class="min-width-25" type="button" (click)="aprobarTrabajo()">
+            Aprobar trabajo
+        </button>
+    </div>
+    <div class="d-flex justify-content-end" *ngIf="t().aprobado">
+        <button mat-raised-button class="min-width-25" type="button" (click)="desaprobarTrabajo()">
+            Desaprobar trabajo
+        </button>
+    </div>
+</section>

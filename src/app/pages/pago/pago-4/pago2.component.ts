@@ -24,6 +24,7 @@ export class Pago2Component implements OnInit {
   private passwordConferencista = 'CONFERENCISTAS2021';
   private passwordCoordinador = 'COORDINADORES2021';
   private passwordPedeciba = 'PEDECIBArelarpgpr2021';
+  private passwordArgentina = 'RELARPGPRARGENTINA';
 
   saltarPago(){
     this.router.navigateByUrl('registrarse-5');
@@ -57,6 +58,14 @@ export class Pago2Component implements OnInit {
     }else if( pass==this.passwordPedeciba ){
       this.showPassError = false;
       this.auth.actualizarInscripcionFree('pedeciba').subscribe( (resp) =>{
+        this.snackBar.open('Los datos de inscripción se han actualizado correctamente', 'Aceptar', { duration: 3000 });
+        this.router.navigateByUrl('registrarse-5');
+      }, (error) =>{
+        this.snackBar.open('Se ha producido un error, inténtelo nuevamente', 'Aceptar', { duration: 3000 }) 
+      })
+    }else if( pass==this.passwordArgentina ){
+      this.showPassError = false;
+      this.auth.actualizarInscripcionFree('argentina').subscribe( (resp) =>{
         this.snackBar.open('Los datos de inscripción se han actualizado correctamente', 'Aceptar', { duration: 3000 });
         this.router.navigateByUrl('registrarse-5');
       }, (error) =>{

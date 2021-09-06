@@ -80,7 +80,7 @@ import { IntroduccionComponent } from './components/home/introduccion/introducci
 /* PIPES */
 import { ImgPipe } from './pipes/img.pipe';
 import { UsernamePipe } from './pipes/username.pipe';
-import { OrderTranslatePipe } from './pipes/countries-translate.pipe';
+import { OrderTranslatePipe } from './pipes/order-countries.pipe';
 
 /* DIALOGS */
 import { DeleteConfirmationComponent } from './components/dialogs/delete-confirmation.component';

@@ -2,3 +2,6 @@ h2{
     text-transform: uppercase;
     font-family: 'Staatliches';
 }
+
+.min-width-50{ min-width: 50%; }
+.pl-3{ margin-left: 1rem;}

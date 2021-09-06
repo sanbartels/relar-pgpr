@@ -14,7 +14,7 @@ export class HomeComponent implements OnInit {
     public dialog: MatDialog,
     private auth: AuthService
   ) {
-    this.openDialog();
+    //this.openDialog();
   }
 
   ngOnInit(): void {}
