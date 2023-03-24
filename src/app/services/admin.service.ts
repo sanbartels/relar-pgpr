@@ -11,8 +11,8 @@ export class AdminService {
   usuariosLoadded = false;
   trabajosLoadded = false;
 
-  usuarios: any[];
-  usuariosObj: any;
+  private usuarios: any[];
+  private usuariosObj: any;
   trabajos: any[] = [];
   trabajosObj = new Object();
 
@@ -35,6 +35,10 @@ export class AdminService {
     )
   }
 
+  getUsuarios = () => this.usuarios;
+  getUsuariosObj = () => this.usuariosObj;
+  getUsuario = ( uid:string ) => this.usuariosObj[uid];
+
   sortUsersBy = (value: string) => this.usuarios.sort((a, b) =>{
     // two undefined values should be treated as equal ( 0 )
     if( typeof a[value] === 'undefined' && typeof b[value] === 'undefined' ) return 0;
@@ -48,7 +52,9 @@ export class AdminService {
   sortWorksByTrueOrFalse = (value: string) => this.trabajos.sort((a, b) => a[value] == b[value]? 0 : a[value]? -1 : 1);
 
   getUsers = () => this.http.get(`${ this.url }/users.json`);
+  
   getTrabajos = () => this.http.get(`${ this.url }/trabajos.json`);
+  getTrabajo = ( tid:string ) => this.trabajosObj[tid];
 
   setConferencista = ( data: any, lang: string, key: string ) => this.http.put(`${ this.url }/data/conferencistas/${ key }/${ lang }.json`, data);
   setPanelista = ( data: any, lang: string, key: string ) => this.http.put(`${ this.url }/data/panelistas/${ key }/${ lang }.json`, data);
@@ -57,13 +63,13 @@ export class AdminService {
   desaprobarTrabajo = ( uid: string, tid: string ) => this.http.put(`${ this.url }/trabajos/${uid}/${tid}/aprobado.json`, false);
 
   temas = [
-    '',
+    'Todas las sesiones',
     'Evolución y diversidad de MPCV',
     'Promoción indirecta del crecimiento vegetal',
     'Promoción directa del crecimiento vegetal',
     'El microbioma agrícola',
     'El holobionte planta',
-    'Conservación y manejo del microbioma en sistemas naturales y agroecosistemas',
+    'Conservación y manejo microbiano en sistemas naturales y agroecosistemas',
     'Del laboratorio al campo',
     'Legislación sobre registro y empleo de productos microbiano'
   ]

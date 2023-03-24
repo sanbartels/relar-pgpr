@@ -20,7 +20,10 @@ export class MesasRedondasComponent implements OnInit {
   ){
     /* GET ID */
     this.route.params.subscribe(
-      (resp) => this.mesa = this.data.getMesa(resp.id),
+      (resp) =>{
+        this.id = resp.id;
+        this.mesa = this.data.getMesa(resp.id);
+      },
       (error) => console.log(error)
     )
   }

@@ -1,25 +1,23 @@
 section{
-    background-image: url("/assets/img/fondo-6.jpg");
+    background-image: url("/assets/img/fondo-5.jpg");
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
+.min-height-100{ min-height: calc(100vh - 94px); }
 
 nav, ul, li{ background-color: #16f64b !important; }
 
 p, .p{
-    font-size: 1.1rem;
-    text-align: justify;
+    font-size: 1rem;
     text-shadow: 1px 1px 2px black;
 }
+.cursor{ cursor: pointer; }
+.border-top-xs{ border-top: black solid 1px; }
 
-.border-sm-2px{
-    border-top: black solid 2px;    
-    border-bottom: black solid 2px;    
-}
-
-.bg-transparente{background-color: rgba(88, 88, 88, 0.800);}
+.mr-3{ margin-right: 1rem;}
+.bg-transparente{background-color: rgba(50, 50, 50, 0.9);}
 .border-bottom-green{ border-bottom: #16f64b solid 2px;}
 .li{ font-size: 1.2rem; }
 
@@ -30,7 +28,7 @@ h2, h3, h4, h5{
     padding:0;
     text-shadow: 1px 1px 2px black;
 }
-h2{font-size: 2.8rem; cursor: pointer;}
+h2{font-size: calc(1.8vw + 1.8rem); cursor: pointer;}
 h3{font-size: 2rem;}
 ul{padding: 0.5rem;}
 li{
@@ -42,6 +40,14 @@ li{
     list-style: none;
     cursor: pointer;
 }
+img{
+    border: black solid 1px;
+}
+
+video{
+    border: white 10px solid;
+    border-radius: 20px;
+}
 
 /* MEDIA QUERYS */
 
@@ -50,19 +56,17 @@ li{
 
 /* Medium devices (tablets, 768px and up)*/
 @media (min-width: 768px) {
-    .border-lg-2px{
-        border-left: solid black 1px;
-        border-right: solid black 1px;
-    }
-    .border-sm-2px{
-        border: none;
-    }
+    .border-right{ border-right: solid black 1px; }
+    .border-left{border-left: solid black 1px; }
+    .border-top-xs{ border-top: none; }
     li{
         padding: 0.5rem 3rem;
         margin: 0.5rem 0;
     }
-    ul{
-        padding: 0;
+    ul{ padding: 0; }
+    p, .p{
+        text-align: justify;
+        font-size: 1.1rem;
     }
 }
 

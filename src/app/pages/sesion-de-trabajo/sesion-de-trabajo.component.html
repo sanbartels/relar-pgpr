@@ -1,5 +1,4 @@
-<section>
-
+<section class="pb-5 min-height-100">
     <!-- TITULO -->
     <div class="p-3 p-md-5 text-white" [routerLink]="['/sesiones-de-trabajo/'+id]">
         <h2>SESIÓN<br>{{ sesion[lang.lang].titulo }}</h2>
@@ -9,9 +8,9 @@
     <!-- MENU -->
     <nav class="my-5">
         <ul class="d-md-flex justify-content-center m-0">
-            <li class="border-lg-2px" [matMenuTriggerFor]="menu">Charlas Magistrales</li>
-            <li class="border-sm-2px" [routerLink]="['/sesiones-de-trabajo/'+id+'/poster-talk']">Póster Talk</li>
-            <li class="border-lg-2px" [routerLink]="['/sesiones-de-trabajo/'+id+'/dialogos-de-investigacion']">Diálogos de investigación</li>
+            <li class="border-left border-right" [matMenuTriggerFor]="menu"><i class="fas fa-angle-down mr-3"></i>Charlas Magistrales</li>
+            <li class="border-right border-top-xs" [routerLink]="['/sesiones-de-trabajo/'+id+'/poster-talk']">Póster Talk</li>
+            <li *ngIf="id!=='legislación-sobre-productos-microbianos'" class="border-right border-top-xs" [routerLink]="['/sesiones-de-trabajo/'+id+'/dialogos-de-investigacion']">Diálogos de investigación</li>
         </ul>
         
         <mat-menu #menu="matMenu">

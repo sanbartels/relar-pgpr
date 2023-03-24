@@ -50,6 +50,9 @@ export class Trabajo{
     tipoBeca?: string;
     file?: string;
     tid?: string;
+    pdf?: string;
+    jpg?: string;
+    mp4?: string;
 
     constructor(){
         this.beca = false;

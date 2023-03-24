@@ -2,8 +2,9 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { FormGroup, FormBuilder, Validators, FormArray } from '@angular/forms';
 import { AuthService } from '../../../services/auth.service';
 import { StorageService } from '../../../services/storage.service';
-import { Router } from '@angular/router';
 import { MatSnackBar } from '@angular/material/snack-bar';
+import { Trabajo } from '../../../models/user.model';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-postular-form',
@@ -15,6 +16,7 @@ export class PostularFormComponent implements OnInit {
   form2: FormGroup;
   showFile = false;
 
+  @Input() trabajo: Trabajo;
   @Input() functionName: string = 'subirTrabajoHome';
   @Output() submittedEvent = new EventEmitter<boolean>();
 
@@ -78,6 +80,7 @@ export class PostularFormComponent implements OnInit {
       });
   }
 
+
   save(){
     this.form2.markAllAsTouched();
     if(this.form2.controls.file.value !== null&&this.form2.status=='VALID'){
@@ -123,4 +126,5 @@ export class PostularFormComponent implements OnInit {
   }
 
   subirTrabajo = this.functionOptions[this.functionName];
+
 }

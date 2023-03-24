@@ -12,6 +12,7 @@ import { InicioAdminComponent } from './pages/inicio/inicio.component';
 import { UsuariosComponent } from './pages/usuarios/usuarios.component';
 import { TrabajoComponent } from './pages/trabajo/trabajo.component';
 import { TrabajosComponent } from './pages/trabajos/trabajos.component';
+import { TrabajosFilesComponent } from './pages/trabajos-files/trabajos-files.component';
 import { ConferencistaComponent } from './pages/conferencista/conferencista.component';
 import { PanelistaComponent } from './pages/panelista/panelista.component';
 import { ActualizarMesaComponent } from './pages/actualizar-mesa/actualizar-mesa.component';
@@ -30,7 +31,8 @@ import { AdminService } from '../../services/admin.service';
     PanelistaComponent,
     ActualizarMesaComponent,
     ActualizarSesionComponent,
-    TrabajoComponent
+    TrabajoComponent,
+    TrabajosFilesComponent,
   ],
   imports: [
     CommonModule,

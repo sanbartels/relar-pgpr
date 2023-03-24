@@ -1,0 +1,74 @@
+<section>
+    <!-- TITULO -->
+    <div class="p-3 p-md-5 text-white">
+        <h2>CONFERENCIA DE CLAUSURA</h2>
+        <h3 class="mt-4">
+            Viernes 8 de Octubre
+            <br>
+            17:00
+        </h3>
+    </div>
+
+    <div style="height: 6px;" class="bg-green mb-5"></div>
+
+    <section class="pb-5">
+        <div class="d-flex flex-wrap m-3 mb-5 m-md-5">
+            <div class="col-12 col-md-8">
+                <h3>
+                    <span class="text-white">Dra. Esperanza Martinez</span>
+                    <br>
+                    {{ 'COUNTRIES.MX' | translate }}
+                </h3>
+            </div>
+            <div *ngIf="url&&auth.logged" class="col-12 col-md-4 mt-5 mt-md-0">
+                <video controls class="w-100" controlsList="nodownload">
+                    <source [src]="url" type="video/mp4" sizes="480">
+                </video>
+            </div>
+        </div>
+        <div class="justify p-3 p-md-5 bg-transparente text-white">
+            <h5 class="pb-4">GENÓMICA Y GENÓMICA FUNCIONAL DE RIZOBIOS</h5>
+            <p>
+                En general, las bacterias del suelo que pueden colonizar plantas tienen
+                genomas grandes, con una capacidad amplia para degradar distintos
+                sustratos. En particular, estudiamos los genomas de Bradyrhizobium
+                y Rhizobium. Mientras que en Bradyrhizobium la información para la
+                inducción de nódulos y fijación es cromosomal, en Rhizobium se encuentra
+                en plásmidos de alto peso molecular, los cuales pueden transferirse entre
+                bacterias. En Bradyrhizobium existen islas genómicas, que al igual que los
+                plásmidos simbióticos tienen un bajo contenido de GC en comparación
+                con el resto del genoma. Las incongruencias filogenéticas entre genes
+                de simbiosis y genes del metabolismo celular se han considerado como
+                evidencia de transferencia lateral de la información genética entre rizobios.
+                En plásmidos y en islas se encuentran genes que se expresan en nódulos
+                en simbiosis. Estudiamos Bradyrhizobium de árboles nativos de México:
+                Lysiloma e Inga. Destaca la alta capacidad de fijación biológica de nitrógeno
+                en árboles de leguminosas. En la selva de los Tuxtlas encontramos 22 nuevos
+                linajes de Bradyrhizobium algunos de los cuales son capaces de nodular Inga
+                de manera efectiva. Un estudio genomotaxonómico nos permitió calcular
+                que deben existir en la naturaleza más de mil especies de Bradyrhizobium.
+            </p>
+            <p>
+                Por otro lado, con un enfoque diferente utilizamos inóculos multiespecie
+                que han probado ser mejores promotores de crecimiento vegetal que
+                inóculos de una sola especie bacteriana. Esto imitaría más las interacciones
+                que se dan en plantas en condiciones naturales y nos han permitido explorar
+                la expresión de genes bacterianos en plantas, no solo frijol sino también
+                maíz. Además, con Rhizobium phaseoli hemos estudiado la expresión de
+                genes en presencia de exudados de maíz y frijol en conjunto, que reflejarían
+                lo que ocurre en la milpa, que es una práctica agrícola ancestral en algunos
+                países de Latinoamérica.
+            </p>
+        </div>
+        <div style="height: 2px;" class="bg-green"></div>
+        <div class="justify p-3 p-md-5 bg-transparente text-white">
+            <p>
+                Es investigadora Titular C del Centro de Ciencias Genómicas de la Universidad
+                Nacional Autónoma de México (UNAM) en Cuernavaca, México. Investiga la
+                convivencia pacífica entre especies: simbiosis mutualistas de bacterias con
+                plantas y animales nativos de México con enfoques metagenómicos y de
+                genómica funcional.
+            </p> 
+        </div>
+    </section>
+</section>

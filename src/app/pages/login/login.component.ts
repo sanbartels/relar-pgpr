@@ -35,7 +35,7 @@ export class LoginComponent {
   }
 
   resetPassword(){
-    return this.afa.sendPasswordResetEmail(document.getElementById('mat-input-0')['value'])
+    this.afa.sendPasswordResetEmail(document.getElementsByTagName('input')[0].value)
       .then(() => this.snackBar.open('Se envió un e-mail a su casilla de correo', 'Aceptar', { duration: 3000 }) )
       .catch((event) =>{
         if(event.code == "auth/invalid-email"){

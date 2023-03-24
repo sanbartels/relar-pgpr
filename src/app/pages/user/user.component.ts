@@ -12,6 +12,9 @@ import { DeleteConfirmationComponent } from '../../components/dialogs/delete-con
 })
 export class UserComponent{
 
+  submitted = false;
+  changeSubmitted = ( event ) => { this.submitted = event }
+
   constructor( 
     public auth: AuthService,
     public dialog: MatDialog,
@@ -36,16 +39,26 @@ export class UserComponent{
   trabajos: Trabajo[] = [];
 
   importarTrabajos(){
-    if(this.auth.user.postulaTrabajo){
-      this.auth.getTrabajos().subscribe(
-        (resp) =>{
-          this.trabajos = this.fromJSONtoArray(resp);
-          this.trabajosLoadded = true;
-        },
-        (error) => console.log(error)
-      )
-    }else{
-      this.trabajosLoadded = true
+    let i = 0;
+    while(i<20){
+      setTimeout(() => {
+        if(this.auth.logged){
+          if(this.auth.user.postulaTrabajo){
+            this.auth.getTrabajos().subscribe(
+              (resp) =>{
+                this.trabajos = this.fromJSONtoArray(resp);
+                this.trabajosLoadded = true;
+              },
+              (error) =>{
+                console.log(error);
+              }
+            )
+          }else{
+            this.trabajosLoadded = true
+          }
+        }
+      }, 800);
+      if(this.trabajosLoadded=true) break;
     }
   }
 
@@ -65,8 +78,9 @@ export class UserComponent{
     return trabajosArray;
   }
 
-    /* ELIMINAR TRABAJOS */
-    openDialog = ( tid: string ) =>{
-      const dialogRef = this.dialog.open(DeleteConfirmationComponent, { data: { uid: this.auth.user.uid, tid: tid, trabajos: this.trabajos }} );
-    }
+  /* ELIMINAR TRABAJOS */
+  openDialog = ( tid: string ) =>{
+    const dialogRef = this.dialog.open(DeleteConfirmationComponent, { data: { uid: this.auth.user.uid, tid: tid, trabajos: this.trabajos }} );
+  }
+
 }

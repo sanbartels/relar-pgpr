@@ -1,13 +1,22 @@
 <article>
-    <div class="m-3 m-md-5">
-        <h3><span class="text-white">CHARLA MAGISTRAL</span><br>
-        {{ conferencista.nombre }}<br>
-        {{ 'COUNTRIES.'+conferencista.pais | translate }}</h3>
-        <h3 class="text-white my-3">{{ conferencista.horario }} HRS</h3>
+    <div class="d-flex flex-wrap align-items-center p-3 px-md-5 pb-md-5">
+        <div class="col-12 col-md-9">
+            <h3><span class="text-white">CHARLA MAGISTRAL</span><br>
+            {{ conferencista.nombre }}<br>
+            {{ 'COUNTRIES.'+conferencista.pais | translate }}</h3>
+            <h3 class="text-white my-3">{{ conferencista.horario }} HRS</h3>
+        </div>
+        <div *ngIf="url&&auth.logged" class="col-12 col-md-3 my-3 my-md-0">
+            <video controls class="w-100" controlsList="nodownload" id="video">
+                <source [src]="url" type="video/mp4" sizes="480">
+            </video>
+        </div>
+    </div>
+    <div class="bg-transparente border-bottom-green p-3 p-md-5">
+        <h5 class="pb-4 text-white">{{ conferencista[lang.lang].titulo }}</h5>
+        <p class="text-white">{{ conferencista[lang.lang].texto }}</p>
     </div>
     <div class="bg-transparente">
-        <h5 class="px-5 pt-5 pb-4 text-white">{{ conferencista[lang.lang].titulo }}</h5>
-        <p class="px-5 pb-5 text-white border-bottom-green">{{ conferencista[lang.lang].texto }}</p>
         <p class="p-3 p-md-5 text-white">{{ conferencista[lang.lang].bio }}</p>
     </div>
 </article>

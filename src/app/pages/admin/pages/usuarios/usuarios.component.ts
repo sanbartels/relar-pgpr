@@ -18,4 +18,8 @@ export class UsuariosComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  consoleUser( user: any ){
+    console.log(user)
+  }
+
 }

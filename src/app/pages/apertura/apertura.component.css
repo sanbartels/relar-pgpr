@@ -1,0 +1,39 @@
+section{
+    background-image: url("/assets/img/fondo-3.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bg-green{ background-color: #16f64b !important; }
+.bg-transparente{background-color: rgba(70, 70, 70, 0.9);}
+
+p{
+    font-size: 1rem;
+    text-shadow: 1px 1px 2px black;
+}
+a{ text-decoration: none; color: black; }
+
+
+h2, h3, h4, h5{
+    font-family: 'Seravek', sans-serif;
+    text-transform: uppercase;
+    margin:0;
+    padding:0;
+    text-shadow: 1px 1px 2px black;
+}
+h2{font-size: calc(1.8vw + 1.8rem); cursor: pointer;}
+h3{font-size: 2rem;}
+
+video{
+    border: white 10px solid;
+    border-radius: 20px;
+}
+
+@media (min-width: 768px) {
+    p{
+        text-align: justify;
+        font-size: 1.1rem;
+    }
+}

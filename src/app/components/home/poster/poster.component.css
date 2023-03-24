@@ -1,21 +1,41 @@
-
-/* MEDIA QUERIES */
-/* Small devices (landscape phones, 576px and up)*/
-@media (min-width: 576px) {}
-
-/* Medium devices (tablets, 768px and up)*/
-@media (min-width: 768px) {}
-
-/* Large devices (desktops, 992px and up)*/
-@media (min-width: 992px) {
-  .width-lg-90{
-    width: 90%;
-    margin: auto;
-  }
+.width-lg-90{
+  width: 90%;
+  margin: auto;
+}
+.display-flex{
+  display: flex;
+  flex-wrap: wrap;
 }
 
-/* X-Large devices (large desktops, 1200px and up)*/
-@media (min-width: 1200px) {}
+img{ box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.6); }
 
-/* XX-Large devices (larger desktops, 1400px and up)*/
-@media (min-width: 1400px) {}
+.imgA{
+  width: 70%;
+  padding-left: 3vw;
+}
+.imgB{
+  width: 30%;
+  padding: 2vw;
+}
+.imgC{
+  padding: 5vw 0 2vw 2vw;
+}
+.imgD{
+  position: relative;
+  top: -4vw;
+  width: 35%;
+}
+.imgE{
+  width: 65%;
+  padding: 0 0 0 2vw;
+}
+.imgF{
+  padding: 3vw 0 2vw 6vw;
+}
+.imgG{
+  padding: 1vw 3vw 0 2vw;
+}
+.imgH{
+  padding: 1vw 40% 0 10%;
+}
+

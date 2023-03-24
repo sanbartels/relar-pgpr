@@ -2,6 +2,9 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { LangService } from './lang.service';
+import { MatDialog } from '@angular/material/dialog';
+import { PopUpComponent } from '../components/dialogs/pop-up-home.component';
+import { Conferencista } from '../models/data.model';
 
 @Injectable({
   providedIn: 'root'
@@ -42,9 +45,9 @@ export class DataService {
           "titulo" : "Bioinsumos: logros y desafíos en el desarrollo de la agroecología en Uruguay"
         },
         "_es" : {
-          "bio" : "Oriunda de Tacuarembó Uruguay, madre de cuatro hijos, es Ingeniera Agrónoma (título otorgado por la Facultad de Agronomía de la Universidad de la República) y Doctora en Ciencias Agrarias (título otorgado por la Universidad Agraria de la Habana-Cuba). Se desempeña como Responsable Norte del Sistema Nacional de Áreas Protegidas y directora técnica científica del Batoví Instituto Orgánico. Además ha desarrollado diversas consultorías en organizaciones nacionales e internacionales tales como la Cooperación Técnica Alemana (GTZ), la Organización de las Naciones Unidas para la Alimentación y la Agricultura (FAO), el Programa de las Naciones Unidas para el Desarrollo (PNUD) entre otros. Ha publicado más de 20 artículos científicos y 3 libros de autoría propia. Ha capacitado y acompañado técnicamente a más de 100 productores familiares en la implementación de sistemas agroecológicos de producción.",
-          "texto" : "Próximamente más información",
-          "titulo" : "Bioinsumos: logros y desafíos en el desarrollo de la agroecología en Uruguay"
+          "bio" : "Oriunda de Tacuarembó Uruguay, madre de cuatro hijos, es Ingeniera Agrónoma   (título otorgado por la Facultad de Agronomía de la Universidad de la República) y Doctora en Ciencias Agrarias (título otorgado por la Universidad Agraria de la Habana-Cuba). Se desempeña como directora técnica científica del Batoví Instituto Orgánico. Además ha desarrollado diversas consultorías en organizaciones nacionales e internacionales tales como la Cooperación Técnica  Alemana (GTZ), la Organización de las Naciones Unidas  para la Alimentación  y la Agricultura (FAO), el Programa de las Naciones Unidas para el Desarrollo (PNUD) entre otros. Ha publicado mas de 20 artículos científicos y 3 libros de autoría propia. Ha capacitado y acompañado técnicamente a  productores familiares en la implementación de sistemas agroecológicos de producción.",
+          "texto" : "A través de un proceso de co-innovación para la obtención de soluciones biológicas, llevadas adelante por \ndiferentes organizaciones de productores familiares y BIO-Uruguay (Batoví Instituto Orgánico) se han generado bioinsumos  a partir del reconocimiento y uso de hongos patogénicos nativos para controlar plagas de importancia económica. Estos bioinsumos vienen contribuyendo en la restitución de los equilibrios biológicos y en las transiciones agroecológicas de diferentes sistemas productivos.  Estos aprendizajes contribuyen al desarrollo de las capacidades individuales e institucionales necesarias para “fabricar la agroecología” en Uruguay.\n",
+          "titulo" : "Bioinsumos: Logros y desafíos en el desarrollo de la Agroecología en Uruguay. "
         },
         "_pt" : {
           "bio" : "Oriunda de Tacuarembó Uruguay, madre de cuatro hijos, es Ingeniera Agrónoma (título otorgado por la Facultad de Agronomía de la Universidad de la República) y Doctora en Ciencias Agrarias (título otorgado por la Universidad Agraria de la Habana-Cuba). Se desempeña como Responsable Norte del Sistema Nacional de Áreas Protegidas y directora técnica científica del Batoví Instituto Orgánico. Además ha desarrollado diversas consultorías en organizaciones nacionales e internacionales tales como la Cooperación Técnica Alemana (GTZ), la Organización de las Naciones Unidas para la Alimentación y la Agricultura (FAO), el Programa de las Naciones Unidas para el Desarrollo (PNUD) entre otros. Ha publicado más de 20 artículos científicos y 3 libros de autoría propia. Ha capacitado y acompañado técnicamente a más de 100 productores familiares en la implementación de sistemas agroecológicos de producción.",
@@ -64,8 +67,8 @@ export class DataService {
         },
         "_es" : {
           "bio" : "La Dra. Alexandra Stoll obtuvo su título en Biología (2001) en la Universidad Técnica de Dresden, Alemania, donde también realizó su doctorado (2005). Desde 2008 se desempeña como investigadora titular del Centro de Estudios Avanzados en Zonas Áridas (CEAZA, Chile) y desde 2012 lidera el Laboratorio de Microbiología Aplicada. Sus líneas principales de investigación se centran en la identificación y caracterización de microorganismos y comunidades asociadas a la raíz vegetal, los mecanismos involucrados en la interacción planta-bacteria, y aplicaciones para la agricultura en zonas áridas. En esta línea emplean un enfoque holístico de ecología vegetal y microbiana, incluida su interacción, en ecosistemas naturales y agrícolas de zonas áridas. Además, promueve la divulgación a la sociedad y socios empresariales (transferencia tecnológica), y realiza capacitaciones para agricultores regionales.",
-          "texto" : "",
-          "titulo" : "Próximamente más información"
+          "texto" : "En las últimas décadas, los mecanismos de elicitación de resistencia sistémica inducida (ISR) y de inhibición de infecciones fúngicas como p.ej. del hongo necrotrófico Botrytis cinerea, han sido estudiados desde distintas aproximaciones y aun así quedan diferentes aspectos por comprender. En nuestro trabajo comparamos los perfiles transcriptómicos de plantas de tomate tratadas con microorganismos benéficos, evaluando por un lado aplicaciones pre y post infección con B. cinerea, así también la influencia del tipo de microorganismo benéfico (Bacillus, Trichodermas) en la elicitación del ISR. Plantas que no fueron tratadas preinfección mostraron una marcada expresión de genes relacionados con las respuestas de las vías del SA. Según el enriquecimiento en los GO term en estas plantas más del 70% de los transcritos se pueden relacionar con respuestas inespecíficas a estímulos o patógenos. En plantas tratadas con Bacillus sp. preinfección se reconocieron respuestas ISR relacionadas con las vías del JA además una serie de transcritos relacionados con el reconocimiento de PAMPS/MAMPs y efectores ETS (PRRs y NBS-LRR) y un importante enriquecimiento en vías que favorecen sistemas de detoxificación y reparación celular. La inoculación combinada Bacillus-Trichodermas también activa una respuesta ISR, pero reflejando señales mixtas de reconocimiento de ambos microorganismos benéficos.",
+          "titulo" : "Modulación microbiana de la respuesta vegetal ante la infección con Botrytis cinerea"
         },
         "_pt" : {
           "bio" : "La Dra. Alexandra Stoll obtuvo su título en Biología (2001) en la Universidad Técnica de Dresden, Alemania, donde también realizó su doctorado (2005). Desde 2008 se desempeña como investigadora titular del Centro de Estudios Avanzados en Zonas Áridas (CEAZA, Chile) y desde 2012 lidera el Laboratorio de Microbiología Aplicada. Sus líneas principales de investigación se centran en la identificación y caracterización de microorganismos y comunidades asociadas a la raíz vegetal, los mecanismos involucrados en la interacción planta-bacteria, y aplicaciones para la agricultura en zonas áridas. En esta línea emplean un enfoque holístico de ecología vegetal y microbiana, incluida su interacción, en ecosistemas naturales y agrícolas de zonas áridas. Además, promueve la divulgación a la sociedad y socios empresariales (transferencia tecnológica), y realiza capacitaciones para agricultores regionales.",
@@ -85,8 +88,8 @@ export class DataService {
         },
         "_es" : {
           "bio" : "Possui graduação em Farmacia e Bioquimica pela Universidade Federal do Paraná (1984) e doutorado em Ciências (Bioquímica) pela Universidade Federal do Paraná (1990). Atualmente é Professor Titular da Universidade Federal do Paraná. Tem experiência na área de Bioquímica, com ênfase em Biologia Molecular. Atua principalmente nos seguintes temas: fixação biológica de nitrogênio, regulação da expressão gênica em Azospirillum brasilense e Herbaspirillium seropedicae, expressão e purificação de proteínas em Escherichia coli e mecanismos moleculares da interacao planta-bactéria.",
-          "texto" : "",
-          "titulo" : "Próximamente más información"
+          "texto" : "Cereals are the main energy source for humans and animals, and grain production is ever-increasing to\nfeed larger populations. The increase in production, however, is heavily based on the use of nitrogenous\nfertilization which is both costly and damaging to the environment. By colonizing the roots of rice, maize\nand other cereals, diazotrophic rhizobacteria such as Herbaspirillum seropedicae stimulate plant growth\nand productivity, however, the mechanisms by which these bacteria benefit the plant are largely unknown.\nTranscription profiles of rice roots inoculated with Herbaspirillum seropedicae by RNA-seq were used to\nobtain insights of this interaction. Out of over13,000 transcripts, >1,000 were differentially regulated.\nGenes for plant disease resistance and secondary metabolite biosynthesis were repressed, while genes\nrelated to the synthesis and efflux of phytosiderophores (PS) and transport of PS-iron complexes were\ninduced by the bacteria, suggesting that the H. seropedicae modulates rice defense system in order to\ncolonize the inner root tissues. Up-regulation of metal uptake indicate a possible route for increase the\nplant mineral nutrient content.",
+          "titulo" : "Herbaspirillum seropedicae-rice interaction. What we learned, what we would like to know "
         },
         "_pt" : {
           "bio" : "Possui graduação em Farmacia e Bioquimica pela Universidade Federal do Paraná (1984) e doutorado em Ciências (Bioquímica) pela Universidade Federal do Paraná (1990). Atualmente é Professor Titular da Universidade Federal do Paraná. Tem experiência na área de Bioquímica, com ênfase em Biologia Molecular. Atua principalmente nos seguintes temas: fixação biológica de nitrogênio, regulação da expressão gênica em Azospirillum brasilense e Herbaspirillium seropedicae, expressão e purificação de proteínas em Escherichia coli e mecanismos moleculares da interacao planta-bactéria.",
@@ -150,8 +153,8 @@ export class DataService {
         },
         "_es" : {
           "bio" : "Doctor en Agronomía-Ciencias del Suelo por la Universidad Federal Rural de Rio de Janeiro y Postdoctorado por la Universidad de Murdoch en Australia. Investigador de Embrapa Brasileira de Pesquisa Agropecuária (Embrapa) desde 2003, en el área de Microbiología de suelos, fijación biológica de nitrógeno, fitotecnia y taxonomía microbiana. Es conservador de la colección Cultures del Centro de Recursos Biológicos Johanna Döbereiner.",
-          "texto" : "",
-          "titulo" : "Próximamente más información"
+          "texto" : "América Latina se ha destacado como una región del mundo con una clara expansión en el desarrollo y uso de bioinsumos en la agricultura. En Brasil, hay más de 150 empresas que desarrollan productos biológicos microbianos para la agricultura. Cada\npaís tiene sus propias reglas para el desarrollo y registro de productos microbianos destinados a la agricultura. En general, cuando los productos están destinados al control biológico, se registran siguiendo las reglas de registro de plaguicidas. Por otro lado, cuando son rizobios u otros promotores del crecimiento, es necesario seguir las reglas de registro de fertilizantes. En otros países de América Latina, las reglas son similares, aunque las peculiaridades inherentes a cada producto son comunes. Países como Brasil y Argentina tienen políticas / programas nacionales diseñados para fomentar el registro de nuevos bioinsumos.",
+          "titulo" : "Legislación para el desarrollo de productos microbiológicos que contengan microorganismos promotores del crecimiento vegetal, con énfasis en Brasil"
         },
         "_pt" : {
           "bio" : "Doctor en Agronomía-Ciencias del Suelo por la Universidad Federal Rural de Rio de Janeiro y Postdoctorado por la Universidad de Murdoch en Australia. Investigador de Embrapa Brasileira de Pesquisa Agropecuária (Embrapa) desde 2003, en el área de Microbiología de suelos, fijación biológica de nitrógeno, fitotecnia y taxonomía microbiana. Es conservador de la colección Cultures del Centro de Recursos Biológicos Johanna Döbereiner.",
@@ -170,9 +173,9 @@ export class DataService {
           "titulo" : "Próximamente más información"
         },
         "_es" : {
-          "bio" : "",
-          "texto" : "",
-          "titulo" : "Próximamente más información"
+          "bio" : "Jorge L. Mazza Rodrigues is currently a Professor in the Department of Land, Air and Water\nResources at University of California – Davis. He has an Agronomical Engineering degree from\nthe University of Sao Paulo, Brazil, and a dual PhD from Michigan State University, USA. His\nlaboratory research focuses on the ecology of soil microorganisms and their importance as\nbiological regulators of biogeochemical cycles in natural and agricultural ecosystems.",
+          "texto" : "A critical component of any self-sustainable ecosystem is its microbiome, the collection of all\nmicroorganisms and the genomic make-up that they carry to mediate important environmental\nservices and biogeochemical processes. This is not different in agricultural systems, where\nmicroorganisms mediate the cycling of carbon and nutrients, protection against pathogens, and\nother beneficial interactions with plants. Significant efforts for soil conservation and sustainable\nmanagement practices have led to the concept of soil health, which is directly linked to the\noverall health of cultivated plants through their rhizosphere microbiomes. In this presentation, I\nwill provide data on how losses in microbial community diversity (taxa abundance and structure)\nin soils have a direct effect on plants. Using a combination of high-throughput omics\ntechnologies and soil physico-chemical properties, our group has observed that forest-to-pasture\nconversion resulted in genomic losses that were translated into ecosystem processes related to\nthe C and N cycles. The metabolite profiles of soils were also altered with easier-to-degrade\ncompounds such as beta-gentiobiose and glutamic acid being detected in grasses, while aromatic\ncompounds, like 4-hydroxybenzoic acid, were detected in pristine environments. At the\nmicrobiome level, stress-related functions controlled by transcriptional regulator genes that act as\nmaster switches of cell metabolism were also altered. Functions associated with heat stress,\ncarbon starvation and microbial motility were altered under different soil management practices.\nTaken together, our results show the potential for transcriptional regulators to be used as\nbiological indicators of soil -plant-ecosystem health.",
+          "titulo" : "The Soil-Plant-Ecosystem Health Connection"
         },
         "_pt" : {
           "bio" : "",
@@ -192,8 +195,8 @@ export class DataService {
         },
         "_es" : {
           "bio" : "Professor Dr. Dr. h.c. Kornelia Smalla is the head of the microbial ecology group in the Institute for Epidemiology and Pathogen Diagnostics at the Julius Kühn-Institut (JKI), Federal Research Centre for Cultivated Plants, in Braunschweig. She studied chemistry and did her PhD in biochemistry at the Martin-Luther-University in Halle. The venia legendi for microbiology was obtained at the Technical University Braunschweig where she is an adjunct Professor for Microbiology. From the beginning of the 1990’s Kornelia Smalla contributed to the field of molecular microbial ecology and microbiome research. Cultivation-independent methods were developed to study the microbiome of soils or of plants and how the composition and functions of complex microbiomes are affected by agricultural management practice. The group is interested in developing methods to manage and stimulate the soil microbiome by reduced tillage, organic amendments or inoculants. Another research interest of the group are the factors that shape the transferable resistome and plasmid-mediated bacterial adaptation to changing environments.",
-          "texto" : "",
-          "titulo" : "Próximamente más información"
+          "texto" : "Sustainable agricultural production aims to meet future food, feed and fibre demands with the given natural resources and without adverse environmental impact or greater land consumption. Modern conventional agricultural practices with the ultimate aim of higher yields widely ignored environmental consequences – in particular with respect to soils. This resulted over the last decades in reduced soil fertility and biodiversity, accumulation of plant pathogens, environmental contamination with agrochemicals and soil erosion jeopardizing soil health. In view of the limited arable land, soil microbiome modulation through changes in farming practices but also the use of beneficial microorganisms (BMs) might be important strategies to ensure agricultural productivity for future generations.\n\nIn my talk, I will present research insights from different collaboration projects performed under greenhouse and field conditions. Long-term farming practices can result in a soil biotic legacy modulating the rhizosphere microbiome and affecting the performance of subsequent crops via altered plant-microbe interactions in the rhizosphere. We provided evidence in another greenhouse experiment for the effect of the soil microbiome on the plant defense response towards Blumeria graminis when comparing differently managed agricultural to potting soils. BMs present an alternative measure to improve plant health and performance. We observed under field conditions that the inoculation with BMs resulted in a modulation of the rhizosphere microbiome but also of plant hormones and stress protection and most importantly in an increased maize growth in presence of a natural abiotic stressor (drought). In another experiment, bacterial inoculants were also shown to be effective in controlling bacterial wilt disease of tomato plants caused by Ralstonia solanacearum and microbiome modulation seemed to be important.\n\nSoil microorganisms are critical for soil-related ecosystem services. Harnessing their huge untapped and largely unexplored taxonomic and functional diversity and gaining a better mechanistic understanding of plant-microbe interactions under various agricultural management practices can open up new ways to support an economically and environmentally benign plant production.\nMicrobiome modulations achieved by management-dependent support of the indigenous microbiome, or by inoculation of soils or plants with beneficial microbial strains or multi-species consortia hold great promise for a more sustainable agriculture.",
+          "titulo" : "Soil microbiome modulation for improved plant growth and health"
         },
         "_pt" : {
           "bio" : "Professor Dr. Dr. h.c. Kornelia Smalla is the head of the microbial ecology group in the Institute for Epidemiology and Pathogen Diagnostics at the Julius Kühn-Institut (JKI), Federal Research Centre for Cultivated Plants, in Braunschweig. She studied chemistry and did her PhD in biochemistry at the Martin-Luther-University in Halle. The venia legendi for microbiology was obtained at the Technical University Braunschweig where she is an adjunct Professor for Microbiology. From the beginning of the 1990’s Kornelia Smalla contributed to the field of molecular microbial ecology and microbiome research. Cultivation-independent methods were developed to study the microbiome of soils or of plants and how the composition and functions of complex microbiomes are affected by agricultural management practice. The group is interested in developing methods to manage and stimulate the soil microbiome by reduced tillage, organic amendments or inoculants. Another research interest of the group are the factors that shape the transferable resistome and plasmid-mediated bacterial adaptation to changing environments.",
@@ -221,7 +224,7 @@ export class DataService {
           "texto" : "En esta ponencia hablaremos de la diversidad y funciones del microbioma de los agaves y cactus y su potencial para contribuir a la agricultura sustentable en las zonas áridas.",
           "titulo" : "El microbioma de los Agaves y Cactus como modelos para un planeta en calentamiento"
         },
-        "horario" : "10:00",
+        "horario" : "10:45",
         "nombre" : "Dra. Laila Pamela Partida-Martínez",
         "pais" : "MX",
         "sid" : "evolución-y-diversidad-de-mpcv"
@@ -255,8 +258,8 @@ export class DataService {
         },
         "_es" : {
           "bio" : "La profesora Marina Sanchez es Ingeniera Agrónoma, Maestra en Administración de Empresas y en Suelos y Aguas, Doctor Ingeniero Agrónomo de la Universidad Politécnica ETSIA Madrid Área de énfasis en Tecnologías Agroambientales. Profesora Titular de Dedicación Exclusiva, Tenente de Cargo de la Universidad Nacional de Colombia-Sede Palmira, Investigadora Emérita del Departamento Administrativo de Ciencia, Tecnología e Innovación COLCIENCIAS, coordinadora grupo de investigación en Agroecología,  sus áreas de trabajo: Microbiología Agrícola, Biología y Microbiología del Suelo, Fitopatología con énfasis en hongos y bacterias, Agricultura Ecológica y en este momento integra desde su experiencia todas estas áreas en la Agroecología.",
-          "texto" : "",
-          "titulo" : "Próximamente más información"
+          "texto" : "Estamos acostumbrados a visibilizar los microorganismos como componentes clave en la nutrición de las plantas mediante la mineralización de la materia orgánica y como colaboradores en la solubilización del material parental y secundario. Sin embargo, éstos para ser absorbidos con eficiencia en los eco y agroecosistemas requieren de alianzas que faciliten su llegada a las plantas, continuidad en las actividades metabólicas, escape a la adsorción órgano-mineral, señales de comunicación e información efectiva, redes de movilidad y absorción, economía en los procesos,  diálogos interespecies e interespaciales abajo-arriba-abajo que conectan y regulan los sistemas radicales, partes aéreas y se expresan en productividad pero también sanidad y sostenibilidad.  Para comprender el papel de aliados estratégicos de los microorganismos en la sostenibilidad de los eco y agroecosistemas, es necesario reconocer su organización comunitaria donde prima la biodiversidad, hasta el punto que podemos visualizar el suelo como caldo de cultivo multifuncional, complejo enzimático procedente de múltiples ADN interactuando, semáforos que regulan acciones y actividades, diálogos y acuerdos colectivos, los cuales al romperse generan disturbios tan graves como enfermedades, toxicidades, competencias, ataque de plagas, disminución de productividad, entre otros.  \nLa evolución de la vida en la tierra y la colonización de la superficie terrestre -  otrora inerte - a  suelo,  atmósfera  y tierra viva da cuenta de procesos metabólicos y organizativos claves para la existencia de los ecosistemas y posteriormente de los agroecosistemas. En la naturaleza ningún organismo está solo: llámese microorganismo, meso o macroorganismo. Siempre están en comunidades que garantizan diferentes tipos de relaciones: asociaciones complementarias y/o antagónicas, sociedades, simbiosis mutualistas, entre otros, ligadas tanto a nutrición como sanidad y sostenibilidad.  Los microorganismos entre ellos los denominados PGPR están presentes en la mayoría de estas relaciones dándonos múltiples enseñanzas ecosistémicas y sociales.\n",
+          "titulo" : "LOS MICROORGANISMOS DEL SUELO ALIADOS ESTRATÉGICOS EN LOS PROCESOS DE NUTRICIÓN, SANIDAD Y SOSTENIBILIDAD EN LOS ECO Y AGROECOSISTEMAS"
         },
         "_pt" : {
           "bio" : "La profesora Marina Sanchez es Ingeniera Agrónoma, Maestra en Administración de Empresas y en Suelos y Aguas, Doctor Ingeniero Agrónomo de la Universidad Politécnica ETSIA Madrid Área de énfasis en Tecnologías Agroambientales. Profesora Titular de Dedicación Exclusiva, Tenente de Cargo de la Universidad Nacional de Colombia-Sede Palmira, Investigadora Emérita del Departamento Administrativo de Ciencia, Tecnología e Innovación COLCIENCIAS, coordinadora grupo de investigación en Agroecología,  sus áreas de trabajo: Microbiología Agrícola, Biología y Microbiología del Suelo, Fitopatología con énfasis en hongos y bacterias, Agricultura Ecológica y en este momento integra desde su experiencia todas estas áreas en la Agroecología.",
@@ -270,13 +273,13 @@ export class DataService {
       },
       "massimiliano-cardinale" : {
         "_en" : {
-          "bio" : "Massimiliano Cardinale is a microbial ecologist interested in plant-microbe interactions and applications of beneficial microbes in agriculture. His research spreads from the study of specific beneficial symbioses, such as legume-rhizobia and mycorrhiza, to the exploration and exploitation of the plant associated microbiome, with a special focus on the less investigated plant habitats, such as the plant reproductive organs.",
-          "texto" : "Próximamente más información",
+          "bio" : "- MSc. in \"Natural Sciences\", University of Palermo, Italy (2000)\n- PhD. in \"Environmental Remediation\", University of Palermo, Italy  (2005)\n- Assistant professor, Graz University of Technology, Austria (2008-2013)\n- Research Associate, Justus Liebig University Giessen, Germany (2013-2018)\n- Senior Researcher, University of Salento, Italy (2019-current)\nMassimiliano Cardinale is a microbial ecologist interested in plant-microbe interactions and applications of beneficial microbes in agriculture. His research spreads from the study of specific beneficial symbioses, such as legume-rhizobia and mycorrhiza, to the exploration and exploitation of the plant associated microbiome, with a special focus on the less investigated plant habitats, such as the plant reproductive organs.",
+          "texto" : "The seed microbiome has received great attention in the last years, due to the intimate relationship with the plant and the possibility to be vertically transmitted to the next plant generation. Barley seeds are covered with abundant microbes on their surface and contain also an endophytic community showing stable members across genotypes, sites of collection and harvesting years (in particular, the genera Pantoea, Paenibacillus and Pseudomonas). These stable partners promoted barley growth in greenhouse experiments, inducing an increase in both chlorophyll content and concentration of K and Mg; moreover, they showed biocontrol activity against the phytopathogenic fungus Blumeria graminis. Such close and beneficial association suggested a co-evolution between barley and its core seed endophytes. To confirm this hypothesis, we studied the seed endophytes of four cereals and their respective ancestors. Genetic differences between plants, assessed by RAPD, were compared with the differences between the respective seed microbiomes, and a co-evolution test showed significant coherence between them, thus indicating clues of the co-evolution. This study also demonstrated that domestication affected the cereal seed microbiome in a common way, by increasing the diversity in the modern crops but reducing the interaction network with respect to the wild ancestors. Vertical transmission studies in greenhouse trials showed that only a few OTUs were transmitted to the second-generation seeds in barley; however, they represented the larger fraction of the seed microbiome in terms of number of sequences. In field trials, the number of seed-originated rhizosphere members of four cereal species varied significantly depending on the site, the cereal species, and their interaction.\nPlant reproductive organs are the most suitable habitats to study the co-evolution between plants and microbes, and to understand the nature of the plant holobiont. Moreover, they are a source of candidate strains with relevant potential in sustainable, ecosystem-based agricultural biotechnology applications.",
           "titulo" : "The microbiome of seeds and plant reproductive organs: diversity, co-evolution with the plant, and biotechnological potential for agriculture"
         },
         "_es" : {
-          "bio" : "Massimiliano Cardinale is a microbial ecologist interested in plant-microbe interactions and applications of beneficial microbes in agriculture. His research spreads from the study of specific beneficial symbioses, such as legume-rhizobia and mycorrhiza, to the exploration and exploitation of the plant associated microbiome, with a special focus on the less investigated plant habitats, such as the plant reproductive organs.",
-          "texto" : "Próximamente más información",
+          "bio" : "- MSc. in \"Natural Sciences\", University of Palermo, Italy (2000)\n- PhD. in \"Environmental Remediation\", University of Palermo, Italy  (2005)\n- Assistant professor, Graz University of Technology, Austria (2008-2013)\n- Research Associate, Justus Liebig University Giessen, Germany (2013-2018)\n- Senior Researcher, University of Salento, Italy (2019-current)\nMassimiliano Cardinale is a microbial ecologist interested in plant-microbe interactions and applications of beneficial microbes in agriculture. His research spreads from the study of specific beneficial symbioses, such as legume-rhizobia and mycorrhiza, to the exploration and exploitation of the plant associated microbiome, with a special focus on the less investigated plant habitats, such as the plant reproductive organs.",
+          "texto" : "The seed microbiome has received great attention in the last years, due to the intimate relationship with the plant and the possibility to be vertically transmitted to the next plant generation. Barley seeds are covered with abundant microbes on their surface and contain also an endophytic community showing stable members across genotypes, sites of collection and harvesting years (in particular, the genera Pantoea, Paenibacillus and Pseudomonas). These stable partners promoted barley growth in greenhouse experiments, inducing an increase in both chlorophyll content and concentration of K and Mg; moreover, they showed biocontrol activity against the phytopathogenic fungus Blumeria graminis. Such close and beneficial association suggested a co-evolution between barley and its core seed endophytes. To confirm this hypothesis, we studied the seed endophytes of four cereals and their respective ancestors. Genetic differences between plants, assessed by RAPD, were compared with the differences between the respective seed microbiomes, and a co-evolution test showed significant coherence between them, thus indicating clues of the co-evolution. This study also demonstrated that domestication affected the cereal seed microbiome in a common way, by increasing the diversity in the modern crops but reducing the interaction network with respect to the wild ancestors. Vertical transmission studies in greenhouse trials showed that only a few OTUs were transmitted to the second-generation seeds in barley; however, they represented the larger fraction of the seed microbiome in terms of number of sequences. In field trials, the number of seed-originated rhizosphere members of four cereal species varied significantly depending on the site, the cereal species, and their interaction.\nPlant reproductive organs are the most suitable habitats to study the co-evolution between plants and microbes, and to understand the nature of the plant holobiont. Moreover, they are a source of candidate strains with relevant potential in sustainable, ecosystem-based agricultural biotechnology applications.",
           "titulo" : "The microbiome of seeds and plant reproductive organs: diversity, co-evolution with the plant, and biotechnological potential for agriculture"
         },
         "_pt" : {
@@ -284,7 +287,7 @@ export class DataService {
           "texto" : "Próximamente más información",
           "titulo" : "The microbiome of seeds and plant reproductive organs: diversity, co-evolution with the plant, and biotechnological potential for agriculture"
         },
-        "horario" : "10:45",
+        "horario" : "10:00",
         "nombre" : "Dr. Massimiliano Cardinale",
         "pais" : "IT",
         "sid" : "evolución-y-diversidad-de-mpcv"
@@ -296,8 +299,8 @@ export class DataService {
           "titulo" : "Structural and functional plasticity in plants through microbial partners: a holistic approach"
         },
         "_es" : {
-          "bio" : "Agronomist from the Federal University of Lavras (UFLA), with M.Sc. in soil fertility and plant nutrition from the Luiz de Queiroz College of Agriculture, University of São Paulo (ESALQ-USP) and Ph.D. in microbial ecology from the University of Groningen (RUG), The Netherlands. He has nearly twenty years of experience in the studies of interaction between plants and microbial mutualisms with emphasis on endophytes. Today, he works as a consultant on the implementation of crop management for the development of sustainable agriculture.",
-          "texto" : "Próximamente más información",
+          "bio" : "Agronomist from the Federal University of Lavras (UFLA), with M.Sc. in soil fertility and plant nutrition from the Luiz de Queiroz College of Agriculture, University of São Paulo (ESALQ-USP) and Ph.D. in microbial ecology from the University of Groningen (RUG), The Netherlands. He has nearly twenty years of experience in the studies of the interaction between plants and microbial mutualisms with an emphasis on endophytes. Today, he works as a consultant on the implementation of crop management for the development of sustainable agriculture.",
+          "texto" : "Plants evolve by interacting with prokaryotic and eukaryotic microorganisms. The association between algae and filamentous fungus allows the former to successfully recruit nutrients and water resources in the substrate, while the\nlatter receives photoassimilates for its services. This mutualistic interaction between algal and mycorrhizal fungus, most likely, allowed ancestor Embryophyta (land plants) to colonize terrestrial ecosystems and diversify into\nmore than 308 thousand vascular plant species currently known. This type of successful partnership is also occasionally observed in commercially cultivated plants. Latin-American soybean plants establish mutualistic interactions with rhizobia allowing the plant to directly assimilate ammonia (NH 3 ) fixed by bacteroid cells inside root nodules. In addition to these well-known symbioses, many other beneficial functions provided by microbial partners are being used in crop plants, especially now with challenges of food security under climate\nchange and the pressure of consumers to obtain high-quality food and feed from sustainable/regenerative systems. To improve agricultural efficiency under this framework, scientists and farmers have the advantage to rely on microbiological partners to perform key functions in the production system.",
           "titulo" : "Structural and functional plasticity in plants through microbial partners: a holistic approach"
         },
         "_pt" : {
@@ -368,7 +371,7 @@ export class DataService {
           "titulo" : "Actores involucrados en el desarrollo y aplicación de bioinsumos: ¿Es posible un modelo alternativo de producción?"
         },
         "conferencistas" : [ "pedro-lage", "tomas-pedro-krotsch", "solon-cordeiro-de-araujo", "maribel-parada", "roberto-rapela" ],
-        "coordinadores" : "Coordinadores: Dr. Federico Battistoni (Uruguay) y Dr. Fabricio Cassan (Brasil)",
+        "coordinadores" : "Coordinadores: Dr. Federico Battistoni (Uruguay) y Dr. Fabricio Cassan (Argentina)",
         "horario" : "Viernes 8 de octubre"
       },
       "mujeres-en-la-ciencia" : {
@@ -395,7 +398,7 @@ export class DataService {
           "bio" : "More information soon"
         },
         "_es" : {
-          "bio" : "Más información próximamente"
+          "bio" : "Es investigadora Titular C del Centro de Ciencias Genómicas de la Universidad Nacional Autónoma de México (UNAM) en Cuernavaca, México. Investiga la convivencia pacífica entre especies: simbiosis mutualistas de bacterias con plantas y animales nativos de México con enfoques metagenómicos y de genómica funcional."
         },
         "_pt" : {
           "bio" : "Mais informações em breve"
@@ -408,7 +411,7 @@ export class DataService {
           "bio" : ""
         },
         "_es" : {
-          "bio" : ""
+          "bio" : "Nacida en Tacuarembó, 1966 es Licenciada en Ciencias Biológicas, FHC UdelaR (1989). Obtuvo la Maestría en Ciencias Biológicas, PEDECIBA (1994) y completó la formación de posgrado en la Universidad de Barcelona donde obtuvo el Doctorado en 1997. Madre de 4 hijos. Subdirectora del PEDECIBA. Profesora Agregada de la Facultad de Ciencias. Ha tenido una activa y prolífica actividad de investigación relacionada a la Biología Celular y Molecular de parásitos, responsable de numerosos proyectos financiados, numerosas comunicaciones a congresos nacionales e Internacionales, decenas de artículos publicados en revistas arbitradas internacionales, y varios capítulos de libro. Contribuyo a la formación de recursos humanos dirigiendo tesis de grado y de posgrado. Llevo a cabo muy diversas actividades de cogobierno y de extensión. Ha participado activamente en actividades de divulgación y actualización para enseñanza primaria y secundaria en programas diversos."
         },
         "_pt" : {
           "bio" : ""
@@ -421,7 +424,7 @@ export class DataService {
           "bio" : ""
         },
         "_es" : {
-          "bio" : ""
+          "bio" : "<p>Agrónoma, microbióloga, investigadora de Embrapa Soja y profesora de posgrado de la Universidade Estadual de Londrina, Paraná, Brasil. Especialista en fijación biológica de nitrógeno y otros procesos microbianos relacionados con bacterias promotoras del crecimiento vegetal. Tiene más de 700 tipos de publicación y ha lanzado más de 30 cepas tecnológicas y de inoculantes.</p><p><a href=\"http://lattes.cnpq.br/7355162785040506\" target=\"_blank\">Link CV</a></p>"
         },
         "_pt" : {
           "bio" : ""
@@ -434,7 +437,7 @@ export class DataService {
           "bio" : ""
         },
         "_es" : {
-          "bio" : ""
+          "bio" : "Nacida en la ciudad de Linares, realizó sus estudios universitarios en la UFRO, Temuco. Profesora de estado en Biología y Ciencias Naturales, por lo que luchó por hacer de la docencia su profesión. Inicia su actividad profesional trabajando en Fitopatología en la Estación Experimental Carillanca, INIA. En agosto de 1990 ingresa a la Facultad de Ciencias Agropecuarias y Forestales de la UFRO. Su actividad docente y de investigación ha estado centrada en el área de la fitopatología y la microbiología. Es Magíster en Ciencias mención Protección Vegetal, por la UACH y Doctora en Biología Molecular y Celular por la Universidad de Sevilla, España. Directora del Centro Biotecnológico de Estudios Microbianos (CEBEM), Vicepresidenta y Coordinadora Nacional de la Asociación Latinoamericana de Rizobiología y Presidenta de la Red Chilena de Bioinsumos A.G."
         },
         "_pt" : {
           "bio" : ""
@@ -449,12 +452,12 @@ export class DataService {
           "bio" : ""
         },
         "_es" : {
-          "bio" : ""
+          "bio" : "2019-2021:Lallemand Plant Care. Gerente Comercial Argentina, Chile y Uruguay.<br>1996-2019: Lage y Cía. S.A., Uruguay, Gerente Comercial<br>2000-2010: Nitrasoil Argentina S.A., Argentina, Directo<br>1996-2000: Universidad ORT, Uruguay. Coordinador de Graduados y Postgrados, Facultad de Ingeniería<br>1991-1992: Ministerio de Transportes y Obras Públicas, Uruguay. Dirección Nacional de Vialidad, Departamento de Estructuras. Ayudante de Ingeniero.<br>1993-1994: MBA, IAE, Universidad Austral, Argentina.<br>1982-1992: Ingeniero Civil, opción Estructural. Facultad de Ingeniería, Universidad de la República Oriental del Uruguay--"
         },
         "_pt" : {
           "bio" : ""
         },
-        "institucion" : "Empresa LAge y Cía - Lallemand",
+        "institucion" : "Empresa Lage y Cía - Lallemand",
         "nombre" : "Ing. Pedro Lage",
         "pais" : "UY",
         "url" : "https://www.lallemand.com/"
@@ -464,7 +467,7 @@ export class DataService {
           "bio" : ""
         },
         "_es" : {
-          "bio" : ""
+          "bio" : "Médico Cirujano, Facultad de Medicina UBA, Argentina. Ex Presidente y Miembro Fundador de CACER (Cámara de Certificadoras de Alimentos, Productos Orgánicos y Afines). Ex Vicepresidente de CALIBA (Cámara Argentina de Laboratorios Independientes Bromatológicos y Afines). Ex Presidente de FOOD SAFETY S.A., Empresa de Servicios de Certificación. Apoderado de Laboratorio Biomédico Dr. Rapela. Presidente de ALEPAR S.A. (Empresa Productora de Ganadería Sustentable). Presidente de la Fundación sin fines de lucro CECEX (Centro de Estudios de Comercio Exterior). Miembro Adherente Alianza del Pastizal -iniciativa para la Conservación de la biodiversidad de los Pastizales del Sur de Sur América. Representante de Mapo en CABUA, (Comité Asesor en Bioinsumos de Uso Agropecuario). Miembro fundador y presidente de CABIO (Cámara Argentina de Bioinsumos). Presidente de HMA4 S.A. (Empresa Nacional productora de Bioinsumos para uso Agropecuario)"
         },
         "_pt" : {
           "bio" : ""
@@ -479,7 +482,7 @@ export class DataService {
           "bio" : ""
         },
         "_es" : {
-          "bio" : ""
+          "bio" : "Ingeniero agrónomo, graduado en la Escuela de Agronomía Eliseu Maciel, de Pelotas, RS. Empezó como Investigador en el IBPT de Paraná, instalando el Sector de Inoculantes. Posteriormente fue Director Técnico y de I&D en cuatro empresas de inoculantes. Actualmente es socio director de SCA Consultoria y Consultor de la Associação Nacional dos Productores e Importadores de Inoculantes -ANPII"
         },
         "_pt" : {
           "bio" : ""
@@ -494,7 +497,7 @@ export class DataService {
           "bio" : ""
         },
         "_es" : {
-          "bio" : ""
+          "bio" : "Desde 2004 es Especialista en Sanidad Agropecuaria,  Inocuidad y Calidad de los Alimentos (SAIA) en el Instituto Interamericano de Cooperación para la Agricultura – IICA, desempeñó ese cargo en el IICA en Brasil y, desde 2009 en Argentina.  Veterinario, formado en el año 2000 con Especialización en Producción Animal en la Universidad de Buenos Aires – UBA. Colabora desde 2013 en el fortalecimiento de la institucionalidad para la promoción del uso y desarrollo del sector de los Bioinsumos en la Argentina, fomentando el diálogo y el intercambio  entre los sectores público,  privado y entre los diferentes países.  Es miembro observador por parte del IICA en el Comité Asesor de Bioinsumos de uso Agropecuario (CABUA) que funciona en el ámbito de la Coordinación de Innovación y Biotecnología de la Dirección Nacional de Bioeconomía de la Secretaría de Alimentos, Bioeconomía y Desarrollo regional del Ministerio de Agricultura, Ganadería y Pesca."
         },
         "_pt" : {
           "bio" : ""
@@ -521,7 +524,9 @@ export class DataService {
         },
         "conferencistas" : [ "marina-sanchez", "alda-rodriguez" ],
         "coordinadores" : "Coordinadores: Dra. Natalia Bajsa (Uruguay) y Dr. Luis Wall (Argentina)",
-        "horario" : "Jueves 7 de octubre"
+        "dialogos" : [ "-MeVzLc1sHpXjbhPFTPh", "-Mf5XdDzx7DzINZKl3PB", "-MgM6SJ9kBhggxwCMNhY" ],
+        "horario" : "Jueves 7 de octubre",
+        "tema" : 6
       },
       "del-laboratorio-al-campo" : {
         "_en" : {
@@ -538,7 +543,9 @@ export class DataService {
         },
         "conferencistas" : [ "maria-caridad-napoles", "paula-aguilera" ],
         "coordinadores" : "Coordinadoras: Dra. Nora Altier (Uruguay) y Dra. Mariangela Hungría (Brasil)",
-        "horario" : "Jueves 7 de octubre"
+        "dialogos" : [ "-Mh000TrGcrztJAsgKYi", "-MhBpsBBOJDzEo-eXzzY", "-MhBTv_21f080I1ZDcn5" ],
+        "horario" : "Jueves 7 de octubre",
+        "tema" : 7
       },
       "el-holobionte-planta" : {
         "_en" : {
@@ -555,7 +562,9 @@ export class DataService {
         },
         "conferencistas" : [ "pablo-hardoim", "emanuel-de-souza" ],
         "coordinadores" : "Coordinadores: Dra. Elena Fabiano (Uruguay) y Dr. Antonio Lagares (Argentina)",
-        "horario" : "Miércoles 6 de octubre"
+        "dialogos" : [ "-MfIXSS5YW6SE_YYEPji", "-Mh01rL761qHoW246jgW", "-Mg8SjUrTRjRvkjN6yoe" ],
+        "horario" : "Miércoles 6 de octubre",
+        "tema" : 5
       },
       "evolución-y-diversidad-de-mpcv" : {
         "_en" : {
@@ -570,9 +579,11 @@ export class DataService {
           "texto" : "Las plantas son sistemas altamente colonizados por microorganismos, cuya presencia determina el crecimiento y la sanidad de los cultivos. Debido al carácter ancestral de las asociaciones microbioma-planta se han observado distintos niveles de sofisticación en estas asociaciones, que incluyen tanto coevolución entre organismos como interacción de comunidades estructuradas complejas con el hospedero. Los cambios en la composición de la comunidad microbiana asociada pueden tener efectos positivos en la capacidad de adaptación a condiciones ambientales cambiantes o extremas y por tanto en la productividad de las plantas. Así, hospedadores y microbiomas constituyen sistemas biológicos complejos y dinámicos, en los cuales el mutualismo, por un lado, y el parasitismo y la patogenicidad por otro, están presentes como parte de un delgado equilibrio modulado fuertemente por el entorno y por las interacciones entre la comunidad microbiana asociada. La sesión Evolución y diversidad de Microorganismos Promotores del Crecimiento Vegetal (MPCV) está orientada a investigaciones relacionadas con la evolución y adaptación de los microorganismos al entorno y a su relación con las plantas. Además, se enfoca en la investigación de la interfaz microorganismo-hospedador, tanto las relaciones patógenas, parasíticas, como los mutualistas, así como también los estudios del microbioma.",
           "titulo" : "Evolución y diversidad de microorganismos promotores de crecimiento vegetal (MPCV)"
         },
-        "conferencistas" : [ "laila-pamela-martinez", "massimiliano-cardinale" ],
+        "conferencistas" : [ "massimiliano-cardinale", "laila-pamela-martinez" ],
         "coordinadores" : "Coordinadores: Dra. Ana Fernandez (Uruguay) y Dr. Mariano Pistorio (Argentina)",
-        "horario" : "Miércoles 6 de octubre"
+        "dialogos" : [ "-Mgr9RPoFIC6XDn0yA4s", "-MjkDMAN8FCAFBmplMmH", "-MhAr78Ad2tJa2DLI2X9" ],
+        "horario" : "Miércoles 6 de octubre",
+        "tema" : 1
       },
       "legislación-sobre-productos-microbianos" : {
         "_en" : {
@@ -589,7 +600,8 @@ export class DataService {
         },
         "conferencistas" : [ "romina-almesia", "jerri-zilli" ],
         "coordinadores" : "Coordinadores: Lic. Bioq. María Mayans (Uruguay) y Ing. Alejandro Perticari (Argentina)",
-        "horario" : "Viernes 8 de octubre"
+        "horario" : "Viernes 8 de octubre",
+        "tema" : 8
       },
       "microbioma-agrícola" : {
         "_en" : {
@@ -606,7 +618,9 @@ export class DataService {
         },
         "conferencistas" : [ "kornelia-smalla", "jorge-mazza-rodrigues" ],
         "coordinadores" : "Coordinadores: Dra. Carolina Leoni (Uruguay) y Dr. Rodrigo Mendes (Brasil)",
-        "horario" : "Lunes 4 de octubre"
+        "dialogos" : [ "-Mh-x6xEaxf4guzJ0aGv", "-Mh9kpbHy0U_OsQt8Uxm", "-MfhgUP7kZSIQoRvTGK8" ],
+        "horario" : "Lunes 4 de octubre",
+        "tema" : 4
       },
       "promoción-directa-del-crecimiento-vegetal" : {
         "_en" : {
@@ -623,7 +637,9 @@ export class DataService {
         },
         "conferencistas" : [ "euan-james", "agustin-grimoldi" ],
         "coordinadores" : "Coordinadoras: Dra. Fabiana Pezzani (Uruguay) y Dra. Verónica Reis (Brasil)",
-        "horario" : "Martes 5 de octubre"
+        "dialogos" : [ "-MhHX7JLhduId_G5rgSZ", "-MhAKjqvL7pIMXrn6nY4", "-Md-1IMLDvfFoyRffXkD" ],
+        "horario" : "Martes 5 de octubre",
+        "tema" : 3
       },
       "promoción-indirecta-del-crecimiento-vegetal" : {
         "_en" : {
@@ -640,17 +656,35 @@ export class DataService {
         },
         "conferencistas" : [ "jeroen-wagemans", "alexandra-stoll" ],
         "coordinadores" : "Coordinadores: Dr. Federico Rivas (Uruguay) y Dr. Claudio Valverde (Argentina)",
-        "horario" : "Martes 5 de octubre"
+        "dialogos" : [ "-MdHlG3SQImD3mVwLLJ5", "-MhAhRuHFLj8GRmYkrp_", "-MhBLuzRHfR3f0rPTt2a" ],
+        "horario" : "Martes 5 de octubre",
+        "tema" : 2
       }
     }
-  }  
+  }
+  public temas = [
+    'Todas las sesiones',
+    'Evolución y diversidad de MPCV',
+    'Promoción indirecta del crecimiento vegetal',
+    'Promoción directa del crecimiento vegetal',
+    'El microbioma agrícola',
+    'El holobionte planta',
+    'Conservación y manejo microbiano en sistemas naturales y agroecosistemas',
+    'Del laboratorio al campo',
+    'Legislación sobre registro y empleo de productos microbiano'
+  ]
   
   constructor(
     private http: HttpClient,
     private snackBar: MatSnackBar,
     public lang: LangService,
+    public dialog: MatDialog
   ){
     this.setData();
+    //
+    if(this.getZoom()){
+      this.dialog.open(PopUpComponent, { data: { url: this.getZoom() }});
+    }
   }
 
   setData(){
@@ -660,8 +694,42 @@ export class DataService {
     )
   }
 
+  getZoom(){
+    let ahora = Date.now()
+    ahora = Math.round(ahora/1000);
+    //LUNES
+    if(1633350600<ahora&&ahora<1633358700){ return 'https://us02web.zoom.us/j/88033648904?pwd=eHRzcDJ0d3JrY212MFJnR09zVmFaZz09' }
+    else if(1633358700<ahora&&ahora<1633365000){ return 'https://us02web.zoom.us/j/85483072259?pwd=b1VycXRMci9oSUtiQk1rMGIxcmw2dz09' }
+    else if(1633365000<ahora&&ahora<1633369500){ return 'https://us02web.zoom.us/j/86259527089?pwd=eU1uZ0xnT3FKdGJwRG5mU3VBeEZZUT09' }
+    else if(1633369500<ahora&&ahora<1633380300){ return 'https://us02web.zoom.us/j/83419263749?pwd=alF0N0xNalQ4TjFxMnMvbmJ6WU4zdz09' }
+    else if(1633380300<ahora&&ahora<1633388400){ return 'https://us02web.zoom.us/j/84060032320?pwd=U3pTMUphNE96bjd3UHUxQ2FGSVNQQT09' }
+    //MARTES
+    else if(1633437000<ahora&&ahora<1633451400){ return 'https://us02web.zoom.us/j/88488323652?pwd=enBoQmU1VmVPZCtQbUE2MHE0eXRkUT09' }
+    else if(1633451400<ahora&&ahora<1633455900){ return 'https://us02web.zoom.us/j/86259527089?pwd=eU1uZ0xnT3FKdGJwRG5mU3VBeEZZUT09' }
+    else if(1633455900<ahora&&ahora<1633466700){ return 'https://us02web.zoom.us/j/82468935882?pwd=S1dYaTFvUmZmTCtITjRuSXkxUFpudz09' }
+    else if(1633466700<ahora&&ahora<1633474800){ return 'https://us02web.zoom.us/j/84060032320?pwd=U3pTMUphNE96bjd3UHUxQ2FGSVNQQT09' }
+    //MIERCOLES
+    else if(1633523400<ahora&&ahora<1633537800){ return 'https://us02web.zoom.us/j/83514836396?pwd=bzlPSC83SmxqZTlHdTBlWkZLa0dWdz09' }
+    else if(1633537800<ahora&&ahora<1633542300){ return 'https://us02web.zoom.us/j/86259527089?pwd=eU1uZ0xnT3FKdGJwRG5mU3VBeEZZUT09' }
+    else if(1633542300<ahora&&ahora<1633553100){ return 'https://us02web.zoom.us/j/85443654948?pwd=UU9WTityUG9IMGtqZXBQTG5OSVFWQT09' }
+    else if(1633553100<ahora&&ahora<1633561200){ return 'https://us02web.zoom.us/j/84060032320?pwd=U3pTMUphNE96bjd3UHUxQ2FGSVNQQT09' }
+    //JUEVES
+    else if(1633609800<ahora&&ahora<1633624200){ return 'https://us02web.zoom.us/j/88410903626?pwd=bzFvcXVBRG42c1EzN3dNTzNNS0NKQT09' }
+    else if(1633624200<ahora&&ahora<1633628700){ return 'https://us02web.zoom.us/j/86259527089?pwd=eU1uZ0xnT3FKdGJwRG5mU3VBeEZZUT09' }
+    else if(1633628700<ahora&&ahora<1633639500){ return 'https://us02web.zoom.us/j/86992682196?pwd=VVFTSmVBTVVJN1pJMkJyOXptUGFSZz09' }
+    else if(1633639500<ahora&&ahora<1633647600){ return 'https://us02web.zoom.us/j/84060032320?pwd=U3pTMUphNE96bjd3UHUxQ2FGSVNQQT09' }
+    //VIERNES
+    else if(1633696200<ahora&&ahora<1633704300){ return 'https://us02web.zoom.us/j/84256818084?pwd=NGxLSWhEQVh4Z1V1bHRvMUhrR3RlQT09' }
+    else if(1633704300<ahora&&ahora<1633715100){ return 'https://us02web.zoom.us/j/84608550743?pwd=WVJUQkE0NDFudEtaVHZ1VHNnSTZmUT09' }
+    else if(1633715100<ahora&&ahora<1633722300){ return 'https://us02web.zoom.us/j/89281049466?pwd=S3B4cHlBU3pMZkFwZXVHRUVkQnRDZz09' }
+    else if(1633722300<ahora&&ahora<1633734000){ return 'https://us02web.zoom.us/j/87462830586?pwd=bldReUxYN29UZmVidjJYaFlmTVNzZz09' }
+    //PRUEBA
+    //else if(1633329000<ahora&&ahora<1633340000){ return 'https://www.google.com.ar/' }
+    else{ return undefined }
+  }
+
   getSesion = ( id: string ) => this.data.sesiones[id];
-  getConferencista = ( id: string ) => this.data.conferencistas[id];
+  getConferencista = ( id: string ): Conferencista => this.data.conferencistas[id];
   getMesa = ( id: string ) => this.data.mesas[id];
   getPanelista = ( id: string ) => this.data.panelistas[id];
   

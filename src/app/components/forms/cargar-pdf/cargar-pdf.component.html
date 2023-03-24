@@ -1,0 +1,131 @@
+<section>
+    <div class="d-flex justify-content-between">
+        <h3>{{ trabajo.titulo }}</h3>
+        <div class="d-flex">
+            <button mat-mini-fab mat-icon-button (click)="editarTrabajo(trabajo.tid)" color="primary" class="mx-1"><i class="fas fa-edit"></i></button>
+            <button mat-mini-fab color="warn" (click)="openDialog(trabajo.tid)"><i class="fas fa-trash-alt"></i></button>
+        </div>
+    </div>
+    <p><strong>{{ trabajo.date | date: 'dd/MM/yyyy':undefined:'en' }}</strong></p>
+
+
+    <!-- CARGAR PDF -->
+    <div class="formGroup" *ngIf="!trabajo.pdf||cargarPdf" class="d-lg-flex justify-content-between mb-3">
+        <label for="pdf">Cargar poster (PDF)</label>
+        <input class="form-control-file mx-3" 
+                type="file" 
+                name="pdf"
+                (change)="handleFilePdf($event)">
+    </div>
+
+    <div *ngIf="trabajo.pdf&&!cargarPdf" class="mb-3 d-flex justify-content-between align-items-center">
+        <div>Poster cargado: <i class="far fa-check-circle text-success"></i></div>
+        <button mat-stroked-button (click)="cargarPdf=true">Volver a cargar PDF</button>
+    </div>
+
+    <!-- CARGAR MP4 -->
+    <div class="formGroup" *ngIf="!trabajo.mp4||cargarMp4" class="d-lg-flex justify-content-between mb-3">
+        <label for="mp4">Cargar video (MP4)</label>
+        <input class="form-control-file mx-3" 
+                type="file" 
+                name="mp4"
+                (change)="handleFileMp4($event)">
+    </div>
+
+    <div *ngIf="trabajo.mp4&&!cargarMp4" class="mb-3 d-flex justify-content-between align-items-center">
+        <div>Video cargado: <i class="far fa-check-circle text-success"></i></div>
+        <button mat-stroked-button (click)="cargarMp4=true">Volver a cargar MP4</button>
+    </div>
+
+    <!-- CARGAR JPG -->
+    <div class="formGroup" *ngIf="false" class="d-lg-flex justify-content-between mb-3">
+        <label for="jpg">Cargar imagen (JPG)</label>
+        <input class="form-control-file mx-3" 
+                type="file" 
+                name="jpg"
+                (change)="handleFileJpg($event)">
+    </div>
+
+    <div *ngIf="false" class="mb-3 d-flex justify-content-between align-items-center">
+        <div>Video cargado: <i class="far fa-check-circle text-success"></i></div>
+        <button mat-stroked-button (click)="cargarJpg=true">Volver a cargar JPG</button>
+    </div>
+
+    <!-- LISTA DE ARCHIVOS -->
+    <div *ngIf="pdf||mp4||jpg">
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Tamaño</th>
+                    <th scope="col">Progreso</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngIf="pdf">
+                    <td>{{ pdf.name }}</td>
+                    <td>{{ pdf.archivo.size /1024 /1024 | number: '1.2-2': '_es' }} MB</td>
+                    <td>
+                        <div class="progress">
+                            <div class="progress-bar" 
+                                    role="progressbar" 
+                                    [ngStyle]="{'width': pdf.progreso+'%' }"
+                                    [ngClass]="{'bg-success': pdf.progreso>=100 }"></div>
+                        </div>
+                    </td>
+                    <td style="text-align: right;">
+                        <!-- CARGAR/ SPINNER/ ACHIVO CARGADO -->
+                        <button mat-raised-button color="primary" (click)="save(pdf)" *ngIf="!pdf.subiendo">Cargar</button>
+                        <div class="spinner-border text-success" role="status" *ngIf="pdf.progreso<100&&pdf.subiendo">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
+                        <button mat-mini-fab class="bg-success text-white" *ngIf="pdf.progreso>=100&&pdf.subiendo"><i class="fas fa-check"></i></button>
+                    </td>
+                </tr>
+                <tr *ngIf="mp4">
+                    <td>{{ mp4.name }}</td>
+                    <td>{{ mp4.archivo.size /1024 /1024 | number: '1.2-2': '_es' }} MB</td>
+                    <td>
+                        <div class="progress">
+                            <div class="progress-bar" 
+                                 role="progressbar" 
+                                 [ngStyle]="{'width': mp4.progreso+'%' }"
+                                 [ngClass]="{'bg-success': mp4.progreso>=100 }"></div>
+                        </div>    
+                    </td>
+                    <td style="text-align: right;">
+                        <!-- CARGAR/ SPINNER/ ACHIVO CARGADO -->
+                        <button mat-raised-button color="primary" (click)="save(mp4)" *ngIf="!mp4.subiendo">Cargar</button>
+                        <div class="spinner-border text-success" role="status" *ngIf="mp4.progreso<100&&mp4.subiendo">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
+                        <button mat-mini-fab class="bg-success text-white" *ngIf="mp4.progreso>=100&&mp4.subiendo"><i class="fas fa-check"></i></button>
+                    </td>
+                </tr>
+                <tr *ngIf="jpg">
+                    <td>{{ jpg.name }}</td>
+                    <td>{{ jpg.archivo.size /1024 /1024 | number: '1.2-2': '_es' }} MB</td>
+                    <td>
+                        <div class="progress">
+                            <div class="progress-bar" 
+                                 role="progressbar" 
+                                 [ngStyle]="{'width': jpg.progreso+'%' }"
+                                 [ngClass]="{'bg-success': jpg.progreso>=100 }"></div>
+                        </div>    
+                    </td>
+                    <td style="text-align: right;">
+                        <!-- CARGAR/ SPINNER/ ACHIVO CARGADO -->
+                        <button mat-raised-button color="primary" (click)="save(jpg)" *ngIf="!jpg.subiendo">Cargar</button>
+                        <div class="spinner-border text-success" role="status" *ngIf="jpg.progreso<100&&jpg.subiendo">
+                            <span class="visually-hidden">Loading...</span>
+                        </div>
+                        <button mat-mini-fab class="bg-success text-white" *ngIf="jpg.progreso>=100&&jpg.subiendo"><i class="fas fa-check"></i></button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        
+    </div>
+</section>
+

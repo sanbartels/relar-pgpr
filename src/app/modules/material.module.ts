@@ -14,8 +14,7 @@ import { MatBadgeModule } from '@angular/material/badge';
 import { MatDialogModule } from '@angular/material/dialog';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { LayoutModule } from '@angular/cdk/layout';
-
-
+import { MatCardModule } from '@angular/material/card';
 
 @NgModule({
   declarations: [],
@@ -34,6 +33,7 @@ import { LayoutModule } from '@angular/cdk/layout';
     MatDialogModule,
     MatPaginatorModule,
     LayoutModule,
+    MatCardModule,
     //
     TranslateModule.forChild({
       extend: true
@@ -52,6 +52,7 @@ import { LayoutModule } from '@angular/cdk/layout';
     MatDialogModule,
     MatPaginatorModule,
     LayoutModule,
+    MatCardModule,
     //
     TranslateModule
   ]

@@ -14,9 +14,12 @@ h3{
     font-family: 'Staatliches', sans-serif;
     text-transform: uppercase;
 }
-p{ text-align: justify; }
 hr{ color: #16f64b; }
-a{ color: black; }
+a{ 
+    color: black;
+    text-decoration: none;
+    font-weight: 600;
+}
 a:hover{ color: #16f64b;}
 
 /* TEXTO NOTICIAS */

@@ -5,23 +5,39 @@
             <th scope="col">#</th>
             <th scope="col" (click)="admin.sortUsersBy('lastname')">Nombre</th>
             <th scope="col" (click)="admin.sortUsersBy('email')">Email</th>
-            <th scope="col" (click)="admin.sortUsersBy('institucion')">Institución</th>
+            <th scope="col">Formacion</th>
             <th scope="col" (click)="admin.sortUsersBy('categoria')">Categoría</th>
-            <th scope="col" (click)="admin.sortUsersBy('pais')">País</th>
-            <th scope="col">T</th>
-            <th scope="col">P</th>
+            <th scope="col" (click)="admin.sortUsersBy('institucion')">Institución</th>
+            <th scope="col">Sección</th>
+            <th scope="col" (click)="admin.sortUsersBy('pais')">Ciudad, País</th>
+            <th scope="col">Teléfono</th>
+            <th scope="col">Género</th>
+            <th scope="col">Fecha de nacimiento</th>
+            <th scope="col">Documento</th>
+            <th scope="col">Trabajo</th>
+            <th scope="col">Pago</th>
+            <!--<th scope="col">T</th>
+            <th scope="col">P</th>-->
           </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let user of admin.usuarios; let i = index">
+            <tr *ngFor="let user of admin.getUsuarios(); let i = index" (click)="consoleUser(user)">
               <th scope="row">{{i}}</th>
               <td>{{ user.lastname | titlecase }}, {{ user.name | titlecase }}</td>
               <td>{{ user.email }}</td>
-              <td>{{ user.institucion }}</td>
+              <td>{{ user.formacion }}</td>
               <td>{{ categorias[user.categoria] }}</td>
-              <td>{{ user.pais }}</td>
-              <td style="color: #333;" [ngClass]="{ 'text-success': user.postulaTrabajo }"><i class="fas fa-circle"></i></td>
-              <td style="color: #333;" [ngClass]="{ 'text-warning': user.brou, 'text-primary': user.metodo=='free', 'text-success': user.metodo=='paypal' }"><i class="fas fa-circle"></i></td>
+              <td>{{ user.institucion }}</td>
+              <td>{{ user.seccion }}</td>
+              <td>{{ user.ciudad }}, {{ user.pais }}</td>
+              <td>{{ user.telefono }}</td>
+              <td>{{ user.sexo }}</td>
+              <td>{{ user.fechaDeNacimiento }}</td>
+              <td>{{ user.dni }}</td>
+              <td>{{ user.postulaTrabajo? 'Si':'No' }}</td>
+              <td>{{ user.brou? 'Brou' : user.metodo=='free'? user.type : user.metodo=='paypal'? 'PayPal' : user.metodo=='beca'? 'Beca' : user.inscripcion==5? 'Si': 'No' }}</td>
+              <!--<td style="color: #333;" [ngClass]="{ 'text-success': user.postulaTrabajo }"><i class="fas fa-circle"></i></td>
+              <td style="color: #333;" [ngClass]="{ 'text-warning': user.brou, 'text-primary': user.metodo=='free', 'text-success': user.metodo=='paypal' }"><i class="fas fa-circle"></i></td>-->
             </tr>
           </tbody>
     </table>

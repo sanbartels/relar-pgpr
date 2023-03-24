@@ -137,3 +137,19 @@ header {
     height: auto;
   }
 }
+
+/* TEXTOS LOCOS */
+.letras-container{
+  z-index: 2;
+  width: 100%;
+  overflow: hidden;
+}
+
+.bg-texto-1{
+  min-height: 40px;
+  width: 1000%;
+  margin-top: 3%;
+  background-image: url("/assets/img/texto-1.png");
+  background-repeat: repeat;
+  animation: texto-loco 80s linear infinite;
+}

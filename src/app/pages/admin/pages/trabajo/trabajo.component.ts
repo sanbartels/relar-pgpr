@@ -3,7 +3,6 @@ import { AdminService } from '../../../../services/admin.service';
 import { ActivatedRoute } from '@angular/router';
 import { MatSnackBar } from '@angular/material/snack-bar';
 
-
 @Component({
   selector: 'app-trabajo',
   templateUrl: './trabajo.component.html',

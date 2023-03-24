@@ -1,0 +1,48 @@
+h2{
+    font-family: 'Seravek', sans-serif;
+    text-transform: uppercase;
+    color: white;
+    margin:0;
+    padding:0;
+    text-shadow: 1px 1px 2px black;
+    cursor: pointer;
+    font-size: calc(2vw + 2rem);
+}
+h3{
+    font-family: 'Staatliches';
+    font-size: calc(0.5vw + 1.5rem);
+}
+nav{
+    height: 70px;
+    background-color: #16f64b;
+}
+.menu{
+    font-family: 'Seravek', sans-serif;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+.pointer{ cursor: pointer; }
+
+img{
+    box-shadow: 8px 8px 6px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 8px 8px 6px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 8px 8px 6px 0px rgba(0,0,0,0.75);
+
+    border: solid #333 1px;
+}
+
+.bg-0{
+    background-image: url("/assets/img/fondo-0.jpg");
+    background-size: cover;
+}
+video{
+    max-width: 100%;
+}
+.max-320{ max-height: 320; }
+.max-600{ max-height: 600px; }
+
+@media (min-width: 992px) {
+    .pl{ padding-left: 2rem; }
+    p{ text-align: justify; }
+}

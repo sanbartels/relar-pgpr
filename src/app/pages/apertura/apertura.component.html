@@ -1,0 +1,62 @@
+<section>
+    <!-- TITULO -->
+    <div class="p-3 p-md-5 text-white">
+        <h2>CONFERENCIA DE APERTURA</h2>
+        <h3 class="mt-4">Lunes 4 de octubre<br>
+            10:30</h3>
+    </div>
+
+    <div style="height: 6px;" class="bg-green mb-5"></div>
+
+    <section class="pb-5">
+        <div class="d-flex flex-wrap m-3 mb-5 m-md-5">
+            <div class="col-12 col-md-8">
+                <h3>
+                    <span class="text-white">Dra. Mariangela Hungría</span>
+                    <br>
+                    {{ 'COUNTRIES.BR' | translate }}
+                </h3>
+            </div>
+            <div *ngIf="url&&auth.logged" class="col-12 col-md-4 mt-5 mt-md-0">
+                <video controls class="w-100" controlsList="nodownload">
+                    <source [src]="url" type="video/mp4" sizes="480">
+                </video>
+            </div>
+        </div>
+        <div class="justify p-3 p-md-5 bg-transparente text-white">
+            <h5 class="pb-4">Una nueva mirada a la multifuncionalidad de los inoculantes: Impacto en la producción, sostenibilidad y ciclo de nutrientes</h5>
+            <p>
+                Por un siglo los inoculantes se limitaron a los rizobios y su contribución
+                a la fijación biológica de nitrógeno (FBN) con diversas leguminosas.
+                América del Sur tomó la delantera en el uso de FBN en cultivos de
+                granos relevantes para la agroindustria como la soja, en forrajes
+                como la alfalfa, en granos de seguridad alimentaria como el frijol.
+                En los últimos años, una nueva mirada a los microorganismos en
+                la agricultura ha ganado una visibilidad cada vez mayor. Nuevos
+                microorganismos que actúan en procesos multifuncionales, como
+                Azospirillum brasilense, Pseudomonas fluorescens y Bacillus spp.
+                ganan mercado. Una nueva visión debe tener en cuenta no solo los
+                impactos en la producción, sino también los beneficios de reciclaje
+                de otros nutrientes además del nitrógeno, de restauración de la
+                fertilidad del suelo y de mitigación de los impactos ambientales al
+                reducir la lixiviación de residuos químicos y la emisión de gases de
+                efecto invernadero (GEI). Nuevos mercados como los créditos de
+                carbono, las contribuciones a los Objetivos de Desarrollo Sostenible
+                (ODS) y las estimatovas de reducción de emisiones de GEI aparecen
+                como grandes oportunidades. Pero es necesario no perder el foco en
+                los avances tecnológicos logrados a lo largo de décadas, con la oferta
+                de microorganismos de élite y bioinsumos de calidad, traduciendo los
+                resultados de la investigación en beneficios en el campo.
+            </p>
+        </div>
+        <div style="height: 2px;" class="bg-green"></div>
+        <div class="justify p-3 p-md-5 bg-transparente text-white">
+            <p>
+                Agrónoma, microbióloga, investigadora de Embrapa Soja y profesora de posgrado de la Universidade Estadual de Londrina, Paraná, Brasil. 
+                Especialista en fijación biológica de nitrógeno y otros procesos microbianos relacionados con bacterias promotoras del crecimiento vegetal. 
+                Tiene más de 700 tipos de publicación y ha lanzado más de 30 cepas tecnológicas y de inoculantes.
+            </p> 
+            <p><a href="http://lattes.cnpq.br/7355162785040506" target="_blank" class="text-primary">Link CV</a></p>
+        </div>
+    </section>
+</section>

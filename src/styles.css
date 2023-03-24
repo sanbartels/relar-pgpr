@@ -10,13 +10,14 @@ font-family: 'Seravek Light', sans-serif;
   font-family: 'MacType';
   src: url(/assets/fonts/mactype.ttf) format('truetype');
 }
+*/
 
 @font-face {
-  font-family: 'Roboto';
-  src: url(/assets/fonts/roboto/Roboto-Regular.ttf) format('truetype');
+  font-family: 'Seravek';
+  font-style: normal;
+  font-weight: 400;
+  src: url(/assets/fonts/seravek/Seravek.woff) format('truetype');
 }
-
-*/
 
 ::-webkit-scrollbar { display: none; }
 

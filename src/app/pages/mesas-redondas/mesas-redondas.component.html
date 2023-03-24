@@ -1,21 +1,25 @@
 <section *ngIf="mesa">
 
     <!-- TITULO -->
-    <div class="p-3 p-md-5 text-white" [routerLink]="['/mesas-redondas/'+id]">
-        <h2>MESA REDONDA<br>{{ mesa[lang.lang].titulo }}</h2>
-        <h3 class="mt-4">{{ mesa.horario }}</h3>
+    <div class="p-3 p-md-5 text-white">
+        <h2 [routerLink]="['/mesas-redondas/'+id]">MESA REDONDA<br>{{ mesa[lang.lang].titulo }}</h2>
+        <h3 class="mt-4">
+            {{ mesa.horario }}
+            <br>
+            12:00
+        </h3>
     </div>
 
     <!-- MENU -->
     <nav class="my-5">
         <ul class="d-md-flex justify-content-center m-0">
-            <li class="border-left border-right uppercase" [matMenuTriggerFor]="invitados">Panelistas</li>
+            <li class="border-left border-right uppercase" [matMenuTriggerFor]="invitados"><i class="fas fa-angle-down mr-3"></i>Panelistas</li>
         </ul>
         
         <!-- INVITADOS -->
         <mat-menu #invitados="matMenu">
             <ul class="py-2 mt-2">
-                <li class="li" *ngFor="let cid of mesa.conferencistas">
+                <li class="li" *ngFor="let cid of mesa.conferencistas" [routerLink]="['/mesas-redondas/'+id+'/'+cid]">
                     <span class="uppercase">{{ data.getPanelista(cid).nombre }}</span>
                     <br>
                     <span *ngIf="data.getPanelista(cid).institucion">{{ data.getPanelista(cid).institucion }}</span>

@@ -1,5 +1,14 @@
 .nav-fix { height: 44px; }
 
+.display-flex{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap-reverse;
+}
+.d-flex-center{ 
+    display: flex; 
+    align-items: center;
+}
 /* NAV */
 nav{
     background-color: white;
@@ -23,7 +32,7 @@ nav li{
     color: black;
     font-family: 'Seravek', sans-serif;
     text-transform: uppercase;
-    padding: 5px 20px;
+    padding: 5px 12px;
     margin: 5px 0;
     cursor: pointer;
 }
@@ -31,6 +40,11 @@ nav li{
 nav, ul{ background-color: #16f64b !important; margin:0; padding:0; }
 nav i{ font-size: 20px; }
 nav img{ width: 30px; border-radius: 50%; }
-.d-flex-center{ display: flex; align-items: center; }
 .border-left{ border-left: solid black 2px; }
 .border-right{ border-right: solid black 2px; }
+.vivo{
+    margin-right: 5px;
+    color: red;
+    font-size: 10px !important;
+    text-shadow: -1px -1px 2px #CE5937;
+}

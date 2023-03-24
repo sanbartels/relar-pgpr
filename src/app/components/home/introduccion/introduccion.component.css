@@ -14,6 +14,7 @@
   animation: texto-loco 80s linear infinite;
 }
 
+img{ box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.6); }
 .texto-01{ position: relative }
 .frente-a0{ width: 18% }
 .frente-a1{
@@ -23,13 +24,6 @@
 }
 .frente-a2{ width: 39% }
 
-/* MEDIA QUERIES */
-/* Small devices (landscape phones, 576px and up)*/
-@media (min-width: 576px) {}
-
-/* Medium devices (tablets, 768px and up)*/
-@media (min-width: 768px) {}
-
 /* Large devices (desktops, 992px and up)*/
 @media (min-width: 992px) {
   .width-lg-90{
@@ -37,16 +31,4 @@
     margin: auto;
   }
 }
-
-/* X-Large devices (large desktops, 1200px and up)*/
-@media (min-width: 1200px) {}
-
-/* XX-Large devices (larger desktops, 1400px and up)*/
-@media (min-width: 1400px) {}
-
-/* X-Large devices (large desktops, 1200px and up)*/
-@media (min-width: 1200px) {}
-
-/* XX-Large devices (larger desktops, 1400px and up)*/
-@media (min-width: 1400px) {}
 

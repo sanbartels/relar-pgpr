@@ -1,0 +1,61 @@
+
+<!-- TÍTULO -->
+<h2 class="m-3 m-lg-5 p-3">{{ 'Posterhall' | uppercase }}</h2>
+    
+<!-- MENU -->
+<nav class="d-md-flex justify-content-between align-items-center px-3 px-lg-5">
+
+    <ul class="p-3 m-0 border-sm-2px">
+        <li [matMenuTriggerFor]="menu" class="li">
+            <i class="fas fa-angle-down mx-2"></i>
+            {{ trabajos.temas[_var.currentTema] }}
+        </li>
+    </ul>
+
+    <!-- BUSCADOR -->
+    <div class="p-3">
+        <input type="text" [(ngModel)]="_var.currentSearch" placeholder="Buscar" (keyup)="search()">
+    </div>
+        
+    <mat-menu #menu="matMenu">
+        <ul class="py-2 mt-3">
+            <li *ngFor="let sesion of trabajos.temas; let i = index" (click)="_var.currentTema=i; search();" class="p-2">{{trabajos.temas[i]}}</li>
+        </ul>
+    </mat-menu>
+</nav>
+    
+<section *ngIf="posterhall.length;else no_resultados">
+    <div class="m-0 m-lg-5 d-flex flex-wrap">
+        <div *ngFor="let trabajo of posterhall | slice:0:limit" class="col-12 col-md-6 col-lg-4 p-3">
+
+            <mat-card class="example-card">
+                <mat-card-subtitle class="subtitulo" (click)="_var.currentTema=trabajo?.tema">{{ trabajos.temas[trabajo?.tema] }}</mat-card-subtitle>
+                <img *ngIf="trabajo?.jpg" [src]="trabajo.jpg" alt="Poster" class="w-100">
+                <mat-card-title class="mt-3">{{ trabajo?.titulo }}</mat-card-title>
+                <hr>
+                <mat-card-content class="mt-3">
+                    <strong>{{ trabajo?.expone }}</strong>
+                    <p>{{ trabajo?.autores }}</p>
+                </mat-card-content>
+                <mat-card-actions class="d-flex justify-content-end">
+                    <button mat-button (click)="_var.navegateTo='/posterhall'; irAlTrabajo(trabajo.uid, trabajo.key)">MÁS INFORMACIÓN</button>
+                </mat-card-actions>
+                <mat-card-footer>
+                </mat-card-footer>
+            </mat-card>
+            
+        </div>
+    </div>
+</section>
+<ng-template #no_resultados>
+    <div *ngIf="posterhallLoadded" class="m-3 m-md-5 p-3 p-md-5 bg-white">
+        <p class="error text-center">No existen resultados con los valores de búsqueda actuales</p>
+    </div>
+
+    <div *ngIf="!posterhallLoadded" class="d-flex justify-content-center pt-5 my-5">
+        <div class="spinner-grow mx-3" role="status"><span class="visually-hidden">Loading...</span></div>
+        <div class="spinner-grow mx-3" role="status"></div>
+        <div class="spinner-grow mx-3" role="status"></div>
+    </div>
+</ng-template>
+

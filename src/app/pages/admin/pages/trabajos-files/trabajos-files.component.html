@@ -1,0 +1,42 @@
+<section *ngIf="admin.usuariosLoadded&&admin.trabajosLoadded">
+    <table class="table table-dark table-hover table-striped">
+        <thead>
+        <tr>
+            <th scope="col">Nombre</th>
+            <th scope="col">Email</th>
+            <th scope="col">Teléfono</th>
+            <th scope="col">Título</th>
+            <th scope="col" (click)="admin.sortWorksBy('tema')">Tema</th>
+            <!--<th scope="col">UID</th>
+            <th scope="col">TID</th>-->
+            <th scope="col">JPG</th>
+            <th scope="col">PDF</th>
+            <th scope="col">MP4</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr *ngFor="let trabajo of admin.trabajos">
+            <td class="pointer" (click)="openNewTab('/poster/'+trabajo.uid+'/'+trabajo.key)">{{ admin.getUsuario(trabajo.uid).lastname }}, {{ admin.getUsuario(trabajo.uid).name }}</td>
+            <td>{{ admin.getUsuario(trabajo.uid).email }}</td>
+            <td>{{ admin.getUsuario(trabajo.uid).telefono }} </td>
+            <td>{{ trabajo.titulo | slice:0:30 }}</td>
+            <td>{{ admin.temas[trabajo.tema] | slice:0:30 }}</td>
+            <!--<td>{{ trabajo.uid }}</td>
+            <td>{{ trabajo.key }}</td>-->
+            <td style="color: #333;" [ngClass]="{ 'text-success': trabajo.jpg }"><i class="fas fa-circle"></i></td>
+            <td style="color: #333;" [ngClass]="{ 'text-success': trabajo.pdf }"><i class="fas fa-circle"></i></td>
+            <td>
+                <i class="fas fa-circle" style="color: #333;" *ngIf="!trabajo.mp4"></i>
+                <a *ngIf="trabajo.mp4" 
+                    [href]="trabajo.mp4"
+                    target="_blank"
+                    [download]="trabajo.tema+'-'+admin.getUsuario(trabajo.uid).email"
+                    class="text-success pointer"
+                    [ngClass]="{ 'text-danger': trabajo.dialogoSeleccionado }">
+                    <i class="fas fa-download"></i>
+                </a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</section>

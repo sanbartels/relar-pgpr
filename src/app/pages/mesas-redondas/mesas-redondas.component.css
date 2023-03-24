@@ -1,5 +1,5 @@
 section{
-    background-image: url("/assets/img/fondo-5.jpg");
+    background-image: url("/assets/img/fondo-6.jpg");
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -9,13 +9,13 @@ section{
 nav, ul, li{ background-color: #16f64b !important; }
 
 p{
-    font-size: 1.1rem;
-    text-align: justify;
+    font-size: 1rem;
     text-shadow: 1px 1px 2px black;
 }
 
+.mr-3{ margin-right: 1rem;}
 a{ text-decoration: none; color: black; }
-.bg-transparente{background-color: rgba(88, 88, 88, 0.800);}
+.bg-transparente{background-color: rgba(50, 50, 50, 0.9);}
 .border-bottom-green{ border-bottom: #16f64b solid 2px;}
 .uppercase{ text-transform: uppercase; }
 .li{ font-size: 1.2rem; }
@@ -27,7 +27,7 @@ h2, h3, h4, h5{
     padding:0;
     text-shadow: 1px 1px 2px black;
 }
-h2{font-size: 2.8rem; cursor: pointer;}
+h2{font-size: calc(1.8vw + 1.8rem); cursor: pointer;}
 h3{font-size: 2rem;}
 ul{padding: 0.5rem;}
 li{
@@ -39,31 +39,6 @@ li{
     cursor: pointer;
 }
 
-/* TEXTO EFECTO */
-
-.letras-container{
-    z-index: 2;
-    width: 100%;
-    overflow: hidden;
-}
-
-.bg-texto-5{
-    min-height: 40px;
-    width: 1000%;
-    background-image: url("/assets/img/texto-6.png");
-    background-repeat: repeat;
-    animation: texto-loco 90s linear infinite;
-}
-
-@keyframes texto-loco{
-	0% {
-		background-position: 100% 50%;
-	}
-	100% {
-		background-position: 0% 50%;
-	}
-}
-
 /* MEDIA QUERYS */
 
 /* Small devices (landscape phones, 576px and up)*/
@@ -71,17 +46,13 @@ li{
 
 /* Medium devices (tablets, 768px and up)*/
 @media (min-width: 768px) {
-    .border-left{
-        border-left: solid black 2px;
-    }
-    .border-right{
-        border-right: solid black 2px;
-    }
-    li{
-        padding: 0.5rem 3rem;
-    }
-    ul{
-        padding: 0;
+    .border-left{ border-left: solid black 2px; }
+    .border-right{ border-right: solid black 2px; }
+    li{ padding: 0.5rem 3rem; }
+    ul{ padding: 0; }
+    p{
+        text-align: justify;
+        font-size: 1.1rem;
     }
 }
 

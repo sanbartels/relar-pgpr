@@ -26,13 +26,7 @@ export class DeleteConfirmationComponent {
     this.auth.deleteTrabajo( this.data.uid, this.data.tid ).subscribe(
       ()=>{
         this.snackBar.open('Trabajo eliminado', 'Aceptar', { duration: 3000 });
-        let i: number;
-        this.data.trabajos.forEach( (element, index: number) => {
-          if( element.tid == this.data.tid ){ i= index; }
-        });
-        if( i!==-1){
-          this.data.trabajos.splice(i,1);
-        }
+        window.location.reload();
       },
       ()=> this.snackBar.open('Se ha producido un error, intentelo nuevamente', 'Aceptar', { duration: 3000 }),
     )

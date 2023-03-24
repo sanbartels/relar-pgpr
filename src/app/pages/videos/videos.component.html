@@ -1,0 +1,49 @@
+<section>
+
+    <div class="display-flex text-white py-5 px-3 p-md-5">
+
+        <div class="col-12 col-md-4 p-3">
+            <div class="p-3 bg-dark">
+                <h4 class="subtitulo" [routerLink]="['/apertura']">APERTURA</h4>
+                <img src="/assets/img/play-button.png" alt="Video" class="img-fluid cursor" (click)="openVideo('apertura')">
+                <h3 [routerLink]="['/apertura']">DRA. MARIANGELA HUNGRÍA
+                    <br><small>{{ 'COUNTRIES.BR' | translate }}</small></h3>
+                <h5>UNA NUEVA MIRADA A LA MULTIFUNCIONALIDAD DE LOS INOCULANTES: IMPACTO EN LA PRODUCCIÓN, SOSTENIBILIDAD Y CICLO DE NUTRIENTES</h5>
+                <!--<p>Por un siglo los inoculantes se limitaron a los rizobios y su contribución a la fijación biológica de nitrógeno (FBN)...</p>-->
+                <div class="d-flex justify-content-end">
+                    <button mat-stroked-button [routerLink]="['/apertura']">MÁS INFORMACIÓN</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-12 col-md-4 p-3">
+            <div class="p-3 bg-dark">
+                <h4 class="subtitulo" [routerLink]="['/clausura']">CLAUSURA</h4>
+                <img src="/assets/img/play-button.png" alt="Video" class="img-fluid cursor" (click)="openVideo('clausura')">
+                <h3 [routerLink]="['/clausura']">DRA. ESPERANZA MARTINEZ
+                    <br><small>{{ 'COUNTRIES.MX' | translate }}</small></h3>
+                <h5>GENÓMICA Y GENÓMICA FUNCIONAL DE RIZOBIOS</h5>
+                <!--<p>En general, las bacterias del suelo que pueden colonizar plantas tienen genomas grandes, con una capacidad amplia para degradar distintos sustratos. En particular, estudiamos los genomas de Bradyrhizobium y Rhizobium....</p>-->
+                <div class="d-flex justify-content-end">
+                    <button mat-stroked-button [routerLink]="['/clausura']">MÁS INFORMACIÓN</button>
+                </div>
+            </div>
+        </div>
+
+        <div *ngFor="let cid of conferencistas" class="col-12 col-md-4 p-3">
+            <div *ngIf="data.getConferencista(cid)" class="p-3 bg-dark">
+                <h4 class="subtitulo" [routerLink]="['/sesiones-de-trabajo/'+data.getConferencista(cid).sid]">{{ data.data.sesiones[data.getConferencista(cid).sid][lang.lang]['titulo'] }}</h4>
+                <img src="/assets/img/play-button.png" alt="Video" class="img-fluid cursor" (click)="openVideo(cid)">
+                <h3 [routerLink]="['/sesiones-de-trabajo/'+data.getConferencista(cid).sid+'/charlas-magistrales/'+cid]">{{ data.getConferencista(cid).nombre }}
+                    <br><small>{{ 'COUNTRIES.'+ data.getConferencista(cid).pais | translate }}</small></h3>
+                <h5>{{ data.data.conferencistas[cid][lang.lang]['titulo'] }}</h5>
+                <!--<p>{{ data.data.conferencistas[cid][lang.lang]['texto'] | slice:0:150 }}...</p>-->
+                <div class="d-flex justify-content-end">
+                    <button mat-stroked-button [routerLink]="['/sesiones-de-trabajo/'+data.getConferencista(cid).sid+'/charlas-magistrales/'+cid]">MÁS INFORMACIÓN</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</section>

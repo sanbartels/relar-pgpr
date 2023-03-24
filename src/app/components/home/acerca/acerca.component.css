@@ -1,3 +1,26 @@
+.bg-grey{ 
+  background-image: 
+  linear-gradient(100deg, rgba(80,80,80,0.9), rgba(110, 110, 110, 0.9), rgba(90,90,90,0.9), rgba(110,110,110,0.9), rgba(80,80,80,0.9));
+  box-shadow: 5px 5px 10px 0px rgba(0,0,0,0.6);
+}
+i{ color: #16f64b !important; }
+.mb-8{ margin-bottom: 8rem;}
+
+
+.margin-1{ padding: 0 3rem 0 0 }
+.margin-2{ padding: 0 0 0 1rem }
+.texto-1{ padding: 3rem 3rem 5rem 1rem }
+.texto-2{ padding: 2rem 2rem 0rem; }
+.texto-3{ padding: 1rem 1rem 1rem; }
+.texto-4{ padding: 3rem 3rem 2rem; }
+.texto-5{ padding: 3rem 8rem 3rem 3rem; }
+
+p{
+  font-size: 1.2rem;
+  color: #eee;
+  text-shadow: 1px 1px 2px black;
+}
+
 /* TEXTOS LOCOS */
 .letras-container{
   z-index: 2;
@@ -21,6 +44,14 @@
   animation: texto-loco 80s linear infinite;
 }
 
+.bg-texto-7{
+  min-height: 50px;
+  width: 1000%;
+  background-image: url("/assets/img/texto-7.png");
+  background-repeat: repeat;
+  animation: texto-loco 80s linear infinite;
+}
+
 
 /* MEDIA QUERIES */
 /* Small devices (landscape phones, 576px and up)*/
@@ -34,6 +65,14 @@
   .width-lg-90{
     width: 90%;
     margin: auto;
+  }
+  .margin-3{
+    margin-top: 4rem;
+    margin-left: 5%;
+  }
+  .margin-4{
+    margin-top: 5rem;
+    margin-right: 10%;
   }
 }
 

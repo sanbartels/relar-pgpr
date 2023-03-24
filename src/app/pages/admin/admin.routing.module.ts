@@ -6,6 +6,7 @@ import { InicioAdminComponent } from './pages/inicio/inicio.component';
 import { UsuariosComponent } from './pages/usuarios/usuarios.component';
 import { TrabajoComponent } from './pages/trabajo/trabajo.component';
 import { TrabajosComponent } from './pages/trabajos/trabajos.component';
+import { TrabajosFilesComponent } from './pages/trabajos-files/trabajos-files.component';
 import { ConferencistaComponent } from './pages/conferencista/conferencista.component';
 import { PanelistaComponent } from './pages/panelista/panelista.component';
 import { ActualizarSesionComponent } from './pages/actualizar-sesion/actualizar-sesion.component';
@@ -19,6 +20,7 @@ const routes: Routes = [
       { path: 'usuarios', component: UsuariosComponent },
       { path: 'trabajo/:tid', component: TrabajoComponent },
       { path: 'trabajos', component: TrabajosComponent },
+      { path: 'files', component: TrabajosFilesComponent },
       { path: 'conferencista', component: ConferencistaComponent },
       { path: 'panelista', component: PanelistaComponent },
       { path: 'actualizar-sesion-de-trabajo', component: ActualizarSesionComponent },

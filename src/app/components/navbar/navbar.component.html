@@ -1,13 +1,19 @@
 <!-- LARGE DEVICES -->
 <nav *ngIf="layout.currentScreenSize==='large'">
-    <div class="d-flex-center justify-content-between">
+    <div class="display-flex">
         <ul class="d-flex-center">
+            <!--<li class="border-right" (click)="vivo()"><i class="fas fa-circle vivo"></i>{{ 'VIVO' }}</li>-->
             <li class="border-right" [routerLink]="['/home']">{{ 'NAV.HOME' | translate }}</li>
+            <li class="border-right" (click)="pdf()">{{ 'LIBRO DE RESÚMENES' }}</li>
+            <li class="border-right" [routerLink]="['/videos']">{{ 'CHARLAS MAGISTRALES' }}</li>
             <li class="border-right" [routerLink]="['/programa']">{{ 'NAV.PROGRAMA' | translate }}</li>
             <li class="border-right" [matMenuTriggerFor]="sesiones">{{ 'NAV.SESIONES' | translate }}</li>
             <li class="border-right" [matMenuTriggerFor]="mesas">{{ 'MESAS REDONDAS' }}</li>
-            <li  class="border-right" [routerLink]="['/noticias']">{{ 'NAV.NOTICIAS' | translate }}</li>
-            <li  class="border-right" [routerLink]="['/faq']">{{ 'FAQ' }}</li>
+            <!--<li class="border-right" [routerLink]="['/apertura']">{{ 'APERTURA' }}</li>-->
+            <!--<li class="border-right" [routerLink]="['/clausura']">{{ 'CLAUSURA' }}</li>-->
+            <li class="border-right" [routerLink]="['/posterhall']">{{ 'POSTERHALL' }}</li>
+            <li class="border-right" [routerLink]="['/noticias']">{{ 'NAV.NOTICIAS' | translate }}</li>
+            <li class="border-right" [routerLink]="['/faq']">{{ 'FAQ' }}</li>
 
             <mat-menu #sesiones="matMenu">
                 <div class="bg-white">
@@ -28,7 +34,7 @@
                 </div>
             </mat-menu>
         </ul>
-        <ul class="d-flex-center">
+        <ul class="d-flex-center flex-grow-1 justify-content-end">
             <!--<li (click)="useLanguage('_es')">{{ 'NAV.ES' | translate }}</li>
             <li (click)="useLanguage('_en')">{{ 'NAV.EN' | translate }}</li>
             <li (click)="useLanguage('_pt')">{{ 'NAV.PT' | translate }}</li>-->
@@ -55,10 +61,16 @@
 
     <mat-menu #menu="matMenu">
         <div class="bg-white">
+            <!--<button mat-menu-item (click)="vivo()">{{ 'VIVO ' }}<i class="fas fa-circle vivo"></i></button>-->
             <button mat-menu-item [routerLink]="['/home']">{{ 'NAV.HOME' | translate }}</button>
+            <button mat-menu-item (click)="pdf()">{{ 'LIBRO DE RESÚMENES' }}</button>
             <!--<button mat-menu-item [routerLink]="['/programa']">{{ 'NAV.PROGRAMA' | translate }}</button>-->
+            <button mat-menu-item [routerLink]="['/videos']">{{ 'CHARLAS MAGISTRALES' }}</button>
+            <button mat-menu-item [routerLink]="['/apertura']">{{ 'APERTURA' }}</button>
             <button mat-menu-item [matMenuTriggerFor]="sesiones">{{ 'NAV.SESIONES' | translate }}</button>
             <button mat-menu-item [matMenuTriggerFor]="mesas">{{ 'MESAS REDONDAS' }}</button>
+            <button mat-menu-item [routerLink]="['/clausura']">{{ 'CLAUSURA' }}</button>
+            <button mat-menu-item [routerLink]="['/posterhall']">{{ 'POSTERHALL' }}</button>
             <button mat-menu-item [routerLink]="['/noticias']">{{ 'NAV.NOTICIAS' | translate }}</button>
             <button mat-menu-item [routerLink]="['/faq']">{{ 'FAQ' }}</button>
             <button mat-menu-item [routerLink]="['/user']">{{ 'USUARIO' }}</button>

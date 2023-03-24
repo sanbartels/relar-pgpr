@@ -13,21 +13,27 @@ export interface Panelista {
 }
 
 export interface Conferencista{
-    bio_es: string;
-    bio_en?: string;
-    bio_pg?: string;
     colaboradores?: string;
     institucion?: string;
     horario: string;
     nombre: string;
     pais: string;
     sid: string;
-    texto_es: string;
-    texto_en?: string;
-    texto_pg?: string;
-    titulo_es: string;
-    titulo_en?: string;
-    titulo_pg?: string;
+    _en: {
+        titulo: string,
+        texto: string;
+        bio: string,
+    }
+    _es: {
+        titulo: string,
+        texto: string;
+        bio: string,
+    }
+    _pg: {
+        titulo: string,
+        texto: string;
+        bio: string,
+    }
 }
 
 export interface Sesion {

@@ -1,6 +1,6 @@
-<section *ngIf="admin.usuariosLoadded&&admin.trabajosLoadded">
+<section *ngIf="admin.usuariosLoadded&&admin.trabajosLoadded" class="my-md-3">
 
-  <mat-form-field appearance="fill" class="bg-white w-100">
+  <mat-form-field appearance="fill" class="w-100 bg-green">
     <mat-label>Tema</mat-label>
         <mat-select [(ngModel)]="tema">
           <mat-option value="1">1. Evolución y diversidad de MPCV</mat-option>
@@ -8,19 +8,20 @@
           <mat-option value="3">3. Promoción directa del crecimiento vegetal</mat-option>
           <mat-option value="4">4. El microbioma agrícola </mat-option>
           <mat-option value="5">5. El holobionte planta</mat-option>
-          <mat-option value="6">6. Conservación y manejo del microbioma en sistemas naturales y agroecosistemas</mat-option>
+          <mat-option value="6">6. Conservación y manejo microbiano en sistemas naturales y agroecosistemas</mat-option>
           <mat-option value="7">7. Del laboratorio al campo</mat-option>
           <mat-option value="8">8. Legislación sobre registro y empleo de productos microbiano</mat-option>
         </mat-select>
   </mat-form-field>
 
-  <table class="table table-dark table-hover">
+  <table class="table table-dark table-hover table-striped">
     <thead>
       <tr>
         <th scope="col" (click)="admin.sortWorksBy('date')">Fecha</th>
         <th scope="col" (click)="admin.sortWorksBy('tema')">Tema</th>
         <th scope="col" (click)="admin.sortWorksBy('titulo')">Título</th>
-        <th scope="col">Autor</th>
+        <th scope="col">Usuario</th>
+        <th scope="col">Email</th>
         <th scope="col" (click)="admin.sortWorksByTrueOrFalse('beca')">Beca</th>
         <th scope="col" (click)="admin.sortWorksByTrueOrFalse('aprobado')"><i class="far fa-check-circle mr"></i></th>
       </tr>
@@ -30,10 +31,12 @@
           <td>{{ trabajo.date | date: 'dd/MM/yyyy':undefined:'en' }}</td>
           <td>{{ admin.temas[trabajo.tema] }}</td>
           <td>{{ trabajo.titulo }}</td>
-          <td>{{ admin.usuariosObj[trabajo.uid].lastname }}, {{ admin.usuariosObj[trabajo.uid].name }}</td>
+          <td>{{ admin.getUsuario(trabajo.uid).lastname }}, {{ admin.getUsuario(trabajo.uid).name }}</td>
+          <td>{{ admin.getUsuario(trabajo.uid).email }}</td>
           <td style="color: #333;" [ngClass]="{ 'text-success': trabajo.beca }"><i class="fas fa-circle"></i></td>
           <td style="color: #333;" [ngClass]="{ 'text-success': trabajo.aprobado }"><i class="fas fa-circle"></i></td>
       </tr>
     </tbody>
 </table>
 </section>
+<!--(click)="openNewTab('/admin/trabajo/'+trabajo.key)-->

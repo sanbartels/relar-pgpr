@@ -3,6 +3,7 @@ import { AngularFireAuth } from '@angular/fire/auth';
 import { HttpClient } from '@angular/common/http';
 import { UserDB, Trabajo } from '../models/user.model';
 import { map, delay } from 'rxjs/operators';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Injectable({
   providedIn: 'root'
@@ -10,30 +11,35 @@ import { map, delay } from 'rxjs/operators';
 export class AuthService {
 
   public logged = false;
-  public popup = true;
   public user = new UserDB();
+  public userLoadded = false;
   private trabajo = new Trabajo();
 
   private url = 'https://relar-pgpr-default-rtdb.firebaseio.com';
 
   constructor( 
     private auth: AngularFireAuth,
-    private http: HttpClient
+    private http: HttpClient,
+    private snackBar : MatSnackBar
   ){
     this.auth.authState.subscribe( 
-      (user) =>{ if(user) this.login(user); this.logged = true; }, 
+      (user) =>{ if(user) this.login(user); }, 
       (error) => console.log(error) );
   }
 
   login = (user) => {
     this.getUser(user.uid).subscribe( ( resp: any ) =>{
-      if( resp ) { this.user = resp }
+      if( resp ) { 
+        this.user = resp;
+        this.logged = true;
+      }
       else{ 
         this.user.uid = user.uid;
         if( user.displayName ) this.user.displayName = user.displayName;
         if( user.email ) this.user.email = user.email;
         if( user.emailVerified ) this.user.emailVerified = user.emailVerified;
         if( user.photoURL ) this.user.photoURL = user.photoURL;
+        this.logged = true;
       }
     }, (err) => {} )
   }
@@ -87,6 +93,13 @@ export class AuthService {
   newUser = ( user: UserDB ) => this.http.put(`${ this.url }/users/${ user.uid }.json`, user);
   deleteUser = ( uid: string ) => this.http.delete(`${ this.url }/users/${ uid }.json`).subscribe();
   resetUser = () => this.user = new UserDB();
+  getEmail = ( uid: string ) => this.http.get(`${ this.url }/users/${ uid }.json`)
+    .pipe(
+      map( ( resp:any ) =>{
+        let tel = resp.email;
+        return tel;
+      })
+  )
 
   /* TRABAJO */
   getTrabajo = ( uid: string, tid: string ) => this.http.get(`${ this.url }/trabajos/${uid}/${tid}.json`);
@@ -94,6 +107,8 @@ export class AuthService {
   newTrabajo = ( trabajo: Trabajo ) => this.http.post(`${ this.url }/trabajos/${trabajo.uid}.json`, trabajo);
   deleteTrabajo = ( uid: string, tid: string ) => this.http.delete(`${this.url}/trabajos/${uid}/${tid}.json`);
   resetTrabajo = () => this.trabajo = new Trabajo();
+  actualizarTrabajoPropio = ( tid: string, value: any ) => this.http.put(`${ this.url }/trabajos/${this.user.uid}/${tid}.json`, value);
+  actualizarTrabajo = ( uid:string, tid:string, value:any ) => this.http.put(`${ this.url }/trabajos/${uid}/${tid}.json`, value);
 
   /* ACTUALIZAR TRABAJOS DEL USUARIO */
   actualizarPostulacion = ( tid: string ) =>{
@@ -130,6 +145,25 @@ export class AuthService {
     this.user.type = cod;
     return this.http.put(`${ this.url }/users/${ this.user.uid }.json`, this.user );
   }
+
+  /*BECA*/
+  actualizarBeca = ( uid: string ) =>{
+    let newUser: any;
+    this.getUser(uid).subscribe(
+      (resp)=>{
+        newUser = resp;
+        newUser.inscripcion = 5;
+        newUser.pago = true;
+        newUser.metodo = 'beca';
+        console.log(newUser);
+        this.http.put(`${ this.url }/users/${ uid }.json`, newUser ).subscribe(
+          resp => this.snackBar.open('Beca aceptada', 'Aceptar', { duration: 1000 }),
+          error => this.snackBar.open('Ha ocurrido un error inesperado', 'Aceptar', { duration: 3000 })
+        )
+      },(error)=> this.snackBar.open('Ha ocurrido un error inesperado', 'Aceptar', { duration: 3000 })
+    )
+    //return this.http.put(`${ this.url }/users/${ this.user.uid }.json`, this.user );
+}
 
   private fromJSONtoArray( usersObj : Object ){
 

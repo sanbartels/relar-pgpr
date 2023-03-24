@@ -1,7 +1,17 @@
-<article class="bg-transparente p-3 p-md-5 text-white">
-    <h5 class="pb-4">POSTER TALKS</h5>
-    <p>Al culminar las dos Charlas Magistrales, se exhibirán los video-minuto de todos aquellos trabajos aceptados y sugeridos a Póster Talk por la dupla coordinadora de esta sesión.</p>
-    <p>Cada presentador/a realizará un video, de un minuto de duración, donde relate los principales puntos de su trabajo, teniendo en cuenta: introducción, objetivo/pregunta de investigación, metodología, resultados-discusión y conclusiones.</p>
-    <p>Se promueve este espacio como una ventanilla de exhibición y reconocimiento de trabajos destacados.</p>
-    <p>Los PÓSTER TALK son una excelente oportunidad para despertar el interés de otros colegas respecto a los avances y/o resultados de tu investigación. Así, al finalizar la jornada, podrás intercambiar, en vivo, con ellas y ellos, en la SESIÓN de PÓSTER.</p>
-</article>
+<section *ngIf="postertalk.length" class="px-3 px-lg-5 d-flex flex-wrap">
+    <div *ngFor="let trabajo of postertalk" class="col-12 col-md-6 col-lg-4">
+        <div class="bg-dark text-white my-2 m-md-3 p-3">
+            <!-- VIDEO -->
+            <div>
+                <img src="/assets/img/play-button.png" alt="Video" class="img-fluid cursor" (click)="openDialog(trabajo.mp4)">
+            </div>
+            <!-- DATA -->
+            <h5 class="mt-3">{{ trabajo?.titulo }}</h5>
+            <hr>
+            <p>Expone: {{ trabajo?.expone }}</p>
+            <div class="text-end">
+                <button mat-stroked-button (click)="_var.navegateTo='/sesiones-de-trabajo/'+id+'/poster-talk'; irAlTrabajo(trabajo.uid, trabajo.key)">MÁS INFORMACIÓN</button>
+            </div>
+        </div>
+    </div>
+</section>

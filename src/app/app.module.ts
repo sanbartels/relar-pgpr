@@ -8,7 +8,6 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 
 import { AdminModule } from './pages/admin/admin.module';
-import { SesionModule } from './pages/sesion-de-trabajo/sesion.module';
 import { MaterialModule } from './modules/material.module';
 
 /* FIREBASE */
@@ -43,14 +42,17 @@ registerLocaleData(localeEn, '_en');
 /* PAGES */
 import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
-import { PostularTrabajo2Component } from './pages/postular-trabajo2/postular-trabajo2.component';
 import { LoginComponent } from './pages/login/login.component';
 import { UserComponent } from './pages/user/user.component';
+import { EditarComponent } from './pages/editar/editar.component';
 import { ProgramaComponent } from './pages/programa/programa.component';
 import { FaqComponent } from './pages/faq/faq.component';
 import { NoticiasComponent } from './pages/noticias/noticias.component';
-//import { SesionDeTrabajoComponent } from './pages/sesion-de-trabajo/sesion-de-trabajo.component';
-import { MesasRedondasComponent } from './pages/mesas-redondas/mesas-redondas.component';
+import { PosterhallComponent } from './pages/posterhall/posterhall.component';
+import { PosterComponent } from './pages/poster/poster.component';
+import { AperturaComponent } from './pages/apertura/apertura.component';
+import { ClausuraComponent } from './pages/clausura/clausura.component';
+//import { PostularTrabajo2Component } from './pages/postular-trabajo2/postular-trabajo2.component';
 /* PAGO */
 import { RegistrarseComponent } from './pages/pago/pago-1/registrarse.component';
 import { PagoComponent } from './pages/pago/pago-2/pago.component';
@@ -65,12 +67,15 @@ import { NavbarComponent } from './components/navbar/navbar.component';
 import { PaypalComponent } from './components/paypal/paypal.component';
 /* FORMS */
 import { PostularFormComponent } from './components/forms/postular-trabajo/postular-form.component';
-import { ActualizarConferencistaComponent } from './components/forms/actualizar-conferencista/actualizar-conferencista.component';
+import { CargarPdfComponent } from './components/forms/cargar-pdf/cargar-pdf.component';
+/* DIALOGS */
+import { DeleteConfirmationComponent } from './components/dialogs/delete-confirmation.component';
+import { PopUpComponent } from './components/dialogs/pop-up-home.component';
 /* HOME COMPONENTS */
 import { LogosComponent } from './components/home/logos/logos.component';
 import { ComiteComponent } from './components/home/comite/comite.component';
 import { AcercaComponent } from './components/home/acerca/acerca.component';
-import { PosterComponent } from './components/home/poster/poster.component';
+import { PosterHomeComponent } from './components/home/poster/poster.component';
 import { MesasComponent } from './components/home/mesas/mesas.component';
 import { InscripcionesComponent } from './components/home/inscripciones/inscripciones.component';
 import { FechasImportantesComponent } from './components/home/fechas-importantes/fechas-importantes.component';
@@ -81,10 +86,8 @@ import { IntroduccionComponent } from './components/home/introduccion/introducci
 import { ImgPipe } from './pipes/img.pipe';
 import { UsernamePipe } from './pipes/username.pipe';
 import { OrderTranslatePipe } from './pipes/order-countries.pipe';
-
-/* DIALOGS */
-import { DeleteConfirmationComponent } from './components/dialogs/delete-confirmation.component';
-import { PopUpComponent } from './components/dialogs/pop-up-home.component';
+import { SafePipe } from './pipes/safe.pipe';
+import { VideosComponent } from './pages/videos/videos.component';
 
 
 @NgModule({
@@ -100,32 +103,37 @@ import { PopUpComponent } from './components/dialogs/pop-up-home.component';
     Pago3Component,
     PaypalComponent,
     PostularTrabajoComponent,
-    PostularTrabajo2Component,
+    //PostularTrabajo2Component,
     LoginComponent,
     UserComponent,
+    EditarComponent,
+    PosterhallComponent,
+    PosterComponent,
     //
     ImgPipe,
     UsernamePipe,
     OrderTranslatePipe,
+    SafePipe,
     //
     ProgramaComponent,
     FaqComponent,
     NoticiasComponent,
-    //SesionDeTrabajoComponent,
     LogosComponent,
     ComiteComponent,
     AcercaComponent,
-    PosterComponent,
+    PosterHomeComponent,
     MesasComponent,
     InscripcionesComponent,
     FechasImportantesComponent,
     NoticiasHomeComponent,
     IntroduccionComponent,
-    MesasRedondasComponent,
     PostularFormComponent,
     DeleteConfirmationComponent,
     PopUpComponent,
-    ActualizarConferencistaComponent
+    CargarPdfComponent,
+    AperturaComponent,
+    ClausuraComponent,
+    VideosComponent
   ],
   imports: [
     BrowserModule,
@@ -134,7 +142,6 @@ import { PopUpComponent } from './components/dialogs/pop-up-home.component';
     //
     AdminModule,
     MaterialModule,
-    SesionModule,
     //
     FormsModule,
     ReactiveFormsModule,

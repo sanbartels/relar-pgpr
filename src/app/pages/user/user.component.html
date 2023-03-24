@@ -26,7 +26,7 @@
                 <div class="jumbotron jumbotron-fluid bg-white text-center p-3 p-md-5">
                     <h2>Inscripción incompleta</h2>
                     <hr>
-                    <p class="lead">Su inscripción está pendiente de pago.</p>
+                    <p class="lead">Su inscripción está pendiente de pago</p>
                     <button mat-raised-button color="primary" class="min-width-50 mb-3" (click)="inscripcion()">
                         Completar inscripcion
                     </button>
@@ -35,26 +35,21 @@
     
             <div *ngIf="auth.user.inscripcion==5">
                 <div class="jumbotron jumbotron-fluid bg-white text-center p-3 p-md-5">
-                    <h2>Inscripción completa</h2>
+                    <h2 *ngIf="auth.user.metodo=='beca'">Beca aceptada</h2>
+                    <h2 *ngIf="auth.user.metodo!=='beca'">Inscripción completa</h2>
                     <hr>
-                    <p class="lead">Su inscripción se ha completado correctamente.</p>
+                    <p class="lead">Su inscripción se ha completado correctamente</p>
                 </div>
             </div>
 
             <!-- TRABAJOS PRESENTADOS -->
-            <div *ngIf="trabajosLoadded&&trabajos.length>0">
+            <div *ngIf="auth.logged&&trabajosLoadded&&trabajos.length>0">
                 <div class="bg-white p-3 p-md-5 my-5">
                     <h2>Trabajos presentados</h2>
                     <hr>
 
                     <div *ngFor="let trabajo of trabajos">
-                        <div class="d-lg-flex justify-content-between align-items-center">
-                            <p style="font-size: 1.2rem; margin: 0;"><strong class="mx-3">{{ trabajo.date | date: 'dd/MM/yyyy':undefined:'en' }}</strong>{{ trabajo.titulo }}</p>
-                            <div class="text-end" style="min-width: 150px;">
-                                <!--<button mat-mini-fab mat-icon-button color="primary" class="mx-1"><i class="fas fa-edit"></i></button>-->
-                                <button mat-mini-fab color="warn" (click)="openDialog(trabajo.tid)"><i class="fas fa-trash-alt"></i></button>
-                            </div>
-                        </div>
+                        <app-cargar-pdf [trabajo]="trabajo" (submittedEvent)="changeSubmitted($event)"></app-cargar-pdf>
                         <hr>
                     </div>
 
